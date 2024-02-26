@@ -1,8 +1,8 @@
-# GetFit
+# GetFit 🏋️
 
 Course: COEN390
 
-## Technologies Used & Approach
+## Technologies Used & Approach 💻
 
 - React Native
 - Expo
@@ -12,11 +12,11 @@ Course: COEN390
 - NativeBase
 - React Native SVG
 
-## Methodologies
+## Methodologies 💻
 
 SCRUM methodology
 
-## How to Use
+## How to Use 📋
 
 ### Clone this repo
 
