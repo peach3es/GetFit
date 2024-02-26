@@ -38,4 +38,4 @@ npm install
 npm run a
 ```
 
-"\*" Make sure to have Android Studio installed and created an AVG profile. React Native uses the API 33 so follow [this link](https://reactnative.dev/docs/environment-setup) for the full instructions.
+\* Make sure to have Android Studio installed and created an AVG profile. React Native uses the API 33 so follow [this link](https://reactnative.dev/docs/environment-setup) for the full instructions.
