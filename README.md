@@ -32,10 +32,10 @@ git clone https://github.com/peach3es/GetFit
 npm install
 ```
 
-### Run the development server
+### Run the development server\*
 
 ```bash
-npm run a*
+npm run a
 ```
 
-- Make sure to have Android Studio installed and created an AVG profile. React Native uses the API 33 so follow [this link](https://reactnative.dev/docs/environment-setup) for the full instructions.
+"\*" Make sure to have Android Studio installed and created an AVG profile. React Native uses the API 33 so follow [this link](https://reactnative.dev/docs/environment-setup) for the full instructions.
