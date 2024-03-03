@@ -8,6 +8,7 @@ import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
+import { StatusBar } from "react-native";
 
 import { useColorScheme } from "@/src/components/useColorScheme";
 
@@ -27,6 +28,8 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const [loaded, error] = useFonts({
     SpaceMono: require("../../assets/fonts/SpaceMono-Regular.ttf"),
+    Montreau: require("../../assets/fonts/Montreau-Regular.otf"),
+    Chivo: require("@/assets/fonts/Chivo-Regular.otf"),
     ...FontAwesome.font,
   });
 
@@ -50,6 +53,7 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
+  StatusBar.setHidden(true);
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>

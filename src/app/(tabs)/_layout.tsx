@@ -30,7 +30,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Tab One",
+          title: "Home",
           headerShown: false, //Shows Top header or not
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (
@@ -53,9 +53,18 @@ export default function TabLayout() {
         name="two"
         options={{
           title: "Tab Two",
+          headerShown: false, //Shows Top header or not
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
+      {/* <Tabs.Screen
+        name="three"
+        options={{
+          title: "Tab Two",
+          headerShown: false, //Shows Top header or not
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      /> */}
     </Tabs>
   );
 }

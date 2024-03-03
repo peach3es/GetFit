@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Montreau";
+  src: url("assets/fonts/Montreau-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Chivo";
+  src: url("assets/fonts/Chivo-Regular.otf") format("opentype");
+}
