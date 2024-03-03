@@ -58,7 +58,7 @@ export default function TabOneScreen() {
         </Text>
       </View>
       <View className="bg-w1 dark:bg-bl w-full p-[5%] flex justify-bottom h-2/3 rounded-t-2xl absolute bottom-0 ">
-        <Text className="font-chivo text-3xl font-bold tracking-tight">
+        <Text className="font-chivo text-3xl font-bold tracking-tight dark:text-gr">
           Daily Insight
         </Text>
         <View className="rounded-xl bg-w2 flex flex-row justify-evenly py-7 mt-5 h-fit">
@@ -71,10 +71,11 @@ export default function TabOneScreen() {
             <View className="p-5 bg-bl rounded-md h-14"></View>
           </View>
         </View>
-        <Text className="font-chivo text-3xl font-bold tracking-tight mt-5">
+        <Text className="font-chivo text-3xl font-bold tracking-tight mt-5 dark:text-gr">
           What's up for Today?
         </Text>
-        <View className="rounded-xl bg-w2 mt-5 h-fit">
+        <View className="rounded-xl bg-w2 mt-5 h-fit flex flex-row">
+          <View className="p-10"></View>
           <View className="p-10"></View>
         </View>
       </View>
