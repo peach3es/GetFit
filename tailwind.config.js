@@ -25,6 +25,7 @@ module.exports = {
       w2: "#e3e8cd",
       gr: "#93cd64",
       bl: "#3a3c42",
+      bl2: "#5b6068",
       red: "#b33534",
     },
   },

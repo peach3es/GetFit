@@ -52,19 +52,19 @@ export default function TabLayout() {
       <Tabs.Screen
         name="two"
         options={{
-          title: "Tab Two",
+          title: "Progress",
           headerShown: false, //Shows Top header or not
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
-      {/* <Tabs.Screen
+      <Tabs.Screen
         name="three"
         options={{
-          title: "Tab Two",
+          title: "Profile",
           headerShown: false, //Shows Top header or not
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
-      /> */}
+      />
     </Tabs>
   );
 }

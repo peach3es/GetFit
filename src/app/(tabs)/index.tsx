@@ -1,4 +1,11 @@
-import { StyleSheet, Text, View, StatusBar } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  FlatList,
+  ScrollView,
+} from "react-native";
 import "@/global.css";
 
 import { useFonts } from "expo-font";
@@ -21,20 +28,7 @@ const homePic = [
 ];
 
 export default function TabOneScreen() {
-  // const [fontsLoaded, fontError] = useFonts({
-  //   Montreau: require("@/assets/fonts/Montreau-Regular.ttf"),
-  // });
   const [randomIndex, setRandomIndex] = useState(0);
-
-  // const onLayoutRootView = useCallback(async () => {
-  //   if (fontsLoaded || fontError) {
-  //     await SplashScreen.hideAsync();
-  //   }
-  // }, [fontsLoaded, fontError]);
-
-  // if (!fontsLoaded && !fontError) {
-  //   return null;
-  // }
 
   useEffect(() => {
     // Generate a random index when the component mounts
@@ -57,28 +51,38 @@ export default function TabOneScreen() {
           Welcome Back, Brandon!
         </Text>
       </View>
-      <View className="bg-w1 dark:bg-bl w-full p-[5%] flex justify-bottom h-2/3 rounded-t-2xl absolute bottom-0 ">
-        <Text className="font-chivo text-3xl font-bold tracking-tight dark:text-gr">
+      <ScrollView className="bg-w2 dark:bg-bl w-full p-[5%] flex justify-bottom h-2/3 rounded-t-2xl absolute bottom-0 ">
+        <Text className="font-chivo text-3xl font-bold tracking-tight text-bl dark:text-gr">
           Daily Insight
         </Text>
-        <View className="rounded-xl bg-w2 flex flex-row justify-evenly py-7 mt-5 h-fit">
+        <View className="rounded-xl bg-w1 dark:bg-bl2 flex flex-row justify-evenly py-7 mt-5 h-fit">
           <View className="flex flex-col gap-6 ">
-            <View className="p-5 bg-bl rounded-md w-36 h-14"></View>
-            <View className="p-5 bg-bl rounded-md h-14"></View>
+            <View className="p-5 bg-bl2 dark:bg-gr rounded-md w-36 h-14"></View>
+            <View className="p-5 bg-bl2 dark:bg-gr  rounded-md h-14"></View>
           </View>
           <View className="flex flex-col gap-6">
-            <View className="p-5 bg-bl rounded-md w-36 h-14"></View>
-            <View className="p-5 bg-bl rounded-md h-14"></View>
+            <View className="p-5 bg-bl2 dark:bg-gr  rounded-md w-36 h-14"></View>
+            <View className="p-5 bg-bl2 dark:bg-gr  rounded-md h-14"></View>
           </View>
         </View>
-        <Text className="font-chivo text-3xl font-bold tracking-tight mt-5 dark:text-gr">
+        <Text className="font-chivo text-3xl font-bold tracking-tight mt-5 text-bl dark:text-gr">
           What's up for Today?
         </Text>
-        <View className="rounded-xl bg-w2 mt-5 h-fit flex flex-row">
-          <View className="p-10"></View>
-          <View className="p-10"></View>
+        <View className="mt-5 w-full">
+          <ScrollView horizontal={true} className="gap-5">
+            <View className="p-2 aspect-square bg-w1 dark:bg-bl2 flex w-1/2 justify-center items-center rounded-lg">
+              <Text className=" text-bl dark:text-w2 font-chivo text-lg ">
+                Workout 1
+              </Text>
+            </View>
+            <View className="p-2 aspect-square bg-w1 dark:bg-bl2 flex w-1/2 justify-center items-center rounded-lg">
+              <Text className=" text-bl dark:text-w2 font-chivo text-lg">
+                Workout 2
+              </Text>
+            </View>
+          </ScrollView>
         </View>
-      </View>
+      </ScrollView>
 
       {/* <View
         style={styles.separator}
