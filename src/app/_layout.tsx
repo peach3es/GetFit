@@ -63,7 +63,7 @@ function RootLayoutNav() {
       <GluestackUIProvider config={config}>
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="modal" options={{ presentation: "modal" }} />
+          <Stack.Screen name="session" options={{ presentation: "modal" }} />
         </Stack>
       </GluestackUIProvider>
     </ThemeProvider>

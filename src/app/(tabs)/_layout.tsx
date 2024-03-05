@@ -31,10 +31,10 @@ export default function TabLayout() {
         name="index"
         options={{
           title: "Home",
-          headerShown: false, //Shows Top header or not
+          // headerShown: false, //Shows Top header or not
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (
-            <Link href="/modal" asChild>
+            <Link href="/session" asChild>
               <Pressable>
                 {({ pressed }) => (
                   <FontAwesome

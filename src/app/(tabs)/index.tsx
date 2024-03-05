@@ -5,7 +5,6 @@ import {
   Button,
   FlatList,
   ScrollView,
-  SafeAreaView,
 } from "react-native";
 // import { ScrollView } from "@gluestack-ui/themed";
 import "@/global.css";
@@ -46,7 +45,7 @@ export default function TabOneScreen() {
   };
 
   return (
-    <SafeAreaView>
+    <View>
       <View className="flex h-full relative w-full">
         <View className="relative h-1/3">
           <Image source={getRandomImage()} className="w-full h-[105%]" />
@@ -63,6 +62,6 @@ export default function TabOneScreen() {
           </ScrollView>
         </View>
       </View>
-    </SafeAreaView>
+    </View>
   );
 }
