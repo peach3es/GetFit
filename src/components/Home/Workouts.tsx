@@ -1,21 +1,59 @@
 import React from "react";
-import { FlatList, SafeAreaView, ScrollView, Text, View } from "react-native";
+import { useState } from "react";
+import {
+  FlatList,
+  SafeAreaView,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
-export default function Workouts() {
-  const workout = [
-    { id: "workout1", name: "Running" },
-    { id: "workout2", name: "Hiking" },
-    { id: "workout3", name: "Weight Training" },
-  ];
-  type ItemProps = { name: string };
+type ItemData = { id: string; name: string };
+const workout: ItemData[] = [
+  { id: "workout1", name: "Running" },
+  { id: "workout2", name: "Hiking" },
+  { id: "workout3", name: "Weight Training" },
+];
 
-  const WorkoutActivity = ({ name }: ItemProps) => (
+type ItemProps = {
+  item: ItemData;
+  onPress: () => void;
+  backgroundColor: string;
+  textColor: string;
+};
+
+const WorkoutActivity = ({
+  item,
+  onPress,
+  backgroundColor,
+  textColor,
+}: ItemProps) => (
+  <TouchableOpacity onPress={onPress} style={{ backgroundColor }} className="">
     <View className="p-2 aspect-square bg-w1 dark:bg-bl2 flex w-36 justify-center items-center rounded-lg m-3">
       <Text className="text-bl dark:text-gr font-chivo text-lg text-center">
-        {name}
+        {item.name}
       </Text>
     </View>
-  );
+  </TouchableOpacity>
+);
+
+export default function Workouts() {
+  const [selectedId, setSelectedId] = useState<string>();
+
+  const renderItem = ({ item }: { item: ItemData }) => {
+    const backgroundColor = item.id === selectedId ? "" : "";
+    const color = item.id === selectedId ? "white" : "black";
+
+    return (
+      <WorkoutActivity
+        item={item}
+        onPress={() => setSelectedId(item.id)}
+        backgroundColor={backgroundColor}
+        textColor={color}
+      />
+    );
+  };
   return (
     <View className="w-full">
       <Text className="font-chivo text-3xl font-bold tracking-tight mt-5 text-bl dark:text-gr">
@@ -24,7 +62,7 @@ export default function Workouts() {
       <SafeAreaView className="mt-5 flex ">
         <FlatList
           data={workout}
-          renderItem={({ item }) => <WorkoutActivity name={item.name} />}
+          renderItem={renderItem}
           keyExtractor={(item) => item.id}
           horizontal={true}
           showsHorizontalScrollIndicator={false}
