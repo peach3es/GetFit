@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import {
   FlatList,
   SafeAreaView,
@@ -8,51 +7,41 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { Link, useNavigation } from "expo-router";
 
 type ItemData = { id: string; name: string };
+
 const workout: ItemData[] = [
   { id: "workout1", name: "Running" },
   { id: "workout2", name: "Hiking" },
   { id: "workout3", name: "Weight Training" },
 ];
 
-type ItemProps = {
+type WorkoutActivityProps = {
   item: ItemData;
-  onPress: () => void;
-  backgroundColor: string;
-  textColor: string;
 };
 
-const WorkoutActivity = ({
-  item,
-  onPress,
-  backgroundColor,
-  textColor,
-}: ItemProps) => (
-  <TouchableOpacity onPress={onPress} style={{ backgroundColor }} className="">
-    <View className="p-2 aspect-square bg-w1 dark:bg-bl2 flex w-36 justify-center items-center rounded-lg m-3">
-      <Text className="text-bl dark:text-gr font-chivo text-lg text-center">
-        {item.name}
-      </Text>
-    </View>
-  </TouchableOpacity>
-);
+const WorkoutActivity = ({ item }: WorkoutActivityProps) => {
+  return (
+    <Link
+      href={{ pathname: "/session", params: { workoutName: item.name } }}
+      asChild
+    >
+      <TouchableOpacity
+        activeOpacity={0.6}
+        className="rounded-lg bg-w1 dark:bg-bl2 aspect-square w-36 mr-3 flex justify-center items-center"
+      >
+        <Text className="text-bl dark:text-gr font-chivo text-lg text-center">
+          {item.name}
+        </Text>
+      </TouchableOpacity>
+    </Link>
+  );
+};
 
 export default function Workouts() {
-  const [selectedId, setSelectedId] = useState<string>();
-
   const renderItem = ({ item }: { item: ItemData }) => {
-    const backgroundColor = item.id === selectedId ? "" : "";
-    const color = item.id === selectedId ? "white" : "black";
-
-    return (
-      <WorkoutActivity
-        item={item}
-        onPress={() => setSelectedId(item.id)}
-        backgroundColor={backgroundColor}
-        textColor={color}
-      />
-    );
+    return <WorkoutActivity item={item} />;
   };
   return (
     <View className="w-full">

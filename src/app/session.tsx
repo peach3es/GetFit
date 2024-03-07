@@ -1,7 +1,10 @@
 // import { Button } from "@gluestack-ui/themed";
 import { StyleSheet, Text, View, Button } from "react-native";
+import { useNavigation, useLocalSearchParams } from "expo-router";
 
-export default function ModalScreen() {
+const Session = () => {
+  const route = useLocalSearchParams();
+  const workoutName = route.workoutName || "Workout Name";
   return (
     <View className="flex h-full w-full p-5  bg-w2 dark:bg-bl">
       {/* <Text style={styles.title}>Modal</Text>
@@ -13,8 +16,8 @@ export default function ModalScreen() {
       <EditScreenInfo path="app/modal.tsx" />
 
       {/* Use a light status bar on iOS to account for the black space above the modal */}
-      <Text className="text-bl dark:text-w2 font-montreau text-4xl mt-36">
-        Workout Name
+      <Text className="text-bl dark:text-w2 font-montreau text-4xl mt-36 text-bold">
+        {workoutName}
       </Text>
       <View className="flex mt-10">
         <View>
@@ -31,21 +34,6 @@ export default function ModalScreen() {
       </View>
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: "80%",
-  },
-});
+export default Session;
