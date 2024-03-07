@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 
 export default function Daily() {
   return (
-    <View className="mb-4">
+    <View className="">
       <Text className="font-chivo text-3xl font-bold tracking-tight text-bl dark:text-gr">
         Daily Insight
       </Text>

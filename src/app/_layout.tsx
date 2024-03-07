@@ -14,6 +14,10 @@ import { useEffect } from "react";
 import { StatusBar } from "react-native";
 
 import { useColorScheme } from "@/src/components/useColorScheme";
+import {
+  GestureHandlerRootView,
+  NativeViewGestureHandler,
+} from "react-native-gesture-handler";
 
 export {
   // Catch any errors thrown by the Layout component.

@@ -7,7 +7,7 @@ import {
   ScrollView,
   SafeAreaView,
 } from "react-native";
-// import { ScrollView } from "@gluestack-ui/themed";
+// import { ScrollView } from "react-native-gesture-handler";
 import "@/global.css";
 
 import { useFonts } from "expo-font";
@@ -56,8 +56,11 @@ export default function TabOneScreen() {
             Welcome Back, Brandon!
           </Text>
         </View>
-        <SafeAreaView className="">
-          <ScrollView className="w-full bg-w2 dark:bg-bl p-[5%] flex justify-bottom h-3/4 rounded-t-3xl">
+        <SafeAreaView className="" style={{ flex: 1 }}>
+          <ScrollView
+            className="w-full bg-w2 dark:bg-bl p-[5%] justify-bottom h-3/4 rounded-t-3xl"
+            // style={{ flex: 1 }}
+          >
             <Daily />
             <Workouts />
           </ScrollView>
