@@ -7,7 +7,6 @@ import {
   ScrollView,
   SafeAreaView,
 } from "react-native";
-// import { ScrollView } from "react-native-gesture-handler";
 import "@/global.css";
 
 import { useFonts } from "expo-font";
@@ -15,7 +14,6 @@ import * as SplashScreen from "expo-splash-screen";
 import { useCallback } from "react";
 
 import { Image } from "react-native";
-// import { getColors } from "react-native-image-colors";
 import React, { useState, useEffect } from "react";
 import Workouts from "@/src/components/Home/Workouts";
 import Daily from "@/src/components/Home/Daily";

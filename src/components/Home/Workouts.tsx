@@ -6,15 +6,29 @@ import {
   Text,
   TouchableOpacity,
   View,
+  ImageBackground,
+  ImageRequireSource,
 } from "react-native";
 import { Link, useNavigation } from "expo-router";
 
-type ItemData = { id: string; name: string };
+type ItemData = { id: string; name: string; image: any };
 
 const workout: ItemData[] = [
-  { id: "workout1", name: "Running" },
-  { id: "workout2", name: "Hiking" },
-  { id: "workout3", name: "Weight Training" },
+  {
+    id: "workout1",
+    name: "Running",
+    image: require("@/assets/images/workout/workout2.jpg"),
+  },
+  {
+    id: "workout2",
+    name: "Hiking",
+    image: require("@/assets/images/workout/workout3.jpg"),
+  },
+  {
+    id: "workout3",
+    name: "Weight Training",
+    image: require("@/assets/images/workout/workout1.jpg"),
+  },
 ];
 
 type WorkoutActivityProps = {
@@ -31,9 +45,24 @@ const WorkoutActivity = ({ item }: WorkoutActivityProps) => {
         activeOpacity={0.6}
         className="rounded-lg bg-w1 dark:bg-bl2 aspect-square w-36 mr-3 flex justify-center items-center"
       >
-        <Text className="text-bl dark:text-gr font-chivo text-lg text-center">
-          {item.name}
-        </Text>
+        <ImageBackground
+          source={item.image} // Replace with the path to your image
+          style={{
+            width: "100%",
+            height: "100%",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          imageStyle={{
+            borderRadius: 8, // Set borderRadius for ImageBackground
+            opacity: 0.7,
+          }}
+          resizeMode="cover" // or "contain" depending on your preference
+        >
+          <Text className="text-w1 dark:text-gr font-chivo text-lg text-center">
+            {item.name}
+          </Text>
+        </ImageBackground>
       </TouchableOpacity>
     </Link>
   );
