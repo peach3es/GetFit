@@ -55,11 +55,11 @@ const WorkoutActivity = ({ item }: WorkoutActivityProps) => {
           }}
           imageStyle={{
             borderRadius: 8, // Set borderRadius for ImageBackground
-            opacity: 0.7,
+            opacity: 0.8,
           }}
           resizeMode="cover" // or "contain" depending on your preference
         >
-          <Text className="text-w1 dark:text-gr font-chivo text-lg text-center">
+          <Text className="text-w1 dark:text-gr text-shadow-[0_2px_15px_#0d0d0f] font-chivo text-lg text-center">
             {item.name}
           </Text>
         </ImageBackground>

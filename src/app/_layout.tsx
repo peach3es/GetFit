@@ -14,10 +14,6 @@ import { useEffect } from "react";
 import { StatusBar } from "react-native";
 
 import { useColorScheme } from "@/src/components/useColorScheme";
-import {
-  GestureHandlerRootView,
-  NativeViewGestureHandler,
-} from "react-native-gesture-handler";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -67,7 +63,7 @@ function RootLayoutNav() {
       <GluestackUIProvider config={config}>
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="session" options={{ presentation: "modal" }} />
+          <Stack.Screen name="session" options={{ headerShown: false }} />
         </Stack>
       </GluestackUIProvider>
     </ThemeProvider>
