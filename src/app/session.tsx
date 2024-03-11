@@ -55,39 +55,49 @@ const Session: React.FC = () => {
   };
 
   const handleSave = () => {
-    handleEndSession();
+    if (startTime == null)
+    {
+      return;
+    } else {
+      const activity = createActivity();
+      DatabaseManager.addActivity(activity, (success, result) => {
+        if (success) {
+          console.log('Activity data saved:', result);
+        } else {
+          console.log('Error saving activity data:', result);
+        }
+      });
 
-    setIsActive(false);
-    setTime(0);
-    setStartTime(null);
+      setIsActive(false);
+      setTime(0);
+      setStartTime(null);
+    }
   }
 
   useEffect(() => {
     if (workoutName) {
       handleReset();
       setIsActive(true);
+      setStartTime(new Date());
     }
   }, [workoutName]);
 
-  const handleEndSession = () => {
-    if (!startTime) return; // Ensure startTime is set before attempting to end the session
-
+  const createActivity = () => {
     const endTime = new Date();
-    //const duration = Math.round((endTime.getTime() - startTime.getTime()) / 1000); // Duration in seconds
 
      // Format startTime and endTime (Ex.: 9:41 pm)
-    const formattedStartTime = startTime.toLocaleTimeString('en-US', {
+    const formattedStartTime = startTime ? startTime.toLocaleTimeString('en-US', {
       hour: 'numeric',
       minute: '2-digit',
       hour12: true
-    });
+    }): "";
     const formattedEndTime = endTime.toLocaleTimeString('en-US', {
       hour: 'numeric',
       minute: '2-digit',
       hour12: true
     });
   
-    const activity: Activity = {
+    return {
       date: formattedDate,
       type: workoutName,
       startTime: formattedStartTime,
@@ -97,14 +107,6 @@ const Session: React.FC = () => {
       steps: null, // Update with actual data later
       caloriesBurned: null, // Update with actual data later
     };
-  
-    DatabaseManager.addActivity(activity, (success, result) => {
-      if (success) {
-        console.log('Activity data saved:', result);
-      } else {
-        console.log('Error saving activity data:', result);
-      }
-    });
   };
 
   return (
@@ -130,7 +132,7 @@ const Session: React.FC = () => {
             activeOpacity={0.6}
           >
             <Text style={styles.buttonText}>
-              {isActive ? 'Pause' : 'Start'}
+              {isActive ? 'Stop' : 'Start'}
             </Text>
           </TouchableOpacity>
           <TouchableOpacity

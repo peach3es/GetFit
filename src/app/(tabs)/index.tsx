@@ -62,7 +62,6 @@ export default function TabOneScreen() {
           >
             <Daily />
             <Workouts />
-            <History />
           </ScrollView>
         </SafeAreaView>
       </View>

@@ -67,9 +67,9 @@ function RootLayoutNav() {
           <Stack.Screen name="(tabs)/three" options={{headerShown: false }} />
           <Stack.Screen name="(tabs)/two" options={{headerShown: false }} />
           <Stack.Screen name="session" options={{ headerShown: false }} />
-          <Stack.Screen name="Home/Daily" options={{ presentation: "modal" }} />
-          <Stack.Screen name="Home/Workouts" options={{ presentation: "modal" }} />
-          <Stack.Screen name="Home/History" options={{ presentation: "modal" }} />
+          <Stack.Screen name="Home/Daily" options={{ headerShown: false }} />
+          <Stack.Screen name="Home/Workouts" options={{ headerShown: false }} />
+          <Stack.Screen name="Home/History" options={{ headerShown: false }} />
         </Stack>
       </GluestackUIProvider>
     </ThemeProvider>

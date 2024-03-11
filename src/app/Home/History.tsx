@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, FlatList } from 'react-native';
 import { Activity, ListActivitiesCallback, AddActivityCallback, SQLError } from '../types/activityTypes';
 import DatabaseManager from '../services/DatabaseManager';
 
-const History = () => {
+const History: React.FC = () => {
   const [history, setHistory] = useState<Activity[]>([]);
 
   useEffect(() => {
@@ -19,25 +19,27 @@ const History = () => {
   }, []);
 
   return (
-    <View className="w-full">
-      <Text className="font-chivo text-3xl font-bold tracking-tight mt-5 text-bl dark:text-gr">
-        History
-      </Text>
-      <FlatList
-        data={history}
-        keyExtractor={(item, index) => index.toString()}
-        renderItem={({ item }) => (
-          <View style={styles.item}>
-            <Text>Date: {item.date}</Text>
-            <Text>Type: {item.type}</Text>
-            <Text>StartTime: {item.startTime}</Text>
-            <Text>EndTime: {item.endTime}</Text>
-            <Text>Duration: {item.duration} seconds</Text>
-            {/* Display additional data as needed */}
-          </View>
-        )}
-        nestedScrollEnabled={true} // Enable nested scrolling for Android
-      />
+    <View className="bg-w2 dark:bg-bl h-full">
+      <View className="flex h-4/5 w-full p-5">
+        <Text className="text-bl dark:text-w2 font-montreau text-5xl mt-56 text-bold">
+          History
+        </Text>
+        <FlatList
+          data={history}
+          keyExtractor={(item, index) => index.toString()}
+          renderItem={({ item }) => (
+            <View style={styles.item}>
+              <Text>Date: {item.date}</Text>
+              <Text>Type: {item.type}</Text>
+              <Text>StartTime: {item.startTime}</Text>
+              <Text>EndTime: {item.endTime}</Text>
+              <Text>Duration: {item.duration} seconds</Text>
+              {/* Display additional data as needed */}
+            </View>
+          )}
+          nestedScrollEnabled={true} // Enable nested scrolling for Android
+        />
+      </View>
     </View>
   );
 };
@@ -45,18 +47,20 @@ const History = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
+    paddingHorizontal: 5,
+    paddingTop: 5, // Reduced padding at the top
   },
   title: {
-    fontSize: 22,
+    fontSize: 56, // Adjusted for smaller font size
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginBottom: 16, // Reduced bottom margin to bring title closer to list
   },
   item: {
-    padding: 10,
+    paddingVertical: 10, // Reduced vertical padding for each item
     borderBottomWidth: 1,
     borderBottomColor: '#cccccc',
   },
 });
+
 
 export default History;
