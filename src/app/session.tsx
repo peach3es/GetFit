@@ -141,13 +141,15 @@ const Session: React.FC = () => {
           >
             <Text style={styles.buttonText}>Reset </Text>
           </TouchableOpacity>
+          <TouchableOpacity 
+            onPress={handleSave} 
+            style={styles.saveButton}
+            className="rounded-full aspect-square w-20 flex justify-center items-center"
+            activeOpacity={0.6}
+          >
+            <Text style={styles.buttonText}>Save</Text>
+          </TouchableOpacity>
         </View>
-      </View>
-      <View className="h-1/5 bg-w1 dark:bg-bl2 rounded-t-xl">
-        <Text></Text>
-        <TouchableOpacity onPress={handleSave} style={styles.saveButton}>
-          <Text style={styles.buttonText}>Save</Text>
-        </TouchableOpacity>
       </View>
     </View>
   );
