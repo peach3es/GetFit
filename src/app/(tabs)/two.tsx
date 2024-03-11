@@ -6,7 +6,7 @@ import { Text, View } from "@/src/components/Themed";
 export default function TabTwoScreen() {
   return (
     <View className="flex items-center justify-center h-full">
-      <Text className="text-xl font-bold">Tab Two</Text>
+      <Text className="text-xl font-bold">Progress page</Text>
       <View
         style={styles.separator}
         lightColor="#eee"
