@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
-import { Activity, ListActivitiesCallback, AddActivityCallback, SQLError } from '../types/activityTypes';
+import { Activity, ListActivitiesCallback } from '../types/activityTypes';
 import DatabaseManager from '../services/DatabaseManager';
 
 const History: React.FC = () => {

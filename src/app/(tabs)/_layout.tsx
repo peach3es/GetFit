@@ -3,8 +3,6 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Link, Tabs } from "expo-router";
 import { Pressable } from "react-native";
 
-import AppRouter from '../AppRouter';
-
 import Colors from "@/src/constants/Colors";
 import { useColorScheme } from "@/src/components/useColorScheme";
 import { useClientOnlyValue } from "@/src/components/useClientOnlyValue";
@@ -67,7 +65,6 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
-      <AppRouter />
     </Tabs>
   );
 }

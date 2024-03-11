@@ -62,13 +62,8 @@ function RootLayoutNav() {
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <GluestackUIProvider config={config}>
         <Stack>
-          <Stack.Screen name="(tabs)/index" options={{headerShown: false }} />
-          <Stack.Screen name="(tabs)/tabLayout" options={{headerShown: false }} />
-          <Stack.Screen name="(tabs)/three" options={{headerShown: false }} />
-          <Stack.Screen name="(tabs)/two" options={{headerShown: false }} />
+          <Stack.Screen name="(tabs)" options={{headerShown: false }} />
           <Stack.Screen name="session" options={{ headerShown: false }} />
-          <Stack.Screen name="Home/Daily" options={{ headerShown: false }} />
-          <Stack.Screen name="Home/Workouts" options={{ headerShown: false }} />
           <Stack.Screen name="Home/History" options={{ headerShown: false }} />
         </Stack>
       </GluestackUIProvider>

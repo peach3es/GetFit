@@ -17,7 +17,6 @@ import { Image } from "react-native";
 import React, { useState, useEffect } from "react";
 import Daily from "@/src/app/Home/Daily";
 import Workouts from "@/src/app/Home/Workouts";
-import History from "@/src/app/Home/History";
 
 SplashScreen.preventAutoHideAsync();
 

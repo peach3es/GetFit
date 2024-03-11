@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\(tabs)\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\(tabs)\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\_layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\_layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\(tabs)\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\(tabs)\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\session.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\session.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\Home\\History.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\Home\\History.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\AppRouter.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\AppRouter.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\(tabs)\\_layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\(tabs)\\_layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\Home\\Workouts.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\Home\\Workouts.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\app.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -30,49 +50,112 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "session.tsx",
+              "DocumentMoniker": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\session.tsx",
+              "RelativeDocumentMoniker": "src\\app\\session.tsx",
+              "ToolTip": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\session.tsx",
+              "RelativeToolTip": "src\\app\\session.tsx",
+              "ViewState": "AQIAACsAAAAAAAAAAAAqwD4AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-03-11T23:00:14.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "History.tsx",
+              "DocumentMoniker": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\Home\\History.tsx",
+              "RelativeDocumentMoniker": "src\\app\\Home\\History.tsx",
+              "ToolTip": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\Home\\History.tsx",
+              "RelativeToolTip": "src\\app\\Home\\History.tsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-03-11T23:00:08.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "tsconfig.json",
+              "DocumentMoniker": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\tsconfig.json",
+              "RelativeDocumentMoniker": "tsconfig.json",
+              "ToolTip": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\tsconfig.json",
+              "RelativeToolTip": "tsconfig.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-11T22:57:57.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Workouts.tsx",
+              "DocumentMoniker": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\Home\\Workouts.tsx",
+              "RelativeDocumentMoniker": "src\\app\\Home\\Workouts.tsx",
+              "ToolTip": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\Home\\Workouts.tsx",
+              "RelativeToolTip": "src\\app\\Home\\Workouts.tsx",
+              "ViewState": "AQIAADAAAAAAAAAAAAAqwEkAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-03-11T22:54:30.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_layout.tsx",
+              "DocumentMoniker": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\(tabs)\\_layout.tsx",
+              "RelativeDocumentMoniker": "src\\app\\(tabs)\\_layout.tsx",
+              "ToolTip": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\(tabs)\\_layout.tsx",
+              "RelativeToolTip": "src\\app\\(tabs)\\_layout.tsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-03-11T22:54:29.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "_layout.tsx",
               "DocumentMoniker": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\_layout.tsx",
               "RelativeDocumentMoniker": "src\\app\\_layout.tsx",
               "ToolTip": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\_layout.tsx",
               "RelativeToolTip": "src\\app\\_layout.tsx",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAWwEgAAAAjAAAA",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAqwEIAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2024-03-10T21:36:54.352Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "index.tsx",
               "DocumentMoniker": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\(tabs)\\index.tsx",
               "RelativeDocumentMoniker": "src\\app\\(tabs)\\index.tsx",
               "ToolTip": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\(tabs)\\index.tsx",
               "RelativeToolTip": "src\\app\\(tabs)\\index.tsx",
-              "ViewState": "AQIAADAAAAAAAAAAAAAYwDoAAAALAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2024-03-10T21:16:34.964Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "AppRouter.js",
               "DocumentMoniker": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\AppRouter.js",
               "RelativeDocumentMoniker": "src\\app\\AppRouter.js",
               "ToolTip": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\src\\app\\AppRouter.js",
               "RelativeToolTip": "src\\app\\AppRouter.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAqwCYAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-03-10T19:55:11.908Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "postcss.config.js",
               "DocumentMoniker": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\postcss.config.js",
               "RelativeDocumentMoniker": "postcss.config.js",
@@ -84,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "app.json",
               "DocumentMoniker": "D:\\Documents\\Concordia\\COEN390\\GetFit_Repo\\GetFit\\app.json",
               "RelativeDocumentMoniker": "app.json",
