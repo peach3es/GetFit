@@ -3,15 +3,16 @@ import {
   FlatList,
   SafeAreaView,
   ScrollView,
+  StyleSheet,
   Text,
   TouchableOpacity,
   View,
   ImageBackground,
   ImageRequireSource,
 } from "react-native";
-import { Link, useNavigation } from "expo-router";
+import { Link } from "expo-router";
 
-type ItemData = { id: string; name: string; image: any };
+type ItemData = { id: string; name: string; image: ImageRequireSource };
 
 const workout: ItemData[] = [
   {
@@ -89,3 +90,5 @@ export default function Workouts() {
     </View>
   );
 }
+
+

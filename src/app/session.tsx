@@ -1,12 +1,15 @@
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import React, { useState, useEffect } from "react";
-import { useNavigation, useLocalSearchParams } from "expo-router";
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { useNavigation, useLocalSearchParams } from 'expo-router';
+import { Activity, ListActivitiesCallback, AddActivityCallback, SQLError } from './types/activityTypes';
+import DatabaseManager from './services/DatabaseManager';
 
-const Session = () => {
+const Session: React.FC = () => {
   const route = useLocalSearchParams();
-  const workoutName = route.workoutName || "Workout Name";
-  const [isActive, setIsActive] = useState(true);
-  const [time, setTime] = useState(0);
+  const workoutName = Array.isArray(route.workoutName) ? route.workoutName[0] : route.workoutName || 'Workout Name';
+  const [isActive, setIsActive] = useState<boolean>(true);
+  const [time, setTime] = useState<number>(0);
+  const [startTime, setStartTime] = useState<Date | null>(null);
 
   // Create a new Date object and format it
   const currentDate = new Date();
@@ -32,13 +35,32 @@ const Session = () => {
   }, [isActive]);
 
   const handleStartStop = () => {
-    setIsActive(!isActive);
+    if (isActive) {
+      // If the timer is currently active (running), then we pause it
+      setIsActive(false);
+    } else {
+      // If the timer is not active (paused), then we start it without changing the startTime
+      setIsActive(true);
+      // If it's the first start (startTime is null), record the startTime
+      if (!startTime) {
+        setStartTime(new Date());
+      }
+    }
   };
 
   const handleReset = () => {
     setIsActive(false);
     setTime(0);
+    setStartTime(null);
   };
+
+  const handleSave = () => {
+    handleEndSession();
+
+    setIsActive(false);
+    setTime(0);
+    setStartTime(null);
+  }
 
   useEffect(() => {
     if (workoutName) {
@@ -46,6 +68,44 @@ const Session = () => {
       setIsActive(true);
     }
   }, [workoutName]);
+
+  const handleEndSession = () => {
+    if (!startTime) return; // Ensure startTime is set before attempting to end the session
+
+    const endTime = new Date();
+    //const duration = Math.round((endTime.getTime() - startTime.getTime()) / 1000); // Duration in seconds
+
+     // Format startTime and endTime (Ex.: 9:41 pm)
+    const formattedStartTime = startTime.toLocaleTimeString('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true
+    });
+    const formattedEndTime = endTime.toLocaleTimeString('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true
+    });
+  
+    const activity: Activity = {
+      date: formattedDate,
+      type: workoutName,
+      startTime: formattedStartTime,
+      endTime: formattedEndTime,
+      duration: time,
+      heartRateAverage: null, // Update with actual data later
+      steps: null, // Update with actual data later
+      caloriesBurned: null, // Update with actual data later
+    };
+  
+    DatabaseManager.addActivity(activity, (success, result) => {
+      if (success) {
+        console.log('Activity data saved:', result);
+      } else {
+        console.log('Error saving activity data:', result);
+      }
+    });
+  };
 
   return (
     <View className="bg-w2 dark:bg-bl h-full">
@@ -70,7 +130,7 @@ const Session = () => {
             activeOpacity={0.6}
           >
             <Text style={styles.buttonText}>
-              {isActive ? "Pause " : "Start "}
+              {isActive ? 'Pause' : 'Start'}
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -85,6 +145,9 @@ const Session = () => {
       </View>
       <View className="h-1/5 bg-w1 dark:bg-bl2 rounded-t-xl">
         <Text></Text>
+        <TouchableOpacity onPress={handleSave} style={styles.saveButton}>
+          <Text style={styles.buttonText}>Save</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -104,6 +167,11 @@ const styles = StyleSheet.create({
   resetButton: {
     padding: 10,
     backgroundColor: "darkgrey",
+    borderRadius: 5,
+  },
+  saveButton: {
+    padding: 10,
+    backgroundColor: 'blue',
     borderRadius: 5,
   },
   buttonText: {

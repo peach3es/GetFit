@@ -15,8 +15,9 @@ import { useCallback } from "react";
 
 import { Image } from "react-native";
 import React, { useState, useEffect } from "react";
-import Workouts from "@/src/components/Home/Workouts";
-import Daily from "@/src/components/Home/Daily";
+import Daily from "@/src/app/Home/Daily";
+import Workouts from "@/src/app/Home/Workouts";
+import History from "@/src/app/Home/History";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -61,6 +62,7 @@ export default function TabOneScreen() {
           >
             <Daily />
             <Workouts />
+            <History />
           </ScrollView>
         </SafeAreaView>
       </View>
