@@ -1,32 +1,88 @@
-import { StyleSheet } from "react-native";
+import React from "react";
+import {
+  FlatList,
+  SafeAreaView,
+  Text,
+  TouchableOpacity,
+  View,
+  ImageBackground,
+  ImageRequireSource,
+} from "react-native";
+import { Link } from "expo-router";
 
-import EditScreenInfo from "@/src/components/EditScreenInfo";
-import { Text, View } from "react-native";
+type ItemData = { id: string; name: string };
+
+const profile: ItemData[] = [
+  {
+    id: "age",
+    name: "Age",
+  },
+  {
+    id: "sex",
+    name: "Sex",
+  },
+  {
+    id: "weight",
+    name: "Weight",
+  },
+  {
+    id: "height",
+    name: "Height",
+  },
+  {
+    id: "history",
+    name: "Workout History",
+  },
+];
+
+type ProfilePageProps = {
+  item: ItemData;
+  style: string;
+};
+
+const ProfileOptions = ({ item, style }: ProfilePageProps) => {
+  return (
+    <Link
+      href={{ pathname: "/Home/History", params: { workoutName: item.name } }}
+      asChild
+    >
+      <TouchableOpacity
+        activeOpacity={0.6}
+        className={`bg-red dark:bg-gr py-5 flex justify-center items-center ${style} border-b-2 border-w2 dark:border-b-bl dark:border-b-2 `}
+      >
+        <Text className="text-w1 dark:text-bl font-chivo text-lg text-center">
+          {item.name}
+        </Text>
+      </TouchableOpacity>
+    </Link>
+  );
+};
 
 export default function TabTwoScreen() {
+  const renderItem = ({ item, index }: { item: ItemData; index: number }) => {
+    const isFirstItem = index === 0;
+
+    return (
+      <ProfileOptions
+        item={item}
+        style={isFirstItem ? "rounded-t-xl" : ""} // Apply rounded-t-xl style only to the first item
+      />
+    );
+  };
   return (
-    <View className="flex items-center px-10 pt-32 pb-10 h-full bg-w2">
+    <View className="flex items-center pt-32 h-full bg-w2 dark:bg-bl">
       <View className="flex h-1/4">
-        <Text className="text-3xl font-bold ">Profile Page</Text>
+        <Text className="text-3xl font-bold text-bl dark:text-w2">
+          Profile Page
+        </Text>
       </View>
-      <View className="w-full rounded-xl bg-w1 h-3/4 p-5"></View>
+      <View className="w-full rounded-t-xl bg-w1 dark:bg-bl2 h-3/4">
+        <FlatList
+          data={profile}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
+        />
+      </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: "80%",
-  },
-});
