@@ -1,18 +1,15 @@
 import { StyleSheet } from "react-native";
 
 import EditScreenInfo from "@/src/components/EditScreenInfo";
-import { Text, View } from "@/src/components/Themed";
+import { Text, View } from "react-native";
 
 export default function TabTwoScreen() {
   return (
-    <View className="flex items-center justify-center h-full">
-      <Text className="text-xl font-bold">Profile Page</Text>
-      <View
-        style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
-      <EditScreenInfo path="app/(tabs)/two.tsx" />
+    <View className="flex items-center px-10 pt-32 pb-10 h-full bg-w2">
+      <View className="flex h-1/4">
+        <Text className="text-3xl font-bold ">Profile Page</Text>
+      </View>
+      <View className="w-full rounded-xl bg-w1 h-3/4 p-5"></View>
     </View>
   );
 }
