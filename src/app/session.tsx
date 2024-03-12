@@ -139,7 +139,9 @@ const Session: React.FC = () => {
             className="rounded-full aspect-square w-20 flex justify-center items-center"
             activeOpacity={0.6}
           >
-            <Text style={styles.buttonText}>{isActive ? "Stop" : "Start"}</Text>
+            <Text style={styles.buttonText}>
+              {isActive ? "Stop " : "Start "}
+            </Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={handleReset}
@@ -155,7 +157,7 @@ const Session: React.FC = () => {
             className="rounded-full aspect-square w-20 flex justify-center items-center"
             activeOpacity={0.6}
           >
-            <Text style={styles.buttonText}>Save</Text>
+            <Text style={styles.buttonText}>Save </Text>
           </TouchableOpacity>
         </View>
       </View>

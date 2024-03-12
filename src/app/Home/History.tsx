@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
-import { Activity, ListActivitiesCallback } from '../types/activityTypes';
-import DatabaseManager from '../services/DatabaseManager';
+import React, { useEffect, useState } from "react";
+import { View, Text, StyleSheet, FlatList } from "react-native";
+import { Activity, ListActivitiesCallback } from "../types/activityTypes";
+import DatabaseManager from "../services/DatabaseManager";
+import { useLocalSearchParams } from "expo-router";
 
 const History: React.FC = () => {
   const [history, setHistory] = useState<Activity[]>([]);
+  const route = useLocalSearchParams();
+  const name = route.profileName;
 
   useEffect(() => {
     const callback: ListActivitiesCallback = (success, data) => {
       if (success) {
-          setHistory(data as Activity[]); // Cast data to Activity[] since we know it is a success
+        setHistory(data as Activity[]); // Cast data to Activity[] since we know it is a success
       } else {
         console.error("Error fetching activity history", data); // Log the error, data is SQLError
       }
@@ -20,9 +23,9 @@ const History: React.FC = () => {
 
   return (
     <View className="bg-w2 dark:bg-bl h-full">
-      <View className="flex h-4/5 w-full p-5">
-        <Text className="text-bl dark:text-w2 font-montreau text-5xl mt-56 text-bold">
-          History
+      <View className="flex h-full w-full p-5">
+        <Text className="text-bl dark:text-w2 font-montreau text-5xl mt-20 mb-10 text-bold">
+          {name}
         </Text>
         <FlatList
           data={history}
@@ -37,7 +40,8 @@ const History: React.FC = () => {
               {/* Display additional data as needed */}
             </View>
           )}
-          nestedScrollEnabled={true} // Enable nested scrolling for Android
+          // nestedScrollEnabled={true} // Enable nested scrolling for Android
+          className="h-full"
         />
       </View>
     </View>
@@ -52,15 +56,14 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 56, // Adjusted for smaller font size
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 16, // Reduced bottom margin to bring title closer to list
   },
   item: {
     paddingVertical: 10, // Reduced vertical padding for each item
     borderBottomWidth: 1,
-    borderBottomColor: '#cccccc',
+    borderBottomColor: "#cccccc",
   },
 });
-
 
 export default History;
