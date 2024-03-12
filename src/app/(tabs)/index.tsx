@@ -46,7 +46,7 @@ export default function TabOneScreen() {
   return (
     <View>
       <View className="flex h-full relative w-full">
-        <View className="relative h-1/3">
+        <View className="relative h-1/4">
           <Image source={getRandomImage()} className="w-full h-[110%]" />
           <Text
             className={`text-6xl font-montreau text-w1 absolute p-5 z-10 bottom-0 text-shadow-[0_2px_10px_#3a3c42] tracking-wider`}

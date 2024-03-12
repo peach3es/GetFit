@@ -1,19 +1,11 @@
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React, { useState, useEffect } from "react";
 import { useNavigation, useLocalSearchParams } from "expo-router";
-import {
-  Activity,
-  ListActivitiesCallback,
-  AddActivityCallback,
-  SQLError,
-} from "./types/activityTypes";
 import DatabaseManager from "./services/DatabaseManager";
 
 const Session: React.FC = () => {
   const route = useLocalSearchParams();
-  const workoutName = Array.isArray(route.workoutName)
-    ? route.workoutName[0]
-    : route.workoutName || "Workout Name";
+  const workoutName = Array.isArray(route.workoutName) ? route.workoutName[0] : route.workoutName || "Workout Name";
   const [isActive, setIsActive] = useState<boolean>(true);
   const [time, setTime] = useState<number>(0);
   const [startTime, setStartTime] = useState<Date | null>(null);
@@ -132,7 +124,7 @@ const Session: React.FC = () => {
             {new Date(time * 1000).toISOString().substr(11, 8)}{" "}
           </Text>
         </View>
-        <View className="flex flex-row mt-16 justify-evenly">
+        <View className="flex flex-row mt-10 justify-evenly">
           <TouchableOpacity
             onPress={handleStartStop}
             style={isActive ? styles.stopButton : styles.startButton}
