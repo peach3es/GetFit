@@ -46,7 +46,7 @@ export default function TabOneScreen() {
   return (
     <View>
       <View className="flex h-full relative w-full">
-        <View className="relative h-1/4">
+        <View className="relative h-1/3">
           <Image source={getRandomImage()} className="w-full h-[110%]" />
           <Text
             className={`text-6xl font-montreau text-w1 absolute p-5 z-10 bottom-0 text-shadow-[0_2px_10px_#3a3c42] tracking-wider`}
@@ -54,9 +54,9 @@ export default function TabOneScreen() {
             Welcome Back, Brandon!
           </Text>
         </View>
-        <SafeAreaView className="" style={{ flex: 1 }}>
+        <SafeAreaView className="h-2/3" style={{ flex: 1 }}>
           <ScrollView
-            className="w-full bg-w2 dark:bg-bl p-[5%] justify-bottom h-3/4 rounded-t-3xl"
+            className="w-full bg-w2 dark:bg-bl p-[5%] justify-bottom  rounded-t-3xl"
             // style={{ flex: 1 }}
           >
             <Daily />

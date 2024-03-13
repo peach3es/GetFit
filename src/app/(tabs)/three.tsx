@@ -71,10 +71,13 @@ export default function TabTwoScreen() {
   };
   return (
     <View className="flex items-center pt-24 h-full bg-w2 dark:bg-bl justify-between">
-      <View className="flex h-1/4 items-center mb-24">
-        <View className="rounded-full aspect-square w-40 bg-w1 mb-10"></View>
-        <Text className="text-3xl font-bold text-bl dark:text-w2">
+      <View className="flex h-fit items-center px-5 gap-y-5">
+        <Text className="text-3xl font-bold text-bl dark:text-w2 text-center">
           Profile Page
+        </Text>
+        <View className="rounded-full aspect-square w-40 bg-w1"></View>
+        <Text className="text-4xl font-bold text-bl dark:text-w2 text-center">
+          Brandon Lee
         </Text>
       </View>
       <View className="w-full rounded-t-xl bg-w1 dark:bg-bl2 h-fit">
