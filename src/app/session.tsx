@@ -1,7 +1,8 @@
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Modal } from "react-native";
 import React, { useState, useEffect } from "react";
-import { useNavigation, useLocalSearchParams } from "expo-router";
+import { useNavigation, useLocalSearchParams, Link } from "expo-router";
 import DatabaseManager from "./services/DatabaseManager";
+import workout from "./Home/Workouts";
 
 const Session: React.FC = () => {
   const route = useLocalSearchParams();
@@ -111,8 +112,56 @@ const Session: React.FC = () => {
     };
   };
 
+  const [modalVisible, setModalVisible] = useState(false);
+
   return (
     <View className="bg-w2 dark:bg-bl h-full">
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <View style={styles.centeredView}>
+          <View
+            style={styles.modalView}
+            className="flex flex-col gap-y-5 bg-w1 dark:bg-bl h-fit justify-center align-center p-5"
+          >
+            <Text className="text-center text-xl font-bold text-bl dark:text-w1">
+              Are you sure you want to end your workout?
+            </Text>
+            <View className="flex flex-row gap-x-5 justify-center">
+              <TouchableOpacity
+                className="bg-red p-3 rounded-3xl w-[40%] flex justify-center"
+                onPress={() => setModalVisible(!modalVisible)}
+                activeOpacity={0.7}
+              >
+                <Text className="text-center text-w1 text-lg">No</Text>
+              </TouchableOpacity>
+              <Link
+                href={{
+                  pathname: "/Home/summaryInfo",
+                  params: { workoutName: workoutName },
+                }}
+                asChild
+              >
+                <TouchableOpacity
+                  className="bg-gr p-3 rounded-3xl w-[40%] flex justify-center"
+                  onPress={() => {
+                    setModalVisible(!modalVisible);
+                    handleSave();
+                  }}
+                  activeOpacity={0.7}
+                >
+                  <Text className="text-center text-w1 text-lg">End</Text>
+                </TouchableOpacity>
+              </Link>
+            </View>
+          </View>
+        </View>
+      </Modal>
       <View className="flex h-4/5 w-full p-5">
         <Text className="text-bl dark:text-w2 font-montreau text-5xl mt-44 text-bold">
           {workoutName}
@@ -129,12 +178,13 @@ const Session: React.FC = () => {
         <View className="flex flex-row mt-16 justify-evenly">
           <TouchableOpacity
             onPress={handleStartStop}
-            style={isActive ? styles.stopButton : styles.startButton}
-            className="rounded-full aspect-square w-20 flex justify-center items-center"
+            className={`rounded-full aspect-square w-20 flex justify-center items-center ${
+              isActive ? "bg-red" : "bg-gr"
+            }`}
             activeOpacity={0.6}
           >
-            <Text style={styles.buttonText}>
-              {isActive ? "Stop " : "Start "}
+            <Text className="text-center text-w1 font-bold">
+              {isActive ? "Stop" : "Start"}
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -143,19 +193,19 @@ const Session: React.FC = () => {
             className="rounded-full aspect-square w-20 flex justify-center items-center"
             activeOpacity={0.6}
           >
-            <Text style={styles.buttonText}>Reset </Text>
+            <Text className="text-center font-bold">Reset</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={handleSave}
+            onPress={() => setModalVisible(true)}
             style={styles.saveButton}
             className="rounded-full aspect-square w-20 flex justify-center items-center"
             activeOpacity={0.6}
           >
-            <Text style={styles.buttonText}>Save </Text>
+            <Text className="text-center text-w1 font-bold">End</Text>
           </TouchableOpacity>
         </View>
       </View>
-      <View className="flex h-1/5 bg-w1 rounded-t-xl"></View>
+      <View className="flex h-1/5 bg-w1 dark:bg-bl2 rounded-t-xl"></View>
     </View>
   );
 };
@@ -184,6 +234,25 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "white",
     textAlign: "center",
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100%",
+  },
+  modalView: {
+    borderRadius: 20,
+    padding: 5,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+    width: "75%",
   },
 });
 

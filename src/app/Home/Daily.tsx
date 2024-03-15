@@ -36,7 +36,7 @@ export default function Daily() {
 
   return (
     <View className="">
-      <Text className="font-chivo text-3xl font-bold tracking-tight text-bl dark:text-gr">
+      <Text className="font-chivo text-3xl tracking-tight text-bl dark:text-gr">
         Daily Insight
       </Text>
       <View className=" rounded-3xl bg-w1 dark:bg-bl2 flex flex-row justify-evenly py-4 mt-5 h-fit ">

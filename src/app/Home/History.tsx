@@ -32,11 +32,17 @@ const History: React.FC = () => {
           keyExtractor={(item, index) => index.toString()}
           renderItem={({ item }) => (
             <View style={styles.item}>
-              <Text>Date: {item.date}</Text>
-              <Text>Type: {item.type}</Text>
-              <Text>StartTime: {item.startTime}</Text>
-              <Text>EndTime: {item.endTime}</Text>
-              <Text>Duration: {item.duration} seconds</Text>
+              <Text className=" text-bl dark:text-w1">Date: {item.date}</Text>
+              <Text className=" text-bl dark:text-w1">Type: {item.type}</Text>
+              <Text className=" text-bl dark:text-w1">
+                StartTime: {item.startTime}
+              </Text>
+              <Text className=" text-bl dark:text-w1">
+                EndTime: {item.endTime}
+              </Text>
+              <Text className=" text-bl dark:text-w1">
+                Duration: {item.duration} seconds
+              </Text>
               {/* Display additional data as needed */}
             </View>
           )}

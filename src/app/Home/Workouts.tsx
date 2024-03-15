@@ -16,7 +16,7 @@ import { set } from "@gluestack-style/react";
 
 type ItemData = { id: string; name: string; image: ImageRequireSource };
 
-const workout: ItemData[] = [
+export const workout: ItemData[] = [
   {
     id: "workout1",
     name: "Running",
