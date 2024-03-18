@@ -65,10 +65,6 @@ function RootLayoutNav() {
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="session" options={{ headerShown: false }} />
           <Stack.Screen name="Home/History" options={{ headerShown: false }} />
-          <Stack.Screen
-            name="Home/summaryInfo"
-            options={{ headerShown: false }}
-          />
         </Stack>
       </GluestackUIProvider>
     </ThemeProvider>

@@ -16,9 +16,9 @@ const Session: React.FC = () => {
   // Create a new Date object and format it
   const currentDate = new Date();
   const formattedDate = currentDate.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
+    year: "2-digit",
+    month: "2-digit",
+    day: "2-digit",
   });
 
   useEffect(() => {
@@ -142,8 +142,7 @@ const Session: React.FC = () => {
               </TouchableOpacity>
               <Link
                 href={{
-                  pathname: "/Home/summaryInfo",
-                  params: { workoutName: workoutName },
+                  pathname: "/(tabs)",
                 }}
                 asChild
               >

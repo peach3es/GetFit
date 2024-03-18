@@ -10,7 +10,6 @@ export default function AppRouter() {
     <Router>
       <Route path="/Workouts" component={Workouts} />
       <Route path="/session" component={Session} />
-      <Route path="/summaryInfo" component={Summary} />
       <Route path="/History" component={History} />
     </Router>
   );
