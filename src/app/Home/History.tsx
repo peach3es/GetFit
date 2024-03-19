@@ -7,6 +7,7 @@ import WorkoutCard from "@/src/components/workoutCard";
 
 const History: React.FC = () => {
   const [history, setHistory] = useState<Activity[]>([]);
+
   const route = useLocalSearchParams();
   const name = route.profileName;
 
@@ -28,24 +29,11 @@ const History: React.FC = () => {
         <Text className="text-bl dark:text-w2 font-montreau text-5xl mt-20 mb-10 text-bold">
           {name}
         </Text>
+
         <FlatList
           data={history}
           keyExtractor={(item, index) => index.toString()}
           renderItem={({ item }) => (
-            // <View style={styles.item}>
-            //   <Text className=" text-bl dark:text-w1">Date: {item.date}</Text>
-            //   <Text className=" text-bl dark:text-w1">Type: {item.type}</Text>
-            //   <Text className=" text-bl dark:text-w1">
-            //     StartTime: {item.startTime}
-            //   </Text>
-            //   <Text className=" text-bl dark:text-w1">
-            //     EndTime: {item.endTime}
-            //   </Text>
-            //   <Text className=" text-bl dark:text-w1">
-            //     Duration: {item.duration} seconds
-            //   </Text>
-            //   {/* Display additional data as needed */}
-            // </View>
             <WorkoutCard
               date={item.date}
               type={item.type}

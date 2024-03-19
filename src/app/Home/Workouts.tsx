@@ -114,11 +114,6 @@ const WorkoutActivity = ({ item }: WorkoutActivityProps) => {
 };
 
 export default function Workouts() {
-  // const startWorkout = ({ item }: { item: ItemData }) => {
-  //   return (
-
-  //   );
-  // };
   const renderItem = ({ item }: { item: ItemData }) => {
     return <WorkoutActivity item={item} />;
   };
