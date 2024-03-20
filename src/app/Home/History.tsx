@@ -8,9 +8,6 @@ import WorkoutCard from "@/src/components/workoutCard";
 const History: React.FC = () => {
   const [history, setHistory] = useState<Activity[]>([]);
 
-  const route = useLocalSearchParams();
-  const name = route.profileName;
-
   useEffect(() => {
     const callback: ListActivitiesCallback = (success, data) => {
       if (success) {
@@ -27,7 +24,7 @@ const History: React.FC = () => {
     <View className="bg-w2 dark:bg-bl h-full">
       <View className="flex h-full w-full p-5">
         <Text className="text-bl dark:text-w2 font-montreau text-5xl mt-20 mb-10 text-bold">
-          {name}
+          Workout History
         </Text>
 
         <FlatList
