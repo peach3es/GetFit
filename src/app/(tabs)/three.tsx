@@ -12,6 +12,8 @@ import { useRouter } from "expo-router";
 import UserNameModal from '../modals/UserNameModal';
 import UserSexModal from '../modals/UserSexModal';
 import UserDOBModal from "../modals/UserDOBModal";
+import UserHeightModal from "../modals/UserHeightModal"
+import UserWeightModal from "../modals/UserWeightModal"
 import DatabaseManager from "../services/DatabaseManager";
 import { differenceInYears } from 'date-fns';
 
@@ -68,10 +70,14 @@ export default function TabTwoScreen() {
   const [nameModalVisible, setNameModalVisible] = useState(false);
   const [sexModalVisible, setSexModalVisible] = useState(false);
   const [dobModalVisible, setDOBModalVisible] = useState(false);
+  const [heightModalVisible, setHeightModalVisible] = useState(false);
+  const [weightModalVisible, setWeightModalVisible] = useState(false);
   const [userName, setUserName] = useState('');
   const [userSex, setUserSex] = useState('');
   const [userDOB, setUserDOB] = useState('');
   const [userAge, setUserAge] = useState<number | null>(null);
+  const [userHeight, setUserHeight] = useState<number | null>(null);
+  const [userWeight, setUserWeight] = useState<number | null>(null);
   const router = useRouter();
 
   const handlePress = (item: ItemData) => {
@@ -85,11 +91,16 @@ export default function TabTwoScreen() {
       case 'dob':
         setDOBModalVisible(true);
         break;
+      case 'height':
+        setHeightModalVisible(true);
+        break;
+      case 'weight':
+        setWeightModalVisible(true);
+        break;
       case 'history':
         // Use the router to navigate to the History page
         router.push('/Home/History');
         break;
-      // TODO: Height and Weight
       default:
         // Do nothing
         break;
@@ -110,12 +121,26 @@ export default function TabTwoScreen() {
           const age = differenceInYears(new Date(), dob);
           setUserAge(age); // This will now set the age as a number
         }
+
+        if (userProfile.height) {
+          setUserHeight(userProfile.height); // Height is saved in centimeters
+        } else {
+          setUserHeight(null); // Reset height if it's not available
+        }
+
+        if (userProfile.weight) {
+          setUserWeight(userProfile.weight); // Weight is saved in kilograms
+        } else {
+          setUserWeight(null); // Reset weight if it's not available
+        }
       } else {
         console.error("Failed to fetch user profile");
         setUserName('Username'); // Default to "Username" if the fetch fails
         setUserSex('');
         setUserDOB('');
-        setUserAge(null); // Reset age if fetch fails
+        setUserAge(null);
+        setUserHeight(null);
+        setUserWeight(null);
       }
     });
   }, []);
@@ -153,15 +178,24 @@ export default function TabTwoScreen() {
             Age: {userAge} {userAge === 1 ? 'year' : 'years'} old
           </Text>
         )}
-        <Text style={{ marginBottom: -20, textAlign: 'center' }}>
-          Sex: {userSex}
-        </Text>
-        <Text style={{ marginBottom: -20, textAlign: 'center' }}>
-          Height: {/* Replace with your height variable and unit */}
-        </Text>
-        <Text style={{ textAlign: 'center' }}>
-          Weight: {/* Replace with your weight variable and unit */}
-        </Text>
+        {/* Conditionally render the sex if it is available */}
+        {userSex !== null && (
+          <Text style={{ marginBottom: -20, textAlign: 'center' }}>
+            Sex: {userSex}
+          </Text>
+        )}
+        {/* Conditionally render the height if it is available */}
+        {userHeight !== null && (
+          <Text style={{ marginBottom: -20, textAlign: 'center' }}>
+            Height: {userHeight.toFixed(2)} cm
+          </Text>
+        )}
+        {/* Conditionally render the weight if it is available */}
+        {userWeight !== null && (
+          <Text style={{ textAlign: 'center' }}>
+          Weight: {userWeight.toFixed(2)} kg
+          </Text>
+        )}
       </View>
       <View className="w-full rounded-t-xl bg-w1 dark:bg-bl2 h-fit">
         <FlatList
@@ -182,6 +216,16 @@ export default function TabTwoScreen() {
         <UserDOBModal
           visible={dobModalVisible}
           onClose={() => setDOBModalVisible(false)}
+          onUpdate={fetchUserProfile}
+        />
+        <UserHeightModal
+          visible={heightModalVisible}
+          onClose={() => setHeightModalVisible(false)}
+          onUpdate={fetchUserProfile}
+        />
+        <UserWeightModal
+          visible={weightModalVisible}
+          onClose={() => setWeightModalVisible(false)}
           onUpdate={fetchUserProfile}
         />
       </View>

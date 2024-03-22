@@ -8,7 +8,7 @@ const db = SQLite.openDatabase('getfitapp.db');
 const initUserProfileDB = (): void => {
   db.transaction(tx => {
     tx.executeSql(
-      'CREATE TABLE IF NOT EXISTS UserProfile (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, sex TEXT, dob TEXT, height DOUBLE, weight DOUBLE);',
+      'CREATE TABLE IF NOT EXISTS UserProfile (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, sex TEXT, dob TEXT, height DOUBLE, weight DOUBLE, heightUnitPref TEXT, weightUnitPref TEXT);',
       [],
       () => console.log('UserProfile table created successfully'),
       (tx, err) => { console.log('DB Error: ', err); return false; }
@@ -98,6 +98,40 @@ const setUserDOB = (dob: string, callback: AddUserDataCallback): void => {
     );
   });
 };
+const setUserHeightAndUnitPref = (height: number, heightUnitPref: string, callback: AddUserDataCallback): void => {
+  db.transaction(tx => {
+    tx.executeSql(
+      'UPDATE UserProfile SET height = ?, heightUnitPref = ? WHERE id = 1;',
+      [height, heightUnitPref],
+      (_, resultSet) => {
+        console.log('UserHeight and heightUnitPref updated successfully');
+        callback(true, { insertId: 1 });
+      },
+      (tx, err) => {
+        console.error('SetUserHeightAndUnitPref Error: ', err);
+        callback(false, err);
+        return false;
+      }
+    );
+  });
+};
+const setUserWeightAndUnitPref = (weight: number, weightUnitPref: string, callback: AddUserDataCallback): void => {
+  db.transaction(tx => {
+    tx.executeSql(
+      'UPDATE UserProfile SET weight = ?, weightUnitPref = ? WHERE id = 1;',
+      [weight, weightUnitPref],
+      (_, resultSet) => {
+        console.log('UserWeight and weightUnitPref updated successfully');
+        callback(true, { insertId: 1 });
+      },
+      (tx, err) => {
+        console.error('SetUserWeightAndUnitPref Error: ', err);
+        callback(false, err);
+        return false;
+      }
+    );
+  });
+};
 const setUserHeight = (height: number, callback: AddUserDataCallback): void => {
   db.transaction(tx => {
     tx.executeSql(
@@ -118,7 +152,7 @@ const setUserHeight = (height: number, callback: AddUserDataCallback): void => {
 const setUserWeight = (weight: number, callback: AddUserDataCallback): void => {
   db.transaction(tx => {
     tx.executeSql(
-      'UPDATE UserProfile SET dob = ? WHERE id = 1;',
+      'UPDATE UserProfile SET weight = ? WHERE id = 1;',
       [weight],
       (_, resultSet) => {
         console.log('UserWeight updated successfully');
@@ -132,7 +166,6 @@ const setUserWeight = (weight: number, callback: AddUserDataCallback): void => {
     );
   });
 };
-
 // Function to get user profile information
 const getUserProfile = (callback: ListUserDataCallback): void => {
   db.transaction(tx => {
@@ -204,5 +237,7 @@ export default {
   setUserDOB,
   setUserHeight,
   setUserWeight,
+  setUserHeightAndUnitPref,
+  setUserWeightAndUnitPref,
   getUserProfile
 };

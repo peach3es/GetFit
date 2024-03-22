@@ -6,6 +6,8 @@ export interface UserProfileData {
     dob: string; // Date of birth as a string in ISO format
     height: number;
     weight: number;
+    heightUnitPref: string;
+    weightUnitPref: string;
 }
 
 export type ListUserDataCallback = (success: boolean, data: UserProfileData[] | SQLError) => void;
