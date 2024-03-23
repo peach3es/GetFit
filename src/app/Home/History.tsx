@@ -37,7 +37,7 @@ const History: React.FC = () => {
               startTime={item.startTime}
               endTime={item.endTime}
               duration={item.duration}
-              steps={item.steps}
+              steps={item.steps || null}
             />
           )}
           // nestedScrollEnabled={true} // Enable nested scrolling for Android

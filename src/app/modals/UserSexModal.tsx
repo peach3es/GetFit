@@ -1,6 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Modal, View, Text, TouchableOpacity, Alert } from 'react-native';
-import DatabaseManager from '../services/DatabaseManager'; // Adjust the import path as necessary
+import React, { useState, useEffect } from "react";
+import {
+  Modal,
+  View,
+  Text,
+  TouchableOpacity,
+  Alert,
+  useColorScheme,
+} from "react-native";
+import DatabaseManager from "../services/DatabaseManager"; // Adjust the import path as necessary
+import { Iconify } from "react-native-iconify";
 
 type UserSexModalProps = {
   visible: boolean;
@@ -8,8 +16,15 @@ type UserSexModalProps = {
   onUpdate: () => void;
 };
 
-const UserSexModal: React.FC<UserSexModalProps> = ({ visible, onClose, onUpdate }) => {
-  const [sex, setSex] = useState('');
+const UserSexModal: React.FC<UserSexModalProps> = ({
+  visible,
+  onClose,
+  onUpdate,
+}) => {
+  const colorScheme = useColorScheme();
+
+  const [sex, setSex] = useState("");
+  const iconColor = colorScheme === "dark" ? "#93cd64" : "#b33534";
 
   useEffect(() => {
     if (visible) {
@@ -26,34 +41,54 @@ const UserSexModal: React.FC<UserSexModalProps> = ({ visible, onClose, onUpdate 
   const saveSex = (newSex: string) => {
     DatabaseManager.setUserSex(newSex, (success, data) => {
       if (success) {
-        console.log('Sex saved successfully');
+        console.log("Sex saved successfully");
         onUpdate();
         onClose();
       } else {
-        console.error('Failed to save sex');
-        Alert.alert('Error', 'Failed to save sex');
+        console.error("Failed to save sex");
+        Alert.alert("Error", "Failed to save sex");
       }
     });
   };
 
   return (
     <Modal
-      animationType="slide"
+      animationType="fade"
       transparent={true}
       visible={visible}
       onRequestClose={onClose}
     >
-      <View style={{ marginTop: 50, padding: 20, backgroundColor: 'white' }}>
-        <Text>Please select your sex:</Text>
-        <TouchableOpacity onPress={() => saveSex('Male')}>
-          <Text style={{ padding: 10, backgroundColor: sex === 'Male' ? '#DDD' : '#FFF' }}>Male</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => saveSex('Female')}>
-          <Text style={{ padding: 10, backgroundColor: sex === 'Female' ? '#DDD' : '#FFF' }}>Female</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={onClose}>
-          <Text style={{ padding: 10 }}>Cancel</Text>
-        </TouchableOpacity>
+      <View className="flex justify-center items-center h-full">
+        <View className="bg-w1 p-8 rounded-xl w-[80%]">
+          <TouchableOpacity
+            activeOpacity={0.7}
+            className="absolute top-5 right-5"
+            onPress={() => onClose()}
+          >
+            <Iconify icon="mingcute:close-fill" size={28} color={iconColor} />
+          </TouchableOpacity>
+
+          <Text className="text-bl dark:text-b1 text-2xl my-5 items-center text-center font-bold">
+            Please select your sex:
+          </Text>
+
+          <TouchableOpacity
+            onPress={() => saveSex("Male")}
+            className="p-3 rounded-3xl flex items-center border-2 border-red mb-3"
+          >
+            <Text className="font-medium text-xl text-red dark:text-gr">
+              Male
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => saveSex("Female")}
+            className="p-3 rounded-3xl flex items-center border-2 border-red"
+          >
+            <Text className="font-medium text-xl text-red dark:text-gr">
+              Female
+            </Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </Modal>
   );
