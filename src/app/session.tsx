@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { useNavigation, useLocalSearchParams, Link } from "expo-router";
 import DatabaseManager from "./services/DatabaseManager";
 import workout from "./Home/Workouts";
+import { Pedometer } from "expo-sensors";
+import { Subscription } from "expo-sensors/build/Pedometer";
 
 const Session: React.FC = () => {
   const route = useLocalSearchParams();
@@ -204,7 +206,14 @@ const Session: React.FC = () => {
           </TouchableOpacity>
         </View>
       </View>
-      <View className="flex h-1/5 bg-w1 dark:bg-bl2 rounded-t-xl"></View>
+      <View className="flex h-1/5 bg-w1 dark:bg-bl2 rounded-t-xl justify-between">
+        <View className="flex flex-col ">
+          <Text className="text-bl dark:text-w2 text-4xl mt-5 pl-5">Steps</Text>
+          <Text className="text-bl dark:text-w2 text-4xl mt-2 pl-5">
+            number goes here
+          </Text>
+        </View>
+      </View>
     </View>
   );
 };

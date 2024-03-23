@@ -10,12 +10,14 @@ export default function WorkoutCard({
   startTime,
   endTime,
   duration,
+  steps,
 }: {
   date: string;
   type: string;
   startTime: any;
   endTime: any;
   duration: number;
+  steps: number;
 }) {
   const colorScheme = useColorScheme();
   const iconColor = colorScheme === "dark" ? "#93cd64" : "#b33534";
@@ -89,6 +91,7 @@ export default function WorkoutCard({
               <View className="flex flex-col items-center">
                 <Text className="text-lg font-medium">Avg. Heart Rate</Text>
                 <Text className="text-lg font-medium">Steps Taken</Text>
+                <Text className="text-3xl font-medium">{steps}</Text>
               </View>
             </View>
           </View>
