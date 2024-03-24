@@ -176,7 +176,7 @@ const Session: React.FC = () => {
             {new Date(time * 1000).toISOString().substr(11, 8)}{" "}
           </Text>
         </View>
-        <View className="flex flex-row mt-16 justify-evenly">
+        <View style={{ flexDirection: 'row', marginTop: 25, justifyContent: 'space-evenly' }}>
           <TouchableOpacity
             onPress={handleStartStop}
             className={`rounded-full aspect-square w-20 flex justify-center items-center ${

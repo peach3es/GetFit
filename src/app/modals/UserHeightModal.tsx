@@ -8,6 +8,7 @@ import {
   Text,
   TouchableOpacity,
 } from "react-native";
+import { Picker } from '@react-native-picker/picker';
 import DatabaseManager from "../services/DatabaseManager"; // Adjust the import path as necessary
 
 type UserHeightModalProps = {
@@ -23,56 +24,62 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
 }) => {
   const [height, setHeight] = useState("");
   const [isMetric, setIsMetric] = useState(true);
+  const [centimeters, setCentimeters] = useState(0);
+  const [feet, setFeet] = useState(0);
+  const [inches, setInches] = useState(0);
+  const cmArray = Array.from({ length: 273 }, (_, i) => i);
+  const feetArray = Array.from({ length: 9 }, (_, i) => i);
+  const inchesArray = Array.from({ length: 12 }, (_, i) => i);
+
 
   useEffect(() => {
     if (visible) {
       DatabaseManager.getUserProfile((success, data) => {
         if (success && Array.isArray(data) && data.length > 0) {
           const userProfile = data[0];
-          const heightUnitPref = userProfile.heightUnitPref || "metric";
-          setIsMetric(heightUnitPref === "metric");
-
-          // If height is not null, set it; otherwise, set an empty string
-          if (userProfile.height !== null) {
-            const heightCm = userProfile.height;
-            setHeight(
-              heightUnitPref === "metric"
-                ? heightCm.toString()
-                : convertCmToFtIn(heightCm)
-            );
+          const heightUnitPref = userProfile.heightUnitPref || 'metric';
+          setIsMetric(heightUnitPref === 'metric');
+          const heightValue = userProfile.height || 0;
+  
+          // If the user preference is metric, set the centimeters directly
+          if (heightUnitPref === 'metric') {
+            setCentimeters(heightValue);
           } else {
-            setHeight("");
+            // If the user preference is imperial, convert centimeters to feet and inches and set them
+            const { feet, inches } = convertCmToFtIn(heightValue);
+            setFeet(feet);
+            setInches(inches);
           }
         } else {
           console.log("No user profile data found or an error occurred");
-          setHeight("");
+          // Set default or empty values if no height is found
+          setCentimeters(0);
+          setFeet(0);
+          setInches(0);
         }
       });
     }
   }, [visible]);
+  
 
-  const convertCmToFtIn = (cm: number): string => {
+  const convertCmToFtIn = (cm: number) => {
     const totalInches = cm / 2.54;
     const feet = Math.floor(totalInches / 12);
     const inches = Math.round(totalInches % 12);
-    return `${feet}'${inches}"`; // Returns the string in the format X'Y"
+    return { feet, inches };
   };
 
-  const convertDecimalFeetToCm = (decimalFeet: string): number => {
-    const feet = Math.floor(parseFloat(decimalFeet));
-    const inches = Math.round((parseFloat(decimalFeet) - feet) * 12); // Assumes the decimal part represents inches
-    return (feet * 12 + inches) * 2.54;
+  const convertFtInToCm = (feet: number, inches: number) => {
+    return Math.round((feet * 12 + inches) * 2.54);
   };
 
   const saveHeight = () => {
-    let heightToSave = isMetric
-      ? parseFloat(height)
-      : convertDecimalFeetToCm(height);
-    const unitPref = isMetric ? "metric" : "imperial";
+    const heightToSave = isMetric ? centimeters : convertFtInToCm(feet, inches);
+    const heightUnitPref = isMetric ? "metric" : "imperial";
 
     DatabaseManager.setUserHeightAndUnitPref(
       heightToSave,
-      unitPref,
+      heightUnitPref,
       (success, data) => {
         if (success) {
           console.log("Height and unit preference saved successfully");
@@ -87,23 +94,16 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
 
   const toggleUnit = (value: boolean) => {
     setIsMetric(value);
-
-    // Determine the conversion based on the current and new unit settings
-    let newHeight = "";
-    if (height) {
-      if (isMetric && !value) {
-        // If we're currently in metric and switching to imperial, convert from cm to ft/in
-        const cmValue = parseFloat(height);
-        if (!isNaN(cmValue)) {
-          newHeight = convertCmToFtIn(cmValue);
-        }
-      } else if (!isMetric && value) {
-        // If we're currently in imperial (as a decimal) and switching to metric, convert from ft/in to cm
-        newHeight = convertDecimalFeetToCm(height).toString();
-      }
+    if (value) {
+      // Convert from feet and inches to centimeters
+      const cmValue = convertFtInToCm(feet, inches);
+      setCentimeters(cmValue);
+    } else {
+      // Convert from centimeters to feet and inches
+      const { feet: ft, inches: inc } = convertCmToFtIn(centimeters);
+      setFeet(ft);
+      setInches(inc);
     }
-
-    setHeight(newHeight || "");
   };
 
   return (
@@ -118,17 +118,37 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
           <Text className="text-bl dark:text-gr text-2xl mb-5 items-center text-center">
             Height
           </Text>
-          <TextInput
-            keyboardType="numeric"
-            placeholder={
-              isMetric
-                ? "Enter your height in cm"
-                : "Enter your height as ft.in"
-            }
-            value={height}
-            onChangeText={setHeight}
-            className="text-bl dark:text-gr text-xl border-2 border-red dark:border-gr h-12 rounded-xl text-center"
-          />
+          {isMetric ? (
+            <View style={{ flexDirection: "row", justifyContent: "center" }}>
+              <Picker
+                selectedValue={centimeters}
+                onValueChange={(itemValue) => setCentimeters(itemValue)}
+                style={{ height: 50, width: 133 }}>
+                {Array.from({ length: 273 }, (_, i) => i).map((value) => (
+                  <Picker.Item label={`${value} cm`} value={value} key={value} />
+                ))}
+              </Picker>
+            </View>
+          ) : (
+            <View style={{ flexDirection: "row", justifyContent: "center" }}>
+              <Picker
+                selectedValue={feet}
+                onValueChange={(itemValue) => setFeet(itemValue)}
+                style={{ height: 50, width: 115 }}>
+                {Array.from({ length: 9 }, (_, i) => i).map((value) => (
+                  <Picker.Item label={`${value} ft`} value={value} key={value} />
+                ))}
+              </Picker>
+              <Picker
+                selectedValue={inches}
+                onValueChange={(itemValue) => setInches(itemValue)}
+                style={{ height: 50, width: 115 }}>
+                {Array.from({ length: 12 }, (_, i) => i).map((value) => (
+                  <Picker.Item label={`${value} in`} value={value} key={value} />
+                ))}
+              </Picker>
+            </View>
+          )}
           <View
             style={{
               flexDirection: "row",
@@ -138,7 +158,7 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
             }}
           >
             <Text className="text-bl dark:text-gr font-bold">
-              {isMetric ? "Metric (cm)" : "Imperial (ft.in)"}
+              {isMetric ? "Metric (cm)" : "Imperial (ft'in\"\)"}
             </Text>
             <Switch
               value={isMetric}

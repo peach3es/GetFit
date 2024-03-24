@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Modal, View, Button, Platform } from "react-native";
+import { Modal, View } from "react-native";
 import DateTimePicker from "@react-native-community/datetimepicker"; // Already installed for UserNameModal.tsx
 import DatabaseManager from "../services/DatabaseManager"; // Adjust the import path as necessary
 

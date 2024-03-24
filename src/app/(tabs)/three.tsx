@@ -179,7 +179,7 @@ export default function TabTwoScreen() {
           </Text>
         )}
         {/* Conditionally render the sex if it is available */}
-        {userSex !== null && (
+        {userSex !== '' && (
           <Text style={{ marginBottom: -20, textAlign: 'center' }}>
             Sex: {userSex}
           </Text>
@@ -187,7 +187,7 @@ export default function TabTwoScreen() {
         {/* Conditionally render the height if it is available */}
         {userHeight !== null && (
           <Text style={{ marginBottom: -20, textAlign: 'center' }}>
-            Height: {userHeight.toFixed(2)} cm
+            Height: {userHeight} cm
           </Text>
         )}
         {/* Conditionally render the weight if it is available */}

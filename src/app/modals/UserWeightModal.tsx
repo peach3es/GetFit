@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import {
   Modal,
   View,
-  Button,
   TextInput,
   Switch,
   Text,
@@ -75,40 +74,24 @@ const UserWeightModal: React.FC<UserWeightModalProps> = ({
     onClose(); // Close the modal regardless
   };
 
-  const toggleUnit = (value: boolean | ((prevState: boolean) => boolean)) => {
+  const toggleUnit = (value: boolean) => {
     setIsMetric(value);
-    setWeight(
-      value
-        ? (parseFloat(weight) / 2.20462).toFixed(2)
-        : (parseFloat(weight) * 2.20462).toFixed(2)
-    );
+  
+    // Check if the current weight is a number before converting
+    const currentWeight = parseFloat(weight);
+    if (!isNaN(currentWeight)) {
+      setWeight(
+        value
+          ? (currentWeight / 2.20462).toFixed(2) // Convert lbs to kg
+          : (currentWeight * 2.20462).toFixed(2) // Convert kg to lbs
+      );
+    } else {
+      setWeight(""); // If it's not a number, set it to an empty string
+    }
   };
+  
 
   return (
-    // <Modal
-    //   animationType="slide"
-    //   transparent={true}
-    //   visible={visible}
-    //   onRequestClose={onClose}
-    // >
-    //   <View style={{ marginTop: 50, padding: 20, backgroundColor: 'white' }}>
-    //     <TextInput
-    //       keyboardType="numeric"
-    //       placeholder={isMetric ? "Enter your weight in kg" : "Enter your weight in lbs"}
-    //       value={weight}
-    //       onChangeText={setWeight}
-    //     />
-    //     <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginVertical: 10 }}>
-    //       <Text>{isMetric ? "Metric (kg)" : "Imperial (lbs)"}</Text>
-    //       <Switch
-    //         value={isMetric}
-    //         onValueChange={toggleUnit}
-    //       />
-    //     </View>
-    //     <Button title="Ok" onPress={saveWeight} />
-    //     <Button title="Cancel" onPress={onClose} />
-    //   </View>
-    // </Modal>
     <Modal
       animationType="fade"
       transparent={true}

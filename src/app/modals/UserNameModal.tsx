@@ -3,7 +3,6 @@ import {
   Modal,
   View,
   TextInput,
-  Button,
   Text,
   TouchableOpacity,
 } from "react-native";
