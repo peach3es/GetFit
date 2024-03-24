@@ -8,7 +8,7 @@ import {
   Text,
   TouchableOpacity,
 } from "react-native";
-import { Picker } from '@react-native-picker/picker';
+import { Picker } from "@react-native-picker/picker";
 import DatabaseManager from "../services/DatabaseManager"; // Adjust the import path as necessary
 
 type UserHeightModalProps = {
@@ -31,18 +31,17 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
   const feetArray = Array.from({ length: 9 }, (_, i) => i);
   const inchesArray = Array.from({ length: 12 }, (_, i) => i);
 
-
   useEffect(() => {
     if (visible) {
       DatabaseManager.getUserProfile((success, data) => {
         if (success && Array.isArray(data) && data.length > 0) {
           const userProfile = data[0];
-          const heightUnitPref = userProfile.heightUnitPref || 'metric';
-          setIsMetric(heightUnitPref === 'metric');
+          const heightUnitPref = userProfile.heightUnitPref || "metric";
+          setIsMetric(heightUnitPref === "metric");
           const heightValue = userProfile.height || 0;
-  
+
           // If the user preference is metric, set the centimeters directly
-          if (heightUnitPref === 'metric') {
+          if (heightUnitPref === "metric") {
             setCentimeters(heightValue);
           } else {
             // If the user preference is imperial, convert centimeters to feet and inches and set them
@@ -60,7 +59,6 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
       });
     }
   }, [visible]);
-  
 
   const convertCmToFtIn = (cm: number) => {
     const totalInches = cm / 2.54;
@@ -122,10 +120,15 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
             <View style={{ flexDirection: "row", justifyContent: "center" }}>
               <Picker
                 selectedValue={centimeters}
-                onValueChange={(itemValue) => setCentimeters(itemValue)}
-                style={{ height: 50, width: 133 }}>
+                onValueChange={(itemValue: any) => setCentimeters(itemValue)}
+                style={{ height: 50, width: 133 }}
+              >
                 {Array.from({ length: 273 }, (_, i) => i).map((value) => (
-                  <Picker.Item label={`${value} cm`} value={value} key={value} />
+                  <Picker.Item
+                    label={`${value} cm`}
+                    value={value}
+                    key={value}
+                  />
                 ))}
               </Picker>
             </View>
@@ -133,18 +136,28 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
             <View style={{ flexDirection: "row", justifyContent: "center" }}>
               <Picker
                 selectedValue={feet}
-                onValueChange={(itemValue) => setFeet(itemValue)}
-                style={{ height: 50, width: 115 }}>
+                onValueChange={(itemValue: any) => setFeet(itemValue)}
+                style={{ height: 50, width: 115 }}
+              >
                 {Array.from({ length: 9 }, (_, i) => i).map((value) => (
-                  <Picker.Item label={`${value} ft`} value={value} key={value} />
+                  <Picker.Item
+                    label={`${value} ft`}
+                    value={value}
+                    key={value}
+                  />
                 ))}
               </Picker>
               <Picker
                 selectedValue={inches}
-                onValueChange={(itemValue) => setInches(itemValue)}
-                style={{ height: 50, width: 115 }}>
+                onValueChange={(itemValue: any) => setInches(itemValue)}
+                style={{ height: 50, width: 115 }}
+              >
                 {Array.from({ length: 12 }, (_, i) => i).map((value) => (
-                  <Picker.Item label={`${value} in`} value={value} key={value} />
+                  <Picker.Item
+                    label={`${value} in`}
+                    value={value}
+                    key={value}
+                  />
                 ))}
               </Picker>
             </View>
@@ -158,7 +171,7 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
             }}
           >
             <Text className="text-bl dark:text-gr font-bold">
-              {isMetric ? "Metric (cm)" : "Imperial (ft'in\"\)"}
+              {isMetric ? "Metric (cm)" : "Imperial (ft'in\")"}
             </Text>
             <Switch
               value={isMetric}
