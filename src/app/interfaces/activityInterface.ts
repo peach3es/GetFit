@@ -7,7 +7,7 @@ export interface Activity {
   endTime: string;
   duration: number;
   heartRateAverage: number | null;
-  steps: number | null;
+  steps: number;
   caloriesBurned: number | null;
 }
 

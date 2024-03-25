@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, FlatList } from "react-native";
-import { Activity, ListActivitiesCallback } from "../types/activityTypes";
+import { Activity, ListActivitiesCallback } from "../interfaces/activityInterface";
 import DatabaseManager from "../services/DatabaseManager";
 import { useLocalSearchParams } from "expo-router";
 import WorkoutCard from "@/src/components/workoutCard";
@@ -37,7 +37,7 @@ const History: React.FC = () => {
               startTime={item.startTime}
               endTime={item.endTime}
               duration={item.duration}
-              steps={item.steps || null}
+              steps={item.steps}
             />
           )}
           // nestedScrollEnabled={true} // Enable nested scrolling for Android

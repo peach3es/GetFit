@@ -1,12 +1,12 @@
 import React from "react";
-import { View, Text, useColorScheme } from "react-native";
+import { View, Text, useColorScheme, InteractionManager } from "react-native";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Pedometer } from "expo-sensors";
 import { useState, useEffect } from "react";
+import DatabaseManager from "../services/DatabaseManager";
 import { Iconify } from "react-native-iconify";
 
 export default function Daily() {
-  // const [isPedometerAvailable, setIsPedometerAvailable] = useState("checking");
-
   const colorScheme = useColorScheme();
   const iconColor = colorScheme === "dark" ? "#93cd64" : "#b33534";
 
@@ -14,7 +14,6 @@ export default function Daily() {
 
   const subscribe = async () => {
     const isAvailable = await Pedometer.isAvailableAsync();
-    // setIsPedometerAvailable(String(isAvailable));
 
     if (isAvailable) {
       Pedometer.requestPermissionsAsync();
@@ -25,18 +24,62 @@ export default function Daily() {
   };
 
   useEffect(() => {
+    // Load the initial step count from AsyncStorage when the app starts
+    const loadStepCount = async () => {
+      const storedStepCount = await AsyncStorage.getItem('dailyStepCount');
+      setCurrentStepCount(storedStepCount ? parseInt(storedStepCount, 10) : 0);
+    };
+
+    loadStepCount();
+
     const setupSubscription = async () => {
       const sub = await subscribe();
+
+      // Save the steps at 23:59:59 every day
+      const endTime = new Date();
+      endTime.setHours(23, 59, 59, 999);
+      const timeout = endTime.getTime() - Date.now();
+      const dailySaveTimeout = setTimeout(saveDailyData, timeout);
 
       // Cleanup function
       return () => {
         // Check if subscription is defined before accessing remove
         sub && sub.remove();
+        clearTimeout(dailySaveTimeout);
       };
     };
 
-    setupSubscription();
+    InteractionManager.runAfterInteractions(() => {
+      setupSubscription();
+    });
   }, []);
+
+  const createDailyData = () => {
+    const currentDate = new Date();
+    const formattedDate = currentDate.toLocaleDateString("en-US", {
+      year: "2-digit",
+      month: "2-digit",
+      day: "2-digit",
+    });
+    return {
+      date: formattedDate,
+      heartRateAverage: null,
+      steps: currentStepCount,
+      caloriesBurned: null,
+    };
+  };
+
+  const saveDailyData = async () => {
+    const dailyData = createDailyData();
+    DatabaseManager.addDailyData(dailyData, (success, result) => {
+      if (success) {
+        console.log("Daily data saved:", result);
+      } else {
+        console.log("Error saving daily data:", result);
+      }
+    });
+    await AsyncStorage.setItem('dailyStepCount', currentStepCount.toString());
+  }
 
   return (
     <View className="">
@@ -97,7 +140,7 @@ export default function Daily() {
                 />
               </View>
               <Text className="w-fit text-w2 dark:text-bl">
-                Steps: {currentStepCount}{" "}
+                Steps: {currentStepCount}
               </Text>
             </View>
           </View>

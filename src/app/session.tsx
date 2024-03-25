@@ -1,8 +1,8 @@
-import { StyleSheet, Text, View, TouchableOpacity, Modal } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Modal, InteractionManager } from "react-native";
 import React, { useState, useEffect } from "react";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation, useLocalSearchParams, Link } from "expo-router";
 import DatabaseManager from "./services/DatabaseManager";
-import workout from "./Home/Workouts";
 import { Pedometer } from "expo-sensors";
 import { Subscription } from "expo-sensors/build/Pedometer";
 
@@ -13,7 +13,10 @@ const Session: React.FC = () => {
     : route.workoutName || "Workout Name";
   const [isActive, setIsActive] = useState<boolean>(true);
   const [time, setTime] = useState<number>(0);
-  const [startTime, setStartTime] = useState<Date | null>(null);
+  const [startTime, setStartTime] = useState<Date | undefined>(undefined);
+  const [initialSteps, setInitialSteps] = useState<number>(0);
+  const [workoutSteps, setWorkoutSteps] = useState<number>(0);
+  const [sessionSubscription, setSessionSubscription] = useState<Subscription | null>(null);
 
   // Create a new Date object and format it
   const currentDate = new Date();
@@ -25,55 +28,92 @@ const Session: React.FC = () => {
 
   useEffect(() => {
     let interval: any = null;
-
+    let lastStepCount = 0;
+    let workoutStarted = false;
+  
+    const subscribeToStepCount = () => {
+      const sub = Pedometer.watchStepCount(result => {
+        if (!workoutStarted) {
+          lastStepCount = result.steps;
+          workoutStarted = true;
+        } else {
+          // Update the step count for the workout session
+          const stepsDuringWorkout = result.steps - lastStepCount;
+          setWorkoutSteps(stepsDuringWorkout);
+        }
+      });
+      setSessionSubscription(sub);
+    };
+  
     if (isActive) {
+      subscribeToStepCount();
       interval = setInterval(() => {
-        setTime((time) => time + 1);
+        setTime(prevTime => prevTime + 1);
       }, 1000);
-    } else if (!isActive && time !== 0) {
+    } else if (sessionSubscription) {
+      sessionSubscription.remove();
+      setSessionSubscription(null);
       clearInterval(interval);
     }
+  
     return () => {
+      if (sessionSubscription) {
+        sessionSubscription.remove();
+        setSessionSubscription(null);
+      }
       clearInterval(interval);
     };
   }, [isActive]);
+    
 
   const handleStartStop = () => {
     if (isActive) {
-      // If the timer is currently active (running), then we pause it
+      // Stopping the workout
       setIsActive(false);
+      // No need to call `remove()` here, it's already handled in the useEffect cleanup
     } else {
-      // If the timer is not active (paused), then we start it without changing the startTime
+      // Starting the workout
       setIsActive(true);
-      // If it's the first start (startTime is null), record the startTime
-      if (!startTime) {
-        setStartTime(new Date());
-      }
     }
   };
 
   const handleReset = () => {
     setIsActive(false);
     setTime(0);
-    setStartTime(null);
+    setStartTime(undefined);
+    setWorkoutSteps(0);
   };
 
-  const handleSave = () => {
-    if (startTime == null) {
+  const handleSave = async () => {
+    if (startTime == undefined) {
       return;
     } else {
       const activity = createActivity();
-      DatabaseManager.addActivity(activity, (success, result) => {
+      DatabaseManager.addActivity(activity, async (success, result) => {
         if (success) {
           console.log("Activity data saved:", result);
+          // Run AsyncStorage operations in the background after interactions are complete
+          InteractionManager.runAfterInteractions(async () => {
+            try {
+              // Load the current daily step count, update it, and save it back
+              const storedStepCount = await AsyncStorage.getItem('dailyStepCount');
+              const dailyStepCount = storedStepCount ? parseInt(storedStepCount, 10) : 0;
+              const updatedDailySteps = dailyStepCount + workoutSteps;
+              await AsyncStorage.setItem('dailyStepCount', updatedDailySteps.toString());
+            } catch (error) {
+              console.error("Failed to save daily steps to AsyncStorage", error);
+            }
+          });
         } else {
           console.log("Error saving activity data:", result);
         }
       });
 
+      // Reset the workout state
       setIsActive(false);
       setTime(0);
-      setStartTime(null);
+      setStartTime(undefined);
+      setWorkoutSteps(0);
     }
   };
 
@@ -109,7 +149,7 @@ const Session: React.FC = () => {
       endTime: formattedEndTime,
       duration: time,
       heartRateAverage: null, // Update with actual data later
-      steps: null, // Update with actual data later
+      steps: workoutSteps,
       caloriesBurned: null, // Update with actual data later
     };
   };
@@ -208,10 +248,7 @@ const Session: React.FC = () => {
       </View>
       <View className="flex h-1/5 bg-w1 dark:bg-bl2 rounded-t-xl justify-between">
         <View className="flex flex-col ">
-          <Text className="text-bl dark:text-w2 text-4xl mt-5 pl-5">Steps</Text>
-          <Text className="text-bl dark:text-w2 text-4xl mt-2 pl-5">
-            number goes here
-          </Text>
+          <Text className="text-bl dark:text-w2 text-4xl mt-5 pl-5">{isActive && <Text>Steps: {workoutSteps}</Text>}</Text>
         </View>
       </View>
     </View>
