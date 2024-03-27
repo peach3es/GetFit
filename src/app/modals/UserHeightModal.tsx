@@ -2,14 +2,12 @@ import React, { useState, useEffect } from "react";
 import {
   Modal,
   View,
-  Button,
-  TextInput,
   Switch,
   Text,
   TouchableOpacity,
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
-import DatabaseManager from "../services/DatabaseManager"; // Adjust the import path as necessary
+import DatabaseManager from "../services/DatabaseManager";
 
 type UserHeightModalProps = {
   visible: boolean;
@@ -22,14 +20,21 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
   onClose,
   onUpdate,
 }) => {
-  const [height, setHeight] = useState("");
   const [isMetric, setIsMetric] = useState(true);
-  const [centimeters, setCentimeters] = useState(0);
-  const [feet, setFeet] = useState(0);
-  const [inches, setInches] = useState(0);
-  const cmArray = Array.from({ length: 273 }, (_, i) => i);
-  const feetArray = Array.from({ length: 9 }, (_, i) => i);
-  const inchesArray = Array.from({ length: 12 }, (_, i) => i);
+  const [centimeters, setCentimeters] = useState(69);
+  const [feet, setFeet] = useState(2);
+  const [inches, setInches] = useState(3);
+  // Adjust the ranges based on the min and max values
+  const cmArray = Array.from({ length: 204 }, (_, i) => 69 + i); // 69 to 272 cm
+  // For feet and inches, dynamically adjust based on selection
+  const getFeetArray = () => Array.from({ length: 7 }, (_, i) => 2 + i); // 2 to 8 feet
+  const getInchesArray = (selectedFeet: number) => {
+    if (selectedFeet === 2) {
+      return Array.from({ length: 9 }, (_, i) => 3 + i); // 3 to 11 inches if feet is 2
+    } else {
+      return Array.from({ length: 12 }, (_, i) => i); // 0 to 11 inches otherwise
+    }
+  };
 
   useEffect(() => {
     if (visible) {
@@ -38,23 +43,20 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
           const userProfile = data[0];
           const heightUnitPref = userProfile.heightUnitPref || "metric";
           setIsMetric(heightUnitPref === "metric");
-          const heightValue = userProfile.height || 0;
+          const heightValue = Math.max(69, Math.min(userProfile.height || 0, 272));
 
-          // If the user preference is metric, set the centimeters directly
           if (heightUnitPref === "metric") {
             setCentimeters(heightValue);
           } else {
-            // If the user preference is imperial, convert centimeters to feet and inches and set them
             const { feet, inches } = convertCmToFtIn(heightValue);
             setFeet(feet);
             setInches(inches);
           }
         } else {
-          console.log("No user profile data found or an error occurred");
-          // Set default or empty values if no height is found
-          setCentimeters(0);
-          setFeet(0);
-          setInches(0);
+          // Set to minimum values by default
+          setCentimeters(69);
+          setFeet(2);
+          setInches(3);
         }
       });
     }
@@ -62,13 +64,57 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
 
   const convertCmToFtIn = (cm: number) => {
     const totalInches = cm / 2.54;
-    const feet = Math.floor(totalInches / 12);
-    const inches = Math.round(totalInches % 12);
+    let feet = Math.floor(totalInches / 12);
+    let inches = totalInches % 12;
+  
+    // Check for edge case where inches are almost zero but due to floating-point arithmetic they're slightly less than 0.5
+    if (Math.abs(inches - 0) < 0.5) {
+      inches = 0; // Reset inches to zero if they're less than half an inch
+    } else {
+      inches = Math.round(inches); // Round to nearest whole number for any other case
+    }
+  
+    // If we have a scenario where inches rounded to 12, that should actually increment the feet by 1 and reset inches to 0
+    if (inches >= 12) {
+      feet += 1;
+      inches = 0;
+    }
+  
     return { feet, inches };
   };
-
+  
   const convertFtInToCm = (feet: number, inches: number) => {
-    return Math.round((feet * 12 + inches) * 2.54);
+    const totalInches = feet * 12 + inches;
+    // Convert total inches to cm
+    return Math.round(totalInches * 2.54);
+  };
+  
+  const toggleUnit = (value: boolean) => {
+    setIsMetric(value);
+    if (value) {
+      // Convert from feet and inches to centimeters
+      setCentimeters(convertFtInToCm(feet, inches));
+    } else {
+      // Convert from centimeters to feet and inches
+      const conversion = convertCmToFtIn(centimeters);
+      setFeet(conversion.feet);
+      setInches(conversion.inches);
+    }
+  };
+
+  const onFeetChange = (value: number) => {
+    // Directly updating the feet and handling inches within the same state change
+    setFeet(value);
+    if (value === 2 && inches < 3) {
+      setInches(3);
+    } else if (value === 8 && inches > 11) {
+      setInches(11);
+    }
+  };
+
+  const onInchesChange = (value: number) => {
+    // Directly updating the inches state
+    setInches(value);
   };
 
   const saveHeight = () => {
@@ -90,20 +136,6 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
     );
   };
 
-  const toggleUnit = (value: boolean) => {
-    setIsMetric(value);
-    if (value) {
-      // Convert from feet and inches to centimeters
-      const cmValue = convertFtInToCm(feet, inches);
-      setCentimeters(cmValue);
-    } else {
-      // Convert from centimeters to feet and inches
-      const { feet: ft, inches: inc } = convertCmToFtIn(centimeters);
-      setFeet(ft);
-      setInches(inc);
-    }
-  };
-
   return (
     <Modal
       animationType="fade"
@@ -123,12 +155,8 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
                 onValueChange={(itemValue: any) => setCentimeters(itemValue)}
                 style={{ height: 50, width: 133 }}
               >
-                {Array.from({ length: 273 }, (_, i) => i).map((value) => (
-                  <Picker.Item
-                    label={`${value} cm`}
-                    value={value}
-                    key={value}
-                  />
+                {cmArray.map((value) => (
+                  <Picker.Item label={`${value} cm`} value={value} key={value} />
                 ))}
               </Picker>
             </View>
@@ -136,28 +164,20 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
             <View style={{ flexDirection: "row", justifyContent: "center" }}>
               <Picker
                 selectedValue={feet}
-                onValueChange={(itemValue: any) => setFeet(itemValue)}
+                onValueChange={onFeetChange}
                 style={{ height: 50, width: 115 }}
               >
-                {Array.from({ length: 9 }, (_, i) => i).map((value) => (
-                  <Picker.Item
-                    label={`${value} ft`}
-                    value={value}
-                    key={value}
-                  />
+                {getFeetArray().map((value) => (
+                  <Picker.Item label={`${value} ft`} value={value} key={value} />
                 ))}
               </Picker>
               <Picker
                 selectedValue={inches}
-                onValueChange={(itemValue: any) => setInches(itemValue)}
+                onValueChange={onInchesChange}
                 style={{ height: 50, width: 115 }}
               >
-                {Array.from({ length: 12 }, (_, i) => i).map((value) => (
-                  <Picker.Item
-                    label={`${value} in`}
-                    value={value}
-                    key={value}
-                  />
+                {getInchesArray(feet).map((value) => (
+                  <Picker.Item label={`${value} in`} value={value} key={value} />
                 ))}
               </Picker>
             </View>
