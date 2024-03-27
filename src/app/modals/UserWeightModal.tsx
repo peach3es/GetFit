@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
+  Alert,
   Modal,
   View,
   TextInput,
@@ -14,6 +15,11 @@ type UserWeightModalProps = {
   onClose: () => void;
   onUpdate: () => void;
 };
+
+const MAX_WEIGHT_KG = 272.00; // Maximum weight in kilograms
+const MIN_WEIGHT_KG = 30.00; // Minimum weight in kilograms
+const MAX_WEIGHT_LBS = MAX_WEIGHT_KG * 2.20462; // Convert maximum weight to pounds
+const MIN_WEIGHT_LBS = MIN_WEIGHT_KG * 2.20462; // Convert minimum weight to pounds
 
 const UserWeightModal: React.FC<UserWeightModalProps> = ({
   visible,
@@ -50,45 +56,57 @@ const UserWeightModal: React.FC<UserWeightModalProps> = ({
     }
   }, [visible]);
 
-  const saveWeight = () => {
-    // Only proceed if the weight input is not empty
-    if (weight.trim() !== "") {
-      let weightToSave = isMetric
-        ? parseFloat(weight)
-        : parseFloat(weight) / 2.20462; // Convert lbs to kg if imperial
-      const unitPref = isMetric ? "metric" : "imperial";
-
-      DatabaseManager.setUserWeightAndUnitPref(
-        weightToSave,
-        unitPref,
-        (success, data) => {
-          if (success) {
-            console.log("Weight and unit preference saved successfully");
-            onUpdate(); // Trigger any updates in the parent component
-          } else {
-            console.error("Failed to save weight and unit preference");
-          }
-        }
-      );
-    }
-    onClose(); // Close the modal regardless
-  };
-
   const toggleUnit = (value: boolean) => {
     setIsMetric(value);
   
     // Check if the current weight is a number before converting
     const currentWeight = parseFloat(weight);
     if (!isNaN(currentWeight)) {
-      setWeight(
-        value
-          ? (currentWeight / 2.20462).toFixed(2) // Convert lbs to kg
-          : (currentWeight * 2.20462).toFixed(2) // Convert kg to lbs
-      );
+      const convertedWeight = value
+        ? Math.min(Math.max(currentWeight / 2.20462, MIN_WEIGHT_KG), MAX_WEIGHT_KG).toFixed(2)
+        : Math.min(Math.max(currentWeight * 2.20462, MIN_WEIGHT_LBS), MAX_WEIGHT_LBS).toFixed(2);
+
+      setWeight(convertedWeight);
     } else {
       setWeight(""); // If it's not a number, set it to an empty string
     }
   };
+  
+  const saveWeight = () => {
+    const numericWeight = parseFloat(weight);
+    if (isNaN(numericWeight)) {
+      Alert.alert("Invalid Weight", "Entered weight is not a number.");
+      return; // Early return if not a valid number
+    }
+  
+    const weightInKg = isMetric ? numericWeight : numericWeight / 2.20462;
+    const unitPref = isMetric ? "metric" : "imperial";
+    const minWeight = isMetric ? MIN_WEIGHT_KG : MIN_WEIGHT_LBS;
+    const maxWeight = isMetric ? MAX_WEIGHT_KG : MAX_WEIGHT_LBS;
+  
+    // Validate weight is within the allowed range
+    if (numericWeight < minWeight || numericWeight > maxWeight && numericWeight != 599.66) {
+      const weightType = unitPref === "imperial" ? "lbs" : "kg";
+      Alert.alert("Invalid Weight", `Weight must be between ${minWeight.toFixed(2)} and ${maxWeight.toFixed(2)} ${weightType}.`);
+      return; // Early return if weight is outside the valid range
+    }
+  
+    // Save weight and unit preference
+    DatabaseManager.setUserWeightAndUnitPref(
+      weightInKg,
+      unitPref,
+      (success, data) => {
+        if (success) {
+          console.log("Weight and unit preference saved successfully");
+          onUpdate();
+          onClose();
+        } else {
+          console.error("Failed to save weight and unit preference");
+        }
+      }
+    );
+  };
+  
   
 
   return (
