@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Modal,
-  View,
-  Switch,
-  Text,
-  TouchableOpacity,
-} from "react-native";
+import { Modal, View, Switch, Text, TouchableOpacity } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import DatabaseManager from "../services/DatabaseManager";
 
@@ -43,7 +37,10 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
           const userProfile = data[0];
           const heightUnitPref = userProfile.heightUnitPref || "metric";
           setIsMetric(heightUnitPref === "metric");
-          const heightValue = Math.max(69, Math.min(userProfile.height || 0, 272));
+          const heightValue = Math.max(
+            69,
+            Math.min(userProfile.height || 0, 272)
+          );
 
           if (heightUnitPref === "metric") {
             setCentimeters(heightValue);
@@ -66,29 +63,29 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
     const totalInches = cm / 2.54;
     let feet = Math.floor(totalInches / 12);
     let inches = totalInches % 12;
-  
+
     // Check for edge case where inches are almost zero but due to floating-point arithmetic they're slightly less than 0.5
     if (Math.abs(inches - 0) < 0.5) {
       inches = 0; // Reset inches to zero if they're less than half an inch
     } else {
       inches = Math.round(inches); // Round to nearest whole number for any other case
     }
-  
+
     // If we have a scenario where inches rounded to 12, that should actually increment the feet by 1 and reset inches to 0
     if (inches >= 12) {
       feet += 1;
       inches = 0;
     }
-  
+
     return { feet, inches };
   };
-  
+
   const convertFtInToCm = (feet: number, inches: number) => {
     const totalInches = feet * 12 + inches;
     // Convert total inches to cm
     return Math.round(totalInches * 2.54);
   };
-  
+
   const toggleUnit = (value: boolean) => {
     setIsMetric(value);
     if (value) {
@@ -144,7 +141,7 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
       onRequestClose={onClose}
     >
       <View className="flex justify-center items-center h-full">
-        <View className="bg-w1 dark:bg-bl2 p-8 rounded-xl w-[80%]">
+        <View className="bg-w1 dark:bg-bl2 p-8 rounded-xl w-[80%] shadow-md shadow-bl">
           <Text className="text-bl dark:text-gr text-2xl mb-5 items-center text-center">
             Height
           </Text>
@@ -156,7 +153,11 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
                 style={{ height: 50, width: 133 }}
               >
                 {cmArray.map((value) => (
-                  <Picker.Item label={`${value} cm`} value={value} key={value} />
+                  <Picker.Item
+                    label={`${value} cm`}
+                    value={value}
+                    key={value}
+                  />
                 ))}
               </Picker>
             </View>
@@ -168,7 +169,11 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
                 style={{ height: 50, width: 115 }}
               >
                 {getFeetArray().map((value) => (
-                  <Picker.Item label={`${value} ft`} value={value} key={value} />
+                  <Picker.Item
+                    label={`${value} ft`}
+                    value={value}
+                    key={value}
+                  />
                 ))}
               </Picker>
               <Picker
@@ -177,7 +182,11 @@ const UserHeightModal: React.FC<UserHeightModalProps> = ({
                 style={{ height: 50, width: 115 }}
               >
                 {getInchesArray(feet).map((value) => (
-                  <Picker.Item label={`${value} in`} value={value} key={value} />
+                  <Picker.Item
+                    label={`${value} in`}
+                    value={value}
+                    key={value}
+                  />
                 ))}
               </Picker>
             </View>

@@ -80,6 +80,16 @@ export default function TabLayout() {
           ),
         }}
       />
+      {/* <Tabs.Screen
+        name="InitialForm"
+        options={{
+          title: "Profile",
+          headerShown: false, //Shows Top header or not
+          tabBarIcon: ({ color }) => (
+            <Iconify icon={"solar:user-line-duotone"} size={36} color={color} />
+          ),
+        }}
+      /> */}
     </Tabs>
   );
 }

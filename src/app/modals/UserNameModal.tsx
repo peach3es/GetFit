@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Modal,
-  View,
-  TextInput,
-  Text,
-  TouchableOpacity,
-} from "react-native";
+import { Modal, View, TextInput, Text, TouchableOpacity } from "react-native";
 import DatabaseManager from "../services/DatabaseManager";
 import { DeviceEventEmitter } from "react-native";
 
@@ -55,7 +49,7 @@ const UserNameModal: React.FC<UserNameModalProps> = ({
       onRequestClose={onClose}
     >
       <View className="flex justify-center items-center h-full">
-        <View className="bg-w1 p-5 rounded-xl w-[75%]">
+        <View className="bg-w1 p-5 rounded-xl w-[75%] shadow-md shadow-bl">
           <Text className="text-bl dark:text-b1 text-2xl mb-5 items-center text-center">
             What is your name?
           </Text>

@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, useColorScheme, InteractionManager } from "react-native";
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Pedometer } from "expo-sensors";
 import { useState, useEffect } from "react";
 import DatabaseManager from "../services/DatabaseManager";
@@ -26,7 +26,7 @@ export default function Daily() {
   useEffect(() => {
     // Load the initial step count from AsyncStorage when the app starts
     const loadStepCount = async () => {
-      const storedStepCount = await AsyncStorage.getItem('dailyStepCount');
+      const storedStepCount = await AsyncStorage.getItem("dailyStepCount");
       setCurrentStepCount(storedStepCount ? parseInt(storedStepCount, 10) : 0);
     };
 
@@ -78,8 +78,8 @@ export default function Daily() {
         console.log("Error saving daily data:", result);
       }
     });
-    await AsyncStorage.setItem('dailyStepCount', currentStepCount.toString());
-  }
+    await AsyncStorage.setItem("dailyStepCount", currentStepCount.toString());
+  };
 
   return (
     <View className="">
@@ -139,7 +139,7 @@ export default function Daily() {
                   color={iconColor}
                 />
               </View>
-              <Text className="w-fit text-w2 dark:text-bl">
+              <Text className="w-fit text-w2 dark:text-bl font-medium">
                 Steps: {currentStepCount}
               </Text>
             </View>

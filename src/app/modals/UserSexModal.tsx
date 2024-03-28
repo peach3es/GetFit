@@ -59,7 +59,7 @@ const UserSexModal: React.FC<UserSexModalProps> = ({
       onRequestClose={onClose}
     >
       <View className="flex justify-center items-center h-full">
-        <View className="bg-w1 p-8 rounded-xl w-[80%]">
+        <View className="bg-w1 p-8 rounded-xl w-[80%] shadow-md shadow-bl">
           <TouchableOpacity
             activeOpacity={0.7}
             className="absolute top-5 right-5"

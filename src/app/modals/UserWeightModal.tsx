@@ -16,8 +16,8 @@ type UserWeightModalProps = {
   onUpdate: () => void;
 };
 
-const MAX_WEIGHT_KG = 272.00; // Maximum weight in kilograms
-const MIN_WEIGHT_KG = 30.00; // Minimum weight in kilograms
+const MAX_WEIGHT_KG = 272.0; // Maximum weight in kilograms
+const MIN_WEIGHT_KG = 30.0; // Minimum weight in kilograms
 const MAX_WEIGHT_LBS = MAX_WEIGHT_KG * 2.20462; // Convert maximum weight to pounds
 const MIN_WEIGHT_LBS = MIN_WEIGHT_KG * 2.20462; // Convert minimum weight to pounds
 
@@ -58,39 +58,53 @@ const UserWeightModal: React.FC<UserWeightModalProps> = ({
 
   const toggleUnit = (value: boolean) => {
     setIsMetric(value);
-  
+
     // Check if the current weight is a number before converting
     const currentWeight = parseFloat(weight);
     if (!isNaN(currentWeight)) {
       const convertedWeight = value
-        ? Math.min(Math.max(currentWeight / 2.20462, MIN_WEIGHT_KG), MAX_WEIGHT_KG).toFixed(2)
-        : Math.min(Math.max(currentWeight * 2.20462, MIN_WEIGHT_LBS), MAX_WEIGHT_LBS).toFixed(2);
+        ? Math.min(
+            Math.max(currentWeight / 2.20462, MIN_WEIGHT_KG),
+            MAX_WEIGHT_KG
+          ).toFixed(2)
+        : Math.min(
+            Math.max(currentWeight * 2.20462, MIN_WEIGHT_LBS),
+            MAX_WEIGHT_LBS
+          ).toFixed(2);
 
       setWeight(convertedWeight);
     } else {
       setWeight(""); // If it's not a number, set it to an empty string
     }
   };
-  
+
   const saveWeight = () => {
     const numericWeight = parseFloat(weight);
     if (isNaN(numericWeight)) {
       Alert.alert("Invalid Weight", "Entered weight is not a number.");
       return; // Early return if not a valid number
     }
-  
+
     const weightInKg = isMetric ? numericWeight : numericWeight / 2.20462;
     const unitPref = isMetric ? "metric" : "imperial";
     const minWeight = isMetric ? MIN_WEIGHT_KG : MIN_WEIGHT_LBS;
     const maxWeight = isMetric ? MAX_WEIGHT_KG : MAX_WEIGHT_LBS;
-  
+
     // Validate weight is within the allowed range
-    if (numericWeight < minWeight || numericWeight > maxWeight && numericWeight != 599.66) {
+    if (
+      numericWeight < minWeight ||
+      (numericWeight > maxWeight && numericWeight != 599.66)
+    ) {
       const weightType = unitPref === "imperial" ? "lbs" : "kg";
-      Alert.alert("Invalid Weight", `Weight must be between ${minWeight.toFixed(2)} and ${maxWeight.toFixed(2)} ${weightType}.`);
+      Alert.alert(
+        "Invalid Weight",
+        `Weight must be between ${minWeight.toFixed(2)} and ${maxWeight.toFixed(
+          2
+        )} ${weightType}.`
+      );
       return; // Early return if weight is outside the valid range
     }
-  
+
     // Save weight and unit preference
     DatabaseManager.setUserWeightAndUnitPref(
       weightInKg,
@@ -106,8 +120,6 @@ const UserWeightModal: React.FC<UserWeightModalProps> = ({
       }
     );
   };
-  
-  
 
   return (
     <Modal
@@ -117,7 +129,7 @@ const UserWeightModal: React.FC<UserWeightModalProps> = ({
       onRequestClose={onClose}
     >
       <View className="flex justify-center items-center h-full">
-        <View className="bg-w1 dark:bg-bl2 p-8 rounded-xl w-[80%]">
+        <View className="bg-w1 dark:bg-bl2 p-8 rounded-xl w-[80%] shadow-md shadow-bl">
           <Text className="text-bl dark:text-gr text-2xl mb-5 items-center text-center">
             Weight
           </Text>

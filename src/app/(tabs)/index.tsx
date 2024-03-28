@@ -19,6 +19,7 @@ import React, { useState, useEffect } from "react";
 import Daily from "@/src/app/Home/Daily";
 import Workouts from "@/src/app/Home/Workouts";
 import DatabaseManager from "../services/DatabaseManager";
+import { router } from "expo-router";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -56,8 +57,9 @@ export default function TabOneScreen() {
       if (success && Array.isArray(data) && data.length > 0) {
         setUserName(data[0].name); // Assuming the name property exists
       } else {
-        console.error("Failed to fetch user profile or no profile exists");
-        setUserName("Username"); // Set to Username if fetching fails
+        // console.error("Failed to fetch user profile or no profile exists");
+        router.push("/Home/InitialForm");
+        // setUserName("Username"); // Set to Username if fetching fails
       }
     });
   };
