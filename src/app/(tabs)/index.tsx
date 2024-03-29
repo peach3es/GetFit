@@ -77,7 +77,7 @@ export default function TabOneScreen() {
           <Text
             className={`text-6xl font-montreau text-w1 absolute p-5 z-10 bottom-0 text-shadow-[0_2px_10px_#3a3c42] tracking-wider`}
           >
-            Welcome Back, {userName}!
+            Welcome Back, {userName != "" ? userName : "Username"}!
           </Text>
         </View>
         <SafeAreaView className="h-2/3" style={{ flex: 1 }}>

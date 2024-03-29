@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Modal, View, TextInput, Text, TouchableOpacity } from "react-native";
+import { Modal, View, TextInput, Text, TouchableOpacity, Alert } from "react-native";
 import DatabaseManager from "../services/DatabaseManager";
 import { DeviceEventEmitter } from "react-native";
 
@@ -20,7 +20,7 @@ const UserNameModal: React.FC<UserNameModalProps> = ({
     if (visible) {
       DatabaseManager.getUserProfile((success, data) => {
         if (success && Array.isArray(data) && data.length > 0) {
-          setName(data[0].name);
+          setName(data[0].name.trim());
         } else {
           console.log("No user profile data found or an error occurred");
         }
@@ -28,17 +28,32 @@ const UserNameModal: React.FC<UserNameModalProps> = ({
     }
   }, [visible]);
 
+  const handleNameChange = (newName: string) => {
+    // Limit the length of the name to 20 characters and allow letters, spaces, and accents
+    const lettersSpacesAndAccents = newName.replace(/[^\p{L}\p{M}\s]/gu, '');
+    const trimmedName = lettersSpacesAndAccents.length <= 20 ? lettersSpacesAndAccents : lettersSpacesAndAccents.slice(0, 20);
+    setName(trimmedName);
+  };
+  
+
   const saveName = () => {
-    DatabaseManager.setUserName(name, (success, data) => {
-      if (success) {
-        console.log("Name saved successfully");
-        DeviceEventEmitter.emit("userNameUpdated");
-        onUpdate();
-        onClose();
-      } else {
-        console.error("Failed to save name");
-      }
-    });
+    const trimmedName = name.trim(); // Remove any leading or trailing spaces
+    if (!trimmedName || !trimmedName.replace(/\s/g, '').length) {
+      // If the name is empty, only contains spaces, or has invalid characters
+      Alert.alert("Invalid Name", "Enter a name containing letters only.");
+    } else {
+      // Save the trimmed name
+      DatabaseManager.setUserName(trimmedName, (success, data) => {
+        if (success) {
+          console.log("Name saved successfully");
+          DeviceEventEmitter.emit("userNameUpdated");
+          onUpdate();
+          onClose();
+        } else {
+          console.error("Failed to save name");
+        }
+      });
+    }
   };
 
   return (
@@ -57,7 +72,7 @@ const UserNameModal: React.FC<UserNameModalProps> = ({
           <TextInput
             placeholder="Name"
             value={name}
-            onChangeText={setName}
+            onChangeText={handleNameChange}
             className="text-bl dark:text-w1 mb-5 text-xl mx-3 h-14 border-2 items-center px-5 rounded-2xl"
           />
 

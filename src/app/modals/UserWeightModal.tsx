@@ -43,7 +43,7 @@ const UserWeightModal: React.FC<UserWeightModalProps> = ({
             setWeight(
               weightUnitPref === "metric"
                 ? weightKg.toString()
-                : (weightKg * 2.20462).toFixed(2)
+                : (weightKg * 2.20462).toFixed(1)
             ); // Convert kg to lbs for display if imperial
           } else {
             setWeight(""); // If there is no weight, leave the field blank
@@ -66,11 +66,11 @@ const UserWeightModal: React.FC<UserWeightModalProps> = ({
         ? Math.min(
             Math.max(currentWeight / 2.20462, MIN_WEIGHT_KG),
             MAX_WEIGHT_KG
-          ).toFixed(2)
+          ).toFixed(1)
         : Math.min(
             Math.max(currentWeight * 2.20462, MIN_WEIGHT_LBS),
             MAX_WEIGHT_LBS
-          ).toFixed(2);
+          ).toFixed(1);
 
       setWeight(convertedWeight);
     } else {
@@ -92,14 +92,14 @@ const UserWeightModal: React.FC<UserWeightModalProps> = ({
 
     // Validate weight is within the allowed range
     if (
-      numericWeight < minWeight ||
-      (numericWeight > maxWeight && numericWeight != 599.66)
+      (numericWeight < minWeight && numericWeight != 66.1) ||
+      (numericWeight > maxWeight && numericWeight != 599.7)
     ) {
       const weightType = unitPref === "imperial" ? "lbs" : "kg";
       Alert.alert(
         "Invalid Weight",
-        `Weight must be between ${minWeight.toFixed(2)} and ${maxWeight.toFixed(
-          2
+        `Weight must be between ${minWeight.toFixed(1)} and ${maxWeight.toFixed(
+          1
         )} ${weightType}.`
       );
       return; // Early return if weight is outside the valid range

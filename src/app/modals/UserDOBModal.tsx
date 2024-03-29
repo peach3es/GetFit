@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Modal, View } from "react-native";
-import DateTimePicker from "@react-native-community/datetimepicker"; // Already installed for UserNameModal.tsx
-import DatabaseManager from "../services/DatabaseManager"; // Adjust the import path as necessary
+import DateTimePicker from "@react-native-community/datetimepicker";
+import DatabaseManager from "../services/DatabaseManager"; 
 
 type UserDOBModalProps = {
   visible: boolean;
@@ -16,16 +16,30 @@ const UserDOBModal: React.FC<UserDOBModalProps> = ({
 }) => {
   const [date, setDate] = useState(new Date());
   const [showPicker, setShowPicker] = useState(false);
+  const today = new Date();
+  // Calculate 6 years before today's date for the maximumDate
+  const maxDate = new Date(today.getFullYear() - 6, today.getMonth(), today.getDate());
+  // Calculate 122 years before today's date for the minimumDate
+  const minDate = new Date(today.getFullYear() - 122, today.getMonth(), today.getDate());
 
   useEffect(() => {
+    let timer: string | number | NodeJS.Timeout | undefined;
     if (visible) {
-      setShowPicker(true);
+      timer = setTimeout(() => {
+        setShowPicker(true);
+      }, 100);
       // Load the current DOB from the UserProfile database if available
       DatabaseManager.getUserProfile((success, data) => {
         if (success && Array.isArray(data) && data.length > 0 && data[0].dob) {
           setDate(new Date(data[0].dob));
         }
       });
+    } else {
+      setShowPicker(false);
+    }
+
+    return () => {
+      clearTimeout(timer);
     }
   }, [visible]);
 
@@ -50,6 +64,7 @@ const UserDOBModal: React.FC<UserDOBModalProps> = ({
       } else {
         console.error("Failed to save DOB");
       }
+      setShowPicker(false);
       onClose(); // Ensure modal closes after saving
     });
   };
@@ -62,13 +77,6 @@ const UserDOBModal: React.FC<UserDOBModalProps> = ({
       onRequestClose={onClose}
     >
       <View className="flex justify-center items-center h-full">
-        {/* <View className="bg-w1 p-8 rounded-xl w-[80%]"> */}
-        {/* {Platform.OS === "android" && (
-            <Button
-              title="Select Date of Birth"
-              onPress={() => setDate(new Date())}
-            /> // This button is only to show the picker in Android
-          )} */}
         {showPicker && (
           <DateTimePicker
             testID="dateTimePicker"
@@ -76,11 +84,11 @@ const UserDOBModal: React.FC<UserDOBModalProps> = ({
             mode="date"
             display="spinner"
             onChange={onChange}
-            maximumDate={new Date()} // Users can't be born in the future
+            maximumDate={maxDate}
+            minimumDate={minDate}
             // className="bg-w1 dark:bg-bl dark:text-w1 text-bl w-full"
           />
         )}
-        {/* </View> */}
       </View>
     </Modal>
   );

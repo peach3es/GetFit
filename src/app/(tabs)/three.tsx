@@ -30,7 +30,7 @@ const profile: ItemData[] = [
   },
   {
     id: "dob",
-    name: "Date of Birth",
+    name: "Age",
   },
   {
     id: "height",
@@ -52,7 +52,7 @@ type ProfilePageProps = {
   onPress: () => void;
 };
 
-const ProfileOptions = ({ item, style, onPress }: ProfilePageProps) => {
+const ProfileOptions = ({ item, style, onPress, value }: ProfilePageProps & { value: string }) => {
   return (
     <TouchableOpacity
       activeOpacity={0.6}
@@ -63,7 +63,7 @@ const ProfileOptions = ({ item, style, onPress }: ProfilePageProps) => {
       }
     >
       <Text className="text-w1 dark:text-bl font-chivo text-lg text-center">
-        {item.name}
+        {value || item.name}
       </Text>
     </TouchableOpacity>
   );
@@ -82,6 +82,23 @@ export default function TabTwoScreen() {
   const [userHeight, setUserHeight] = useState<number | null>(null);
   const [userWeight, setUserWeight] = useState<number | null>(null);
   const router = useRouter();
+
+  const getLabel = (item: { id: any; name: any; }) => {
+    switch (item.id) {
+      case 'name':
+        return userName ? `Name: ${userName}` : 'Name';
+      case 'sex':
+        return userSex ? `Sex: ${userSex}` : 'Sex';
+      case 'dob':
+        return userAge ? `Age: ${userAge}` : 'Age';
+      case 'height':
+        return userHeight ? `Height: ${userHeight} cm` : 'Height';
+      case 'weight':
+        return userWeight ? `Weight: ${userWeight.toFixed(1)} kg` : 'Weight';
+      default:
+        return item.name;
+    }
+  };
 
   const handlePress = (item: ItemData) => {
     switch (item.id) {
@@ -154,12 +171,14 @@ export default function TabTwoScreen() {
 
   const renderItem = ({ item, index }: { item: ItemData; index: number }) => {
     const isFirstItem = index === 0;
+    const label = getLabel(item);
 
     return (
       <ProfileOptions
         item={item}
-        style={isFirstItem ? "rounded-t-xl" : ""} // Apply rounded-t-xl style only to the first item
+        style={isFirstItem ? "rounded-t-xl" : ""}
         onPress={() => handlePress(item)}
+        value={label}
       />
     );
   };
@@ -170,40 +189,6 @@ export default function TabTwoScreen() {
         <Text className="text-3xl font-bold text-bl dark:text-w2 text-center">
           Profile Page
         </Text>
-        {/* <View className="rounded-full aspect-square w-40 bg-w1"></View> */}
-        <Text className="text-4xl font-bold text-bl dark:text-w2 text-center">
-          {userName}
-        </Text>
-        {/* Conditionally render the age if it is available */}
-        {userAge !== null && (
-          <Text style={{ marginBottom: -20, textAlign: "center" }}>
-            Age: {userAge} {userAge === 1 ? "year" : "years"} old
-          </Text>
-        )}
-        {/* Conditionally render the sex if it is available */}
-        {userSex !== "" && (
-          <Text
-            style={{
-              marginBottom: -20,
-              textAlign: "center",
-              fontWeight: "bold",
-            }}
-          >
-            Sex: {userSex}
-          </Text>
-        )}
-        {/* Conditionally render the height if it is available */}
-        {userHeight !== null && (
-          <Text style={{ marginBottom: -20, textAlign: "center" }}>
-            Height: {userHeight} cm
-          </Text>
-        )}
-        {/* Conditionally render the weight if it is available */}
-        {userWeight !== null && (
-          <Text style={{ textAlign: "center" }}>
-            Weight: {userWeight.toFixed(2)} kg
-          </Text>
-        )}
       </View>
       <View className="w-full rounded-t-xl bg-w1 dark:bg-bl2 h-fit">
         <FlatList
