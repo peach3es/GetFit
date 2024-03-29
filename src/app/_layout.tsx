@@ -59,6 +59,7 @@ function RootLayoutNav() {
   const colorScheme = useColorScheme();
 
   StatusBar.setTranslucent(true);
+  StatusBar.setBackgroundColor("transparent");
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>

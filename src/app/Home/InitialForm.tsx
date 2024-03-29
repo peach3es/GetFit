@@ -67,7 +67,13 @@ export default function InitialForm() {
 
   const checkFormAndNavigate = () => {
     // Check all fields are non-null and non-empty
-    if (!userName.trim() || !userSex.trim() || !userDOB.trim() || userHeight === null || userWeight === null) {
+    if (
+      !userName.trim() ||
+      !userSex.trim() ||
+      !userDOB.trim() ||
+      userHeight === null ||
+      userWeight === null
+    ) {
       Alert.alert("Invalid Form", "All fields are required.");
     } else {
       // All fields are filled, navigate to the next screen
@@ -77,7 +83,7 @@ export default function InitialForm() {
 
   return (
     <View className="bg-w2 dark:bg-bl h-full p-8 justify-around">
-      <View className="justify-start h-1/4 pt-16 ">
+      <View className="justify-start h-[20%] pt-16 ">
         <Text className="text-5xl font-montreau text-bl dark:text-w1 mb-2">
           Welcome to GetFit
         </Text>
@@ -85,12 +91,12 @@ export default function InitialForm() {
           Please enter your details below to get started:
         </Text>
       </View>
-      <View className="flex w-full p-5 rounded-xl bg-w1 dark:bg-bl2 h-4/6">
+      <View className="flex w-full p-5 rounded-xl bg-w1 dark:bg-bl2 h-fit">
         <Text className="text-red dark:text-gr font-medium text-lg ml-1 mb-2">
           Name:
         </Text>
         <TouchableOpacity onPress={() => setNameModalVisible(true)}>
-          <Text className="h-12 w-full p-3 rounded-xl bg-w1 dark:bg-bl2 text-lg text-red dark:text-gr font-medium border-2 border-red dark:border-gr mb-[5%]">
+          <Text className="h-12 w-full p-3 rounded-xl bg-w1 dark:bg-bl2 text-lg text-red dark:text-gr font-medium border-2 border-red dark:border-gr mb-[3%]">
             {userName}
           </Text>
         </TouchableOpacity>
@@ -147,7 +153,8 @@ export default function InitialForm() {
         </View>
       </View>
       <Text className=" text-xs text-bl dark:text-w1 pl-3 font-medium tracking-tight leading-2 text-center mt-[2%]">
-        GetFit needs some basic information to get started. We do not have access to your data; it will never be shared with anyone.
+        GetFit needs some basic information to get started. We do not have
+        access to your data; it will never be shared with anyone.
       </Text>
       <UserNameModal
         visible={nameModalVisible}
