@@ -52,7 +52,12 @@ type ProfilePageProps = {
   onPress: () => void;
 };
 
-const ProfileOptions = ({ item, style, onPress, value }: ProfilePageProps & { value: string }) => {
+const ProfileOptions = ({
+  item,
+  style,
+  onPress,
+  value,
+}: ProfilePageProps & { value: string }) => {
   return (
     <TouchableOpacity
       activeOpacity={0.6}
@@ -83,18 +88,18 @@ export default function TabTwoScreen() {
   const [userWeight, setUserWeight] = useState<number | null>(null);
   const router = useRouter();
 
-  const getLabel = (item: { id: any; name: any; }) => {
+  const getLabel = (item: { id: any; name: any }) => {
     switch (item.id) {
-      case 'name':
-        return userName ? `Name: ${userName}` : 'Name';
-      case 'sex':
-        return userSex ? `Sex: ${userSex}` : 'Sex';
-      case 'dob':
-        return userAge ? `Age: ${userAge}` : 'Age';
-      case 'height':
-        return userHeight ? `Height: ${userHeight} cm` : 'Height';
-      case 'weight':
-        return userWeight ? `Weight: ${userWeight.toFixed(1)} kg` : 'Weight';
+      case "name":
+        return userName ? `Name: ${userName}` : "Name";
+      case "sex":
+        return userSex ? `Sex: ${userSex}` : "Sex";
+      case "dob":
+        return userAge ? `Age: ${userAge}` : "Age";
+      case "height":
+        return userHeight ? `Height: ${userHeight} cm` : "Height";
+      case "weight":
+        return userWeight ? `Weight: ${userWeight.toFixed(1)} kg` : "Weight";
       default:
         return item.name;
     }
@@ -186,7 +191,7 @@ export default function TabTwoScreen() {
   return (
     <View className="flex items-center pt-24 h-full bg-w2 dark:bg-bl justify-between">
       <View className="flex h-fit items-center px-5 gap-y-5">
-        <Text className="text-3xl font-bold text-bl dark:text-w2 text-center">
+        <Text className="text-4xl font-montreau text-bl dark:text-w2 text-center">
           Profile Page
         </Text>
       </View>
