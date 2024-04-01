@@ -80,6 +80,16 @@ export default function TabLayout() {
           ),
         }}
       />
+
+      <Tabs.Screen
+        name="four"
+        options={{
+          title: "device",
+          headerShown: false, //Shows Top header or not
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+
       {/* <Tabs.Screen
         name="InitialForm"
         options={{
@@ -90,6 +100,7 @@ export default function TabLayout() {
           ),
         }}
       /> */}
+
     </Tabs>
   );
 }
