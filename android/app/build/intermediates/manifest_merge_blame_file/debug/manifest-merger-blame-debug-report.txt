@@ -1,0 +1,344 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.application.GetFit"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+9        android:targetSdkVersion="30" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:10:3-75
+11-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:10:20-73
+12
+13    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION" />
+13-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:2:3-85
+13-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:2:27-83
+14    <uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION" />
+14-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:3:3-83
+14-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:3:27-81
+15
+16    <uses-permission
+16-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:4:3-92
+17        android:name="android.permission.BLUETOOTH"
+17-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:4:20-63
+18        android:maxSdkVersion="30" />
+18-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:4:64-90
+19    <uses-permission
+19-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:5:3-98
+20        android:name="android.permission.BLUETOOTH_ADMIN"
+20-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:5:20-69
+21        android:maxSdkVersion="30" />
+21-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:5:70-96
+22    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+22-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:6:3-73
+22-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:6:20-71
+23    <uses-permission
+23-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:7:3-91
+24        android:name="android.permission.BLUETOOTH_SCAN"
+24-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:7:20-68
+25        android:usesPermissionFlags="neverForLocation" />
+25-->[com.polidea.rxandroidble2:rxandroidble:1.17.2] C:\Users\atana\.gradle\caches\transforms-3\cd52ecf68ae55a69fdabab64aae225af\transformed\jetified-rxandroidble-1.17.2\AndroidManifest.xml:24:9-55
+26    <uses-permission android:name="android.permission.INTERNET" />
+26-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:8:3-64
+26-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:8:20-62
+27    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+27-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:9:3-77
+27-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:9:20-75
+28    <uses-permission android:name="android.permission.VIBRATE" />
+28-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:11:3-63
+28-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:11:20-61
+29    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+29-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:12:3-78
+29-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:12:20-76
+30
+31    <uses-feature
+31-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:13:3-87
+32        android:name="android.hardware.bluetooth_le"
+32-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:13:17-61
+33        android:required="true" />
+33-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:13:62-85
+34
+35    <queries>
+35-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:14:3-20:13
+36        <intent>
+36-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:15:5-19:14
+37            <action android:name="android.intent.action.VIEW" />
+37-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:16:7-58
+37-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:16:15-56
+38
+39            <category android:name="android.intent.category.BROWSABLE" />
+39-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:17:7-67
+39-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:17:17-65
+40
+41            <data android:scheme="https" />
+41-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:18:7-37
+41-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:18:13-35
+42        </intent>
+43
+44        <package android:name="host.exp.exponent" /> <!-- Query open documents -->
+44-->[:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-53
+44-->[:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:18-50
+45        <intent>
+45-->[:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-17:18
+46            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+46-->[:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-79
+46-->[:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:21-76
+47        </intent>
+48        <intent>
+48-->[:expo-web-browser] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-web-browser\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:18
+49
+50            <!-- Required for opening tabs if targeting API 30 -->
+51            <action android:name="android.support.customtabs.action.CustomTabsService" />
+51-->[:expo-web-browser] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-web-browser\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-90
+51-->[:expo-web-browser] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-web-browser\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:21-87
+52        </intent>
+53    </queries>
+54
+55    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+55-->[com.facebook.flipper:flipper:0.182.0] C:\Users\atana\.gradle\caches\transforms-3\9a57f9132a4dcf71ff27232fb10f4a4f\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:16:5-76
+55-->[com.facebook.flipper:flipper:0.182.0] C:\Users\atana\.gradle\caches\transforms-3\9a57f9132a4dcf71ff27232fb10f4a4f\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:16:22-73
+56    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+56-->[:expo-sensors] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-sensors\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-79
+56-->[:expo-sensors] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-sensors\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:22-76
+57
+58    <permission
+58-->[androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+59        android:name="com.application.GetFit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+59-->[androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+60        android:protectionLevel="signature" />
+60-->[androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+61
+62    <uses-permission android:name="com.application.GetFit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+62-->[androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+62-->[androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+63
+64    <application
+64-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:3-40:17
+65        android:name="com.application.GetFit.MainApplication"
+65-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:16-47
+66        android:allowBackup="true"
+66-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:162-188
+67        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+67-->[androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+68        android:debuggable="true"
+69        android:extractNativeLibs="false"
+70        android:icon="@mipmap/ic_launcher"
+70-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:81-115
+71        android:label="@string/app_name"
+71-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:48-80
+72        android:roundIcon="@mipmap/ic_launcher_round"
+72-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:116-161
+73        android:theme="@style/AppTheme"
+73-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:189-220
+74        android:usesCleartextTraffic="true" >
+74-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml:6:18-53
+75        <meta-data
+75-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:22:5-83
+76            android:name="expo.modules.updates.ENABLED"
+76-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:22:16-59
+77            android:value="false" />
+77-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:22:60-81
+78        <meta-data
+78-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:23:5-93
+79            android:name="expo.modules.updates.EXPO_SDK_VERSION"
+79-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:23:16-68
+80            android:value="49.0.0" />
+80-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:23:69-91
+81        <meta-data
+81-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:24:5-105
+82            android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH"
+82-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:24:16-80
+83            android:value="ALWAYS" />
+83-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:24:81-103
+84        <meta-data
+84-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:25:5-99
+85            android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS"
+85-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:25:16-79
+86            android:value="0" />
+86-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:25:80-97
+87
+88        <activity
+88-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:5-38:16
+89            android:name="com.application.GetFit.MainActivity"
+89-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:15-43
+90            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+90-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:77-154
+91            android:exported="true"
+91-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:276-299
+92            android:label="@string/app_name"
+92-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:44-76
+93            android:launchMode="singleTask"
+93-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:155-186
+94            android:screenOrientation="portrait"
+94-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:300-336
+95            android:theme="@style/Theme.App.SplashScreen"
+95-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:230-275
+96            android:windowSoftInputMode="adjustResize" >
+96-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:187-229
+97            <intent-filter>
+97-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:27:7-30:23
+98                <action android:name="android.intent.action.MAIN" />
+98-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:28:9-60
+98-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:28:17-58
+99
+100                <category android:name="android.intent.category.LAUNCHER" />
+100-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:29:9-68
+100-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:29:19-66
+101            </intent-filter>
+102            <intent-filter>
+102-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:31:7-37:23
+103                <action android:name="android.intent.action.VIEW" />
+103-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:16:7-58
+103-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:16:15-56
+104
+105                <category android:name="android.intent.category.DEFAULT" />
+105-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:33:9-67
+105-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:33:19-65
+106                <category android:name="android.intent.category.BROWSABLE" />
+106-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:17:7-67
+106-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:17:17-65
+107
+108                <data android:scheme="myapp" />
+108-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:18:7-37
+108-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:18:13-35
+109                <data android:scheme="com.application.GetFit" />
+109-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:18:7-37
+109-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:18:13-35
+110            </intent-filter>
+111        </activity>
+112        <activity
+112-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:39:5-106
+113            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+113-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:39:15-79
+114            android:exported="false" />
+114-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:39:80-104
+115
+116        <meta-data
+116-->[:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-14:37
+117            android:name="expo.modules.updates.AUTO_SETUP"
+117-->[:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-59
+118            android:value="false" />
+118-->[:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-34
+119
+120        <activity
+120-->[:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-29:20
+121            android:name="expo.modules.devlauncher.launcher.DevLauncherActivity"
+121-->[:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-81
+122            android:exported="true"
+122-->[:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-36
+123            android:launchMode="singleTask"
+123-->[:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-44
+124            android:theme="@style/Theme.DevLauncher.LauncherActivity" >
+124-->[:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-70
+125            <intent-filter>
+125-->[:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-28:29
+126                <action android:name="android.intent.action.VIEW" />
+126-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:16:7-58
+126-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:16:15-56
+127
+128                <category android:name="android.intent.category.DEFAULT" />
+128-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:33:9-67
+128-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:33:19-65
+129                <category android:name="android.intent.category.BROWSABLE" />
+129-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:17:7-67
+129-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:17:17-65
+130
+131                <data android:scheme="expo-dev-launcher" />
+131-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:18:7-37
+131-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:18:13-35
+132            </intent-filter>
+133        </activity>
+134        <activity
+134-->[:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:9-33:70
+135            android:name="expo.modules.devlauncher.launcher.errors.DevLauncherErrorActivity"
+135-->[:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:31:13-93
+136            android:screenOrientation="portrait"
+136-->[:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:32:13-49
+137            android:theme="@style/Theme.DevLauncher.ErrorActivity" />
+137-->[:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:33:13-67
+138        <activity
+138-->[:expo-dev-menu] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-21:20
+139            android:name="expo.modules.devmenu.DevMenuActivity"
+139-->[:expo-dev-menu] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-64
+140            android:exported="true"
+140-->[:expo-dev-menu] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-36
+141            android:launchMode="singleTask"
+141-->[:expo-dev-menu] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-44
+142            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" >
+142-->[:expo-dev-menu] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-75
+143            <intent-filter>
+143-->[:expo-dev-menu] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-20:29
+144                <action android:name="android.intent.action.VIEW" />
+144-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:16:7-58
+144-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:16:15-56
+145
+146                <category android:name="android.intent.category.DEFAULT" />
+146-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:33:9-67
+146-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:33:19-65
+147                <category android:name="android.intent.category.BROWSABLE" />
+147-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:17:7-67
+147-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:17:17-65
+148
+149                <data android:scheme="expo-dev-menu" />
+149-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:18:7-37
+149-->C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:18:13-35
+150            </intent-filter>
+151        </activity>
+152
+153        <provider
+153-->[:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-30:20
+154            android:name="expo.modules.filesystem.FileSystemFileProvider"
+154-->[:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-74
+155            android:authorities="com.application.GetFit.FileSystemFileProvider"
+155-->[:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-74
+156            android:exported="false"
+156-->[:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
+157            android:grantUriPermissions="true" >
+157-->[:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-47
+158            <meta-data
+158-->[:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-29:70
+159                android:name="android.support.FILE_PROVIDER_PATHS"
+159-->[:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-67
+160                android:resource="@xml/file_system_provider_paths" />
+160-->[:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-67
+161        </provider>
+162
+163        <meta-data
+163-->[:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:9-11:89
+164            android:name="org.unimodules.core.AppLoader#react-native-headless"
+164-->[:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-79
+165            android:value="expo.modules.adapters.react.apploader.RNHeadlessAppLoader" />
+165-->[:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-86
+166        <meta-data
+166-->[:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-15:45
+167            android:name="com.facebook.soloader.enabled"
+167-->[:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-57
+168            android:value="true" />
+168-->[:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-33
+169
+170        <provider
+170-->[androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+171            android:name="androidx.startup.InitializationProvider"
+171-->[androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+172            android:authorities="com.application.GetFit.androidx-startup"
+172-->[androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+173            android:exported="false" >
+173-->[androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+174            <meta-data
+174-->[androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+175                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+175-->[androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+176                android:value="androidx.startup" />
+176-->[androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+177            <meta-data
+177-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\atana\.gradle\caches\transforms-3\dcc6bc01de5c6c9f534b6903a0d2da1a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+178                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+178-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\atana\.gradle\caches\transforms-3\dcc6bc01de5c6c9f534b6903a0d2da1a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+179                android:value="androidx.startup" />
+179-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\atana\.gradle\caches\transforms-3\dcc6bc01de5c6c9f534b6903a0d2da1a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+180        </provider>
+181    </application>
+182
+183</manifest>
