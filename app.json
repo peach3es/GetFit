@@ -16,21 +16,20 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.application.GetFit"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-
       "permissions": [
         "android.permission.BLUETOOTH",
         "android.permission.BLUETOOTH_ADMIN",
         "android.permission.BLUETOOTH_CONNECT"
       ],
-      "package": "com.application.GetFit"
-
+      "package": "com.application.GetFit",
       "softwareKeyboardLayoutMode": "pan"
     },
     "web": {
@@ -56,6 +55,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "f601a79e-ce94-40ad-8744-c5c0146a1c7d"
+      }
     }
   }
 }

@@ -50,14 +50,14 @@ const App = () => {
         style={styles.ctaButton}
       >
         <Text style={styles.ctaButtonText}>
-          {"Connect"}
+          {"Connect to a Device"}
         </Text>
       </TouchableOpacity>
       <DeviceModal
         closeModal={hideModal}
         visible={isModalVisible}
-        connectToPeripheral={()=>{}}
-        devices={[]}
+        connectToPeripheral={() => {}}
+        devices={allDevices}
       />
     </SafeAreaView>
   );

@@ -1,4 +1,4 @@
-/* eslint-disable no-bitwise */
+
 import { useMemo, useState } from "react";
 import { PermissionsAndroid, Platform } from "react-native";
 import {
@@ -74,13 +74,15 @@ function useBLE(): BluetoothLowEnergyApi {
             message: "Bluetooth Low Energy requires Location",
             buttonPositive: "OK",
           }
+
         );
+        console.log("Works");
         return granted === PermissionsAndroid.RESULTS.GRANTED;
       } else {
         const isAndroid31PermissionsGranted =
           await requestAndroid31Permissions();
-
         return isAndroid31PermissionsGranted;
+
       }
     } else {
       return true;
@@ -88,14 +90,14 @@ function useBLE(): BluetoothLowEnergyApi {
   };
 
   const isDuplicteDevice = (devices: Device[], nextDevice: Device) =>
-    devices.findIndex((device) => nextDevice.id === device.id) > -1;
+    devices.findIndex((device) => nextDevice.id === device.id) > - 1;
 
   const scanForPeripherals = () =>
     bleManager.startDeviceScan(null, null, (error, device) => {
       if (error) {
         console.log(error);
       }
-      if (device && device.name?.includes("Beta_Device")) {
+      if (device && device.name?.includes("BetaDevice")) {
         setAllDevices((prevState: Device[]) => {
           if (!isDuplicteDevice(prevState, device)) {
             return [...prevState, device];
