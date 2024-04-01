@@ -1,0 +1,744 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:1:1-41:12
+MERGED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:1:1-41:12
+INJECTED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.182.0] C:\Users\atana\.gradle\caches\transforms-3\9e6b1836d7480c913a32cd24a074646f\transformed\jetified-flipper-network-plugin-0.182.0\AndroidManifest.xml:8:1-15:12
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.182.0] C:\Users\atana\.gradle\caches\transforms-3\6c04c7043424eed7ec2f245b2c0bc631\transformed\jetified-flipper-fresco-plugin-0.182.0\AndroidManifest.xml:8:1-15:12
+MERGED from [com.facebook.flipper:flipper:0.182.0] C:\Users\atana\.gradle\caches\transforms-3\9a57f9132a4dcf71ff27232fb10f4a4f\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:8:1-18:12
+MERGED from [:react-native-community_datetimepicker] C:\Users\atana\Documents\GitHub\GetFit\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-picker_picker] C:\Users\atana\Documents\GitHub\GetFit\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-ble-plx] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-ble-plx\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-config] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-config\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-reanimated] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-reanimated\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-safe-area-context] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-screens] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-svg] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-constants] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-constants\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-36:12
+MERGED from [:expo-dev-menu] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-24:12
+MERGED from [:expo-device] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-device\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-33:12
+MERGED from [:expo-font] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-font\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-haptics] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-haptics\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:expo-keep-awake] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-keep-awake\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-linear-gradient] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-linear-gradient\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-sensors] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-sensors\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:expo-splash-screen] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-sqlite] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-sqlite\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-system-ui] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-system-ui\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-web-browser] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-web-browser\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-18:12
+MERGED from [:expo-dev-menu-interface] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu-interface\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.react:react-android:0.73.6] C:\Users\atana\.gradle\caches\transforms-3\2194cba7ee096887cea4f675e559f03c\transformed\jetified-react-android-0.73.6-debug\AndroidManifest.xml:2:1-24:12
+MERGED from [com.facebook.fresco:flipper:2.6.0] C:\Users\atana\.gradle\caches\transforms-3\4398ae1af69a1b61e87f0e2512e7c5fd\transformed\jetified-flipper-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:stetho:2.6.0] C:\Users\atana\.gradle\caches\transforms-3\6550af2339b4d58149e594712b36cc7f\transformed\jetified-stetho-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fresco:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\e45e6f7703b54dfe93c37f67d22b69f0\transformed\jetified-fresco-3.1.3\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\42e16b18758a0d33c56cdef97e984911\transformed\jetified-imagepipeline-okhttp3-3.1.3\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:animated-gif:2.5.0] C:\Users\atana\.gradle\caches\transforms-3\a4d9983488a8fb4f8f85b52e037bc031\transformed\jetified-animated-gif-2.5.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:webpsupport:2.5.0] C:\Users\atana\.gradle\caches\transforms-3\06666905dc8fb5d62c03f1c03664901d\transformed\jetified-webpsupport-2.5.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.react:hermes-android:0.73.6] C:\Users\atana\.gradle\caches\transforms-3\4aeadb3b74bcd2655372ea5a58a01f3c\transformed\jetified-hermes-android-0.73.6-debug\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\atana\.gradle\caches\transforms-3\2d9bebd27a72e1b052855d7882b4cf41\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.material:material:1.9.0] C:\Users\atana\.gradle\caches\transforms-3\7bdfbcf9e3878c61acd4a80ff5849796\transformed\material-1.9.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\atana\.gradle\caches\transforms-3\abeaee258ae57a9d128ddfac5dadb4da\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\atana\.gradle\caches\transforms-3\8a448b6b595612f57b97926c0b9b82bf\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\atana\.gradle\caches\transforms-3\4176e15a8f8963f794e229f15b32becc\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\57a169bc0908892d27fc921e21cd39d0\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\3c91aa920a0f3956d2da0baeb9499273\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\atana\.gradle\caches\transforms-3\9288cbda4839d57899f1f35d3c18d244\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\atana\.gradle\caches\transforms-3\ec95b9c608430f312605e56de1782643\transformed\jetified-activity-1.6.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\2a3513909a79c92f55d0985c8f58aee0\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\f52b0e4b63f322d11bdc744d6724746c\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\4cab42c5f6db9056f533298ce1637979\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\1a61c509e98cfd38b77906e822f076ec\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\atana\.gradle\caches\transforms-3\6e4ad0c3e8024091af937a73526e2e48\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\atana\.gradle\caches\transforms-3\7620bc51535fd0aa8f0749bee89761e2\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\f6acbc1ec0ddbab494d72aef8a8cf08d\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.facebook.fresco:animated-base:2.5.0] C:\Users\atana\.gradle\caches\transforms-3\cd09cb75db190112f899ba4f62e5744b\transformed\jetified-animated-base-2.5.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:animated-drawable:2.5.0] C:\Users\atana\.gradle\caches\transforms-3\ef6ca80732e7861baafc5e1e001609cf\transformed\jetified-animated-drawable-2.5.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\950877d09c4423318031e09b292c1179\transformed\jetified-drawee-3.1.3\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:nativeimagefilters:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\08f4f3491c8f30a807f19f10a768d51a\transformed\jetified-nativeimagefilters-3.1.3\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:memory-type-native:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\f232d307e27379e7309834df8c1fa1fb\transformed\jetified-memory-type-native-3.1.3\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:memory-type-java:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\de000bd20252912de1260e2a4b0e6436\transformed\jetified-memory-type-java-3.1.3\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:imagepipeline-native:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\6d43351d0cdf8eda5030f47663917620\transformed\jetified-imagepipeline-native-3.1.3\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:memory-type-ashmem:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\16ecd539ad84eaf77ac5537a94efda7c\transformed\jetified-memory-type-ashmem-3.1.3\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:imagepipeline:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\1b998528a37d39b6e388ab81f3be2725\transformed\jetified-imagepipeline-3.1.3\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\76fc4e57fd7edb6881b1a04acdbe127e\transformed\jetified-nativeimagetranscoder-3.1.3\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:imagepipeline-base:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\7a79d37d5f61b85b14405dc6e8913cc9\transformed\jetified-imagepipeline-base-3.1.3\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:middleware:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\6cb692628b5e42284c10ef1f6d68fcad\transformed\jetified-middleware-3.1.3\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:ui-common:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\c69748365d8f4179e27d85762a6be299\transformed\jetified-ui-common-3.1.3\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-dev-client] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-client\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:soloader:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\48e5691cad6ddac3a7832443c85ba136\transformed\jetified-soloader-3.1.3\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:fbcore:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\261266b492641522cd060b80a2640baa\transformed\jetified-fbcore-3.1.3\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.autofill:autofill:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\f3c2390263e8fa98cec8357db0eb7139\transformed\jetified-autofill-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\60a758f2a4a1266a819e7b6544db743d\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\502d7614bc905d886d372bc134963904\transformed\coordinatorlayout-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\f61c934ee8c9a517b44fe7ec3e39f2a0\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\b0e845350898fb3150fcef57c1496b31\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\30aaa7fd3a32e0c44a458762be664acb\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.6.0] C:\Users\atana\.gradle\caches\transforms-3\a3955de25f95452522ffc97f110e0aa1\transformed\browser-1.6.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\885a3f14f9f054d4dbc0a12d839752de\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\atana\.gradle\caches\transforms-3\1c0e8f7a5c30e4fe14fbc6425a3c0f77\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\a36bf8e35a9f122e3262f069089edd49\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\58933e11473d6b72594891fb04f596ec\transformed\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\5dcfbf229c0b2d86ac1dc3652c410f5b\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\8653bbbf5809dc5de2dae530966494be\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\fdb421da502f173367a0fcce52201236\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\717453ce5e905ac9b1ef11df90e3665e\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\21aae90dea55bdc3a27fa11373e1078d\transformed\jetified-core-ktx-1.12.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\atana\.gradle\caches\transforms-3\dcc6bc01de5c6c9f534b6903a0d2da1a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\atana\.gradle\caches\transforms-3\44a24c29099bb77124b275c3f1b7bf4e\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\8de5448aee3526a0e93bd39e3e3e1bd2\transformed\jetified-tracing-1.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.tracing:tracing-ktx:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\fadff347bc3955c4bbe1c8b3a0ef73ca\transformed\jetified-tracing-ktx-1.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [:expo-manifests] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-manifests\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-json-utils] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-json-utils\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-updates-interface] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-updates-interface\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] C:\Users\atana\.gradle\caches\transforms-3\c598b30cbb0693b633469e0c4fa7dc99\transformed\sqlite-framework-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.polidea.rxandroidble2:rxandroidble:1.17.2] C:\Users\atana\.gradle\caches\transforms-3\cd52ecf68ae55a69fdabab64aae225af\transformed\jetified-rxandroidble-1.17.2\AndroidManifest.xml:2:1-27:12
+MERGED from [androidx.sqlite:sqlite:2.2.0] C:\Users\atana\.gradle\caches\transforms-3\232cc0d1ae02f7bcf637c181cc959f6d\transformed\sqlite-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\d459b6faa7af2f5f07b4b03ffcd78e3c\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] C:\Users\atana\.gradle\caches\transforms-3\e2e3ce8562b3e80e72ff3322f14c4b17\transformed\jetified-lifecycle-service-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\atana\.gradle\caches\transforms-3\08fa42173212dbc72fb185375298efe3\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\dc8db49ab7825b725730f81f022d20af\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.databinding:viewbinding:8.1.1] C:\Users\atana\.gradle\caches\transforms-3\a8364a78aee273eb5b715642c6c522fd\transformed\jetified-viewbinding-8.1.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\atana\.gradle\caches\transforms-3\185ceb852d2d0f617a40dbf3bcebb180\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\2bbda4d4ad52453caad300e174b5f6b4\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\atana\.gradle\caches\transforms-3\58f933abd055b4b7703a45f25e6d1f0f\transformed\lifecycle-livedata-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\atana\.gradle\caches\transforms-3\7df6c3a583de3226a0c878d8b36a0f6a\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\atana\.gradle\caches\transforms-3\9c938bab49a5950bd146b126bbca4ae2\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\4abe48bc7b87d41104c31efef3565150\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\8c0219e8149f4c11693e8d94cc299568\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\f45f318678b94c6fb396bcf0ee7a82dc\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\atana\.gradle\caches\transforms-3\01f691f95c8f0b585508a343e4299812\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.ndk.thirdparty:openssl:1.1.1l-beta-1] C:\Users\atana\.gradle\caches\transforms-3\4964c66c3dd382e32243e69befdc69a7\transformed\jetified-openssl-1.1.1l-beta-1\AndroidManifest.xml:1:1-3:12
+MERGED from [com.facebook.fbjni:fbjni:0.5.1] C:\Users\atana\.gradle\caches\transforms-3\cb036cbf446df26a13fe3a5ac955645f\transformed\jetified-fbjni-0.5.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.soloader:soloader:0.10.5] C:\Users\atana\.gradle\caches\transforms-3\6bba1416e654a85d9ccbfd4761c6b39b\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:2:1-17:12
+	package
+		INJECTED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:1:70-116
+	android:versionCode
+		INJECTED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission-sdk-23#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:2:3-85
+MERGED from [com.polidea.rxandroidble2:rxandroidble:1.17.2] C:\Users\atana\.gradle\caches\transforms-3\cd52ecf68ae55a69fdabab64aae225af\transformed\jetified-rxandroidble-1.17.2\AndroidManifest.xml:18:5-88
+MERGED from [com.polidea.rxandroidble2:rxandroidble:1.17.2] C:\Users\atana\.gradle\caches\transforms-3\cd52ecf68ae55a69fdabab64aae225af\transformed\jetified-rxandroidble-1.17.2\AndroidManifest.xml:18:5-88
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:2:27-83
+uses-permission-sdk-23#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:3:3-83
+MERGED from [com.polidea.rxandroidble2:rxandroidble:1.17.2] C:\Users\atana\.gradle\caches\transforms-3\cd52ecf68ae55a69fdabab64aae225af\transformed\jetified-rxandroidble-1.17.2\AndroidManifest.xml:19:5-86
+MERGED from [com.polidea.rxandroidble2:rxandroidble:1.17.2] C:\Users\atana\.gradle\caches\transforms-3\cd52ecf68ae55a69fdabab64aae225af\transformed\jetified-rxandroidble-1.17.2\AndroidManifest.xml:19:5-86
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:3:27-81
+uses-permission#android.permission.BLUETOOTH
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:4:3-92
+MERGED from [com.polidea.rxandroidble2:rxandroidble:1.17.2] C:\Users\atana\.gradle\caches\transforms-3\cd52ecf68ae55a69fdabab64aae225af\transformed\jetified-rxandroidble-1.17.2\AndroidManifest.xml:10:5-12:38
+MERGED from [com.polidea.rxandroidble2:rxandroidble:1.17.2] C:\Users\atana\.gradle\caches\transforms-3\cd52ecf68ae55a69fdabab64aae225af\transformed\jetified-rxandroidble-1.17.2\AndroidManifest.xml:10:5-12:38
+	android:maxSdkVersion
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:4:64-90
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:4:20-63
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:5:3-98
+MERGED from [com.polidea.rxandroidble2:rxandroidble:1.17.2] C:\Users\atana\.gradle\caches\transforms-3\cd52ecf68ae55a69fdabab64aae225af\transformed\jetified-rxandroidble-1.17.2\AndroidManifest.xml:13:5-15:38
+MERGED from [com.polidea.rxandroidble2:rxandroidble:1.17.2] C:\Users\atana\.gradle\caches\transforms-3\cd52ecf68ae55a69fdabab64aae225af\transformed\jetified-rxandroidble-1.17.2\AndroidManifest.xml:13:5-15:38
+	android:maxSdkVersion
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:5:70-96
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:5:20-69
+uses-permission#android.permission.BLUETOOTH_CONNECT
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:6:3-73
+MERGED from [com.polidea.rxandroidble2:rxandroidble:1.17.2] C:\Users\atana\.gradle\caches\transforms-3\cd52ecf68ae55a69fdabab64aae225af\transformed\jetified-rxandroidble-1.17.2\AndroidManifest.xml:21:5-76
+MERGED from [com.polidea.rxandroidble2:rxandroidble:1.17.2] C:\Users\atana\.gradle\caches\transforms-3\cd52ecf68ae55a69fdabab64aae225af\transformed\jetified-rxandroidble-1.17.2\AndroidManifest.xml:21:5-76
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:6:20-71
+uses-permission#android.permission.BLUETOOTH_SCAN
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:7:3-91
+MERGED from [com.polidea.rxandroidble2:rxandroidble:1.17.2] C:\Users\atana\.gradle\caches\transforms-3\cd52ecf68ae55a69fdabab64aae225af\transformed\jetified-rxandroidble-1.17.2\AndroidManifest.xml:22:5-25:31
+MERGED from [com.polidea.rxandroidble2:rxandroidble:1.17.2] C:\Users\atana\.gradle\caches\transforms-3\cd52ecf68ae55a69fdabab64aae225af\transformed\jetified-rxandroidble-1.17.2\AndroidManifest.xml:22:5-25:31
+	android:usesPermissionFlags
+		ADDED from [com.polidea.rxandroidble2:rxandroidble:1.17.2] C:\Users\atana\.gradle\caches\transforms-3\cd52ecf68ae55a69fdabab64aae225af\transformed\jetified-rxandroidble-1.17.2\AndroidManifest.xml:24:9-55
+	tools:targetApi
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:7:69-89
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:7:20-68
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:8:3-64
+MERGED from [com.facebook.flipper:flipper:0.182.0] C:\Users\atana\.gradle\caches\transforms-3\9a57f9132a4dcf71ff27232fb10f4a4f\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:15:5-67
+MERGED from [com.facebook.flipper:flipper:0.182.0] C:\Users\atana\.gradle\caches\transforms-3\9a57f9132a4dcf71ff27232fb10f4a4f\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:15:5-67
+MERGED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-67
+MERGED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-67
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:8:20-62
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:9:3-77
+MERGED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-80
+MERGED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-80
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:9:20-75
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:10:3-75
+MERGED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:10:3-75
+MERGED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:10:3-75
+MERGED from [com.facebook.react:react-android:0.73.6] C:\Users\atana\.gradle\caches\transforms-3\2194cba7ee096887cea4f675e559f03c\transformed\jetified-react-android-0.73.6-debug\AndroidManifest.xml:16:5-78
+MERGED from [com.facebook.react:react-android:0.73.6] C:\Users\atana\.gradle\caches\transforms-3\2194cba7ee096887cea4f675e559f03c\transformed\jetified-react-android-0.73.6-debug\AndroidManifest.xml:16:5-78
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:10:20-73
+uses-permission#android.permission.VIBRATE
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:11:3-63
+MERGED from [:expo-haptics] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-haptics\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-66
+MERGED from [:expo-haptics] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-haptics\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-66
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:11:20-61
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:12:3-78
+MERGED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-81
+MERGED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:12:20-76
+uses-feature#android.hardware.bluetooth_le
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:13:3-87
+	android:required
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:13:62-85
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:13:17-61
+queries
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:14:3-20:13
+MERGED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-9:15
+MERGED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-9:15
+MERGED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-18:15
+MERGED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-18:15
+MERGED from [:expo-web-browser] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-web-browser\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-13:15
+MERGED from [:expo-web-browser] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-web-browser\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-13:15
+intent#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+data:scheme:https
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:15:5-19:14
+action#android.intent.action.VIEW
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:16:7-58
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:16:15-56
+category#android.intent.category.BROWSABLE
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:17:7-67
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:17:17-65
+data
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:18:7-37
+	android:scheme
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:18:13-35
+application
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:3-40:17
+MERGED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:3-40:17
+MERGED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:3-40:17
+INJECTED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml:6:5-162
+MERGED from [:react-native-community_datetimepicker] C:\Users\atana\Documents\GitHub\GetFit\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-20
+MERGED from [:react-native-community_datetimepicker] C:\Users\atana\Documents\GitHub\GetFit\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-20
+MERGED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-34:19
+MERGED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-34:19
+MERGED from [:expo-dev-menu] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-22:19
+MERGED from [:expo-dev-menu] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-22:19
+MERGED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:5-31:19
+MERGED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:5-31:19
+MERGED from [:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-16:19
+MERGED from [:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-16:19
+MERGED from [com.facebook.react:react-android:0.73.6] C:\Users\atana\.gradle\caches\transforms-3\2194cba7ee096887cea4f675e559f03c\transformed\jetified-react-android-0.73.6-debug\AndroidManifest.xml:18:5-22:19
+MERGED from [com.facebook.react:react-android:0.73.6] C:\Users\atana\.gradle\caches\transforms-3\2194cba7ee096887cea4f675e559f03c\transformed\jetified-react-android-0.73.6-debug\AndroidManifest.xml:18:5-22:19
+MERGED from [com.google.android.material:material:1.9.0] C:\Users\atana\.gradle\caches\transforms-3\7bdfbcf9e3878c61acd4a80ff5849796\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.9.0] C:\Users\atana\.gradle\caches\transforms-3\7bdfbcf9e3878c61acd4a80ff5849796\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\atana\.gradle\caches\transforms-3\abeaee258ae57a9d128ddfac5dadb4da\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\atana\.gradle\caches\transforms-3\abeaee258ae57a9d128ddfac5dadb4da\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\atana\.gradle\caches\transforms-3\4176e15a8f8963f794e229f15b32becc\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\atana\.gradle\caches\transforms-3\4176e15a8f8963f794e229f15b32becc\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\atana\.gradle\caches\transforms-3\dcc6bc01de5c6c9f534b6903a0d2da1a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\atana\.gradle\caches\transforms-3\dcc6bc01de5c6c9f534b6903a0d2da1a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\atana\.gradle\caches\transforms-3\44a24c29099bb77124b275c3f1b7bf4e\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\atana\.gradle\caches\transforms-3\44a24c29099bb77124b275c3f1b7bf4e\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\atana\.gradle\caches\transforms-3\185ceb852d2d0f617a40dbf3bcebb180\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\atana\.gradle\caches\transforms-3\185ceb852d2d0f617a40dbf3bcebb180\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [com.facebook.soloader:soloader:0.10.5] C:\Users\atana\.gradle\caches\transforms-3\6bba1416e654a85d9ccbfd4761c6b39b\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:11:5-15:19
+MERGED from [com.facebook.soloader:soloader:0.10.5] C:\Users\atana\.gradle\caches\transforms-3\6bba1416e654a85d9ccbfd4761c6b39b\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:11:5-15:19
+	android:extractNativeLibs
+		INJECTED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+	android:label
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:48-80
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:48-80
+	tools:ignore
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml:6:75-114
+	android:roundIcon
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:116-161
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:116-161
+	tools:targetApi
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml:6:54-74
+	android:icon
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:81-115
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:81-115
+	android:allowBackup
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:162-188
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:162-188
+	android:theme
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:189-220
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:189-220
+	tools:replace
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml:6:115-159
+	android:usesCleartextTraffic
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml:6:18-53
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:16-47
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:21:16-47
+meta-data#expo.modules.updates.ENABLED
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:22:5-83
+	android:value
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:22:60-81
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:22:16-59
+meta-data#expo.modules.updates.EXPO_SDK_VERSION
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:23:5-93
+	android:value
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:23:69-91
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:23:16-68
+meta-data#expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:24:5-105
+	android:value
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:24:81-103
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:24:16-80
+meta-data#expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:25:5-99
+	android:value
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:25:80-97
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:25:16-79
+activity#com.application.GetFit.MainActivity
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:5-38:16
+	android:screenOrientation
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:300-336
+	android:label
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:44-76
+	android:launchMode
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:155-186
+	android:windowSoftInputMode
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:187-229
+	android:exported
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:276-299
+	android:configChanges
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:77-154
+	android:theme
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:230-275
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:26:15-43
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:27:7-30:23
+action#android.intent.action.MAIN
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:28:9-60
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:28:17-58
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:29:9-68
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:29:19-66
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:com.application.GetFit+data:scheme:myapp
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:31:7-37:23
+category#android.intent.category.DEFAULT
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:33:9-67
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:33:19-65
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:39:5-106
+MERGED from [com.facebook.react:react-android:0.73.6] C:\Users\atana\.gradle\caches\transforms-3\2194cba7ee096887cea4f675e559f03c\transformed\jetified-react-android-0.73.6-debug\AndroidManifest.xml:19:9-21:40
+MERGED from [com.facebook.react:react-android:0.73.6] C:\Users\atana\.gradle\caches\transforms-3\2194cba7ee096887cea4f675e559f03c\transformed\jetified-react-android-0.73.6-debug\AndroidManifest.xml:19:9-21:40
+	android:exported
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:39:80-104
+	android:name
+		ADDED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\main\AndroidManifest.xml:39:15-79
+uses-sdk
+INJECTED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml
+INJECTED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.182.0] C:\Users\atana\.gradle\caches\transforms-3\9e6b1836d7480c913a32cd24a074646f\transformed\jetified-flipper-network-plugin-0.182.0\AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.182.0] C:\Users\atana\.gradle\caches\transforms-3\9e6b1836d7480c913a32cd24a074646f\transformed\jetified-flipper-network-plugin-0.182.0\AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.182.0] C:\Users\atana\.gradle\caches\transforms-3\6c04c7043424eed7ec2f245b2c0bc631\transformed\jetified-flipper-fresco-plugin-0.182.0\AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.182.0] C:\Users\atana\.gradle\caches\transforms-3\6c04c7043424eed7ec2f245b2c0bc631\transformed\jetified-flipper-fresco-plugin-0.182.0\AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper:0.182.0] C:\Users\atana\.gradle\caches\transforms-3\9a57f9132a4dcf71ff27232fb10f4a4f\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper:0.182.0] C:\Users\atana\.gradle\caches\transforms-3\9a57f9132a4dcf71ff27232fb10f4a4f\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:11:5-13:41
+MERGED from [:react-native-community_datetimepicker] C:\Users\atana\Documents\GitHub\GetFit\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-community_datetimepicker] C:\Users\atana\Documents\GitHub\GetFit\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-picker_picker] C:\Users\atana\Documents\GitHub\GetFit\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-picker_picker] C:\Users\atana\Documents\GitHub\GetFit\node_modules\@react-native-picker\picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-ble-plx] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-ble-plx\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-ble-plx] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-ble-plx\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-config] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-config\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-config] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-config\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-reanimated] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-reanimated\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-reanimated] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-reanimated\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-safe-area-context] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-safe-area-context] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-screens] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-screens] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-svg] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-svg] C:\Users\atana\Documents\GitHub\GetFit\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-constants] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-constants\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-constants] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-constants\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-dev-menu] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-dev-menu] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-device] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-device\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-device] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-device\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-44
+MERGED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-44
+MERGED from [:expo-font] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-font\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-font] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-font\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-haptics] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-haptics\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-haptics] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-haptics\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-keep-awake] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-keep-awake\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-keep-awake] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-keep-awake\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-linear-gradient] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-linear-gradient\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-linear-gradient] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-linear-gradient\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-sensors] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-sensors\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-sensors] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-sensors\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-splash-screen] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-splash-screen] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-sqlite] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-sqlite\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-sqlite] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-sqlite\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-system-ui] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-system-ui\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-system-ui] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-system-ui\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-web-browser] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-web-browser\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-web-browser] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-web-browser\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-44
+MERGED from [:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-44
+MERGED from [:expo-dev-menu-interface] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu-interface\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-dev-menu-interface] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu-interface\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.react:react-android:0.73.6] C:\Users\atana\.gradle\caches\transforms-3\2194cba7ee096887cea4f675e559f03c\transformed\jetified-react-android-0.73.6-debug\AndroidManifest.xml:10:5-44
+MERGED from [com.facebook.react:react-android:0.73.6] C:\Users\atana\.gradle\caches\transforms-3\2194cba7ee096887cea4f675e559f03c\transformed\jetified-react-android-0.73.6-debug\AndroidManifest.xml:10:5-44
+MERGED from [com.facebook.fresco:flipper:2.6.0] C:\Users\atana\.gradle\caches\transforms-3\4398ae1af69a1b61e87f0e2512e7c5fd\transformed\jetified-flipper-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:flipper:2.6.0] C:\Users\atana\.gradle\caches\transforms-3\4398ae1af69a1b61e87f0e2512e7c5fd\transformed\jetified-flipper-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:stetho:2.6.0] C:\Users\atana\.gradle\caches\transforms-3\6550af2339b4d58149e594712b36cc7f\transformed\jetified-stetho-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:stetho:2.6.0] C:\Users\atana\.gradle\caches\transforms-3\6550af2339b4d58149e594712b36cc7f\transformed\jetified-stetho-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\e45e6f7703b54dfe93c37f67d22b69f0\transformed\jetified-fresco-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:fresco:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\e45e6f7703b54dfe93c37f67d22b69f0\transformed\jetified-fresco-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\42e16b18758a0d33c56cdef97e984911\transformed\jetified-imagepipeline-okhttp3-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\42e16b18758a0d33c56cdef97e984911\transformed\jetified-imagepipeline-okhttp3-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:animated-gif:2.5.0] C:\Users\atana\.gradle\caches\transforms-3\a4d9983488a8fb4f8f85b52e037bc031\transformed\jetified-animated-gif-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-gif:2.5.0] C:\Users\atana\.gradle\caches\transforms-3\a4d9983488a8fb4f8f85b52e037bc031\transformed\jetified-animated-gif-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:webpsupport:2.5.0] C:\Users\atana\.gradle\caches\transforms-3\06666905dc8fb5d62c03f1c03664901d\transformed\jetified-webpsupport-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:webpsupport:2.5.0] C:\Users\atana\.gradle\caches\transforms-3\06666905dc8fb5d62c03f1c03664901d\transformed\jetified-webpsupport-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.react:hermes-android:0.73.6] C:\Users\atana\.gradle\caches\transforms-3\4aeadb3b74bcd2655372ea5a58a01f3c\transformed\jetified-hermes-android-0.73.6-debug\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.react:hermes-android:0.73.6] C:\Users\atana\.gradle\caches\transforms-3\4aeadb3b74bcd2655372ea5a58a01f3c\transformed\jetified-hermes-android-0.73.6-debug\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\atana\.gradle\caches\transforms-3\2d9bebd27a72e1b052855d7882b4cf41\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\atana\.gradle\caches\transforms-3\2d9bebd27a72e1b052855d7882b4cf41\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.9.0] C:\Users\atana\.gradle\caches\transforms-3\7bdfbcf9e3878c61acd4a80ff5849796\transformed\material-1.9.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.9.0] C:\Users\atana\.gradle\caches\transforms-3\7bdfbcf9e3878c61acd4a80ff5849796\transformed\material-1.9.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\atana\.gradle\caches\transforms-3\abeaee258ae57a9d128ddfac5dadb4da\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\atana\.gradle\caches\transforms-3\abeaee258ae57a9d128ddfac5dadb4da\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\atana\.gradle\caches\transforms-3\8a448b6b595612f57b97926c0b9b82bf\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\atana\.gradle\caches\transforms-3\8a448b6b595612f57b97926c0b9b82bf\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\atana\.gradle\caches\transforms-3\4176e15a8f8963f794e229f15b32becc\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\atana\.gradle\caches\transforms-3\4176e15a8f8963f794e229f15b32becc\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\57a169bc0908892d27fc921e21cd39d0\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\57a169bc0908892d27fc921e21cd39d0\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\3c91aa920a0f3956d2da0baeb9499273\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\3c91aa920a0f3956d2da0baeb9499273\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\atana\.gradle\caches\transforms-3\9288cbda4839d57899f1f35d3c18d244\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\atana\.gradle\caches\transforms-3\9288cbda4839d57899f1f35d3c18d244\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\atana\.gradle\caches\transforms-3\ec95b9c608430f312605e56de1782643\transformed\jetified-activity-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\atana\.gradle\caches\transforms-3\ec95b9c608430f312605e56de1782643\transformed\jetified-activity-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\2a3513909a79c92f55d0985c8f58aee0\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\2a3513909a79c92f55d0985c8f58aee0\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\f52b0e4b63f322d11bdc744d6724746c\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\f52b0e4b63f322d11bdc744d6724746c\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\4cab42c5f6db9056f533298ce1637979\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\4cab42c5f6db9056f533298ce1637979\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\1a61c509e98cfd38b77906e822f076ec\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\1a61c509e98cfd38b77906e822f076ec\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\atana\.gradle\caches\transforms-3\6e4ad0c3e8024091af937a73526e2e48\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\atana\.gradle\caches\transforms-3\6e4ad0c3e8024091af937a73526e2e48\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\atana\.gradle\caches\transforms-3\7620bc51535fd0aa8f0749bee89761e2\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\atana\.gradle\caches\transforms-3\7620bc51535fd0aa8f0749bee89761e2\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\f6acbc1ec0ddbab494d72aef8a8cf08d\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\f6acbc1ec0ddbab494d72aef8a8cf08d\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.facebook.fresco:animated-base:2.5.0] C:\Users\atana\.gradle\caches\transforms-3\cd09cb75db190112f899ba4f62e5744b\transformed\jetified-animated-base-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-base:2.5.0] C:\Users\atana\.gradle\caches\transforms-3\cd09cb75db190112f899ba4f62e5744b\transformed\jetified-animated-base-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-drawable:2.5.0] C:\Users\atana\.gradle\caches\transforms-3\ef6ca80732e7861baafc5e1e001609cf\transformed\jetified-animated-drawable-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-drawable:2.5.0] C:\Users\atana\.gradle\caches\transforms-3\ef6ca80732e7861baafc5e1e001609cf\transformed\jetified-animated-drawable-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\950877d09c4423318031e09b292c1179\transformed\jetified-drawee-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:drawee:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\950877d09c4423318031e09b292c1179\transformed\jetified-drawee-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:nativeimagefilters:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\08f4f3491c8f30a807f19f10a768d51a\transformed\jetified-nativeimagefilters-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:nativeimagefilters:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\08f4f3491c8f30a807f19f10a768d51a\transformed\jetified-nativeimagefilters-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:memory-type-native:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\f232d307e27379e7309834df8c1fa1fb\transformed\jetified-memory-type-native-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:memory-type-native:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\f232d307e27379e7309834df8c1fa1fb\transformed\jetified-memory-type-native-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:memory-type-java:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\de000bd20252912de1260e2a4b0e6436\transformed\jetified-memory-type-java-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:memory-type-java:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\de000bd20252912de1260e2a4b0e6436\transformed\jetified-memory-type-java-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:imagepipeline-native:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\6d43351d0cdf8eda5030f47663917620\transformed\jetified-imagepipeline-native-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:imagepipeline-native:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\6d43351d0cdf8eda5030f47663917620\transformed\jetified-imagepipeline-native-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:memory-type-ashmem:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\16ecd539ad84eaf77ac5537a94efda7c\transformed\jetified-memory-type-ashmem-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:memory-type-ashmem:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\16ecd539ad84eaf77ac5537a94efda7c\transformed\jetified-memory-type-ashmem-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:imagepipeline:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\1b998528a37d39b6e388ab81f3be2725\transformed\jetified-imagepipeline-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:imagepipeline:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\1b998528a37d39b6e388ab81f3be2725\transformed\jetified-imagepipeline-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:nativeimagetranscoder:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\76fc4e57fd7edb6881b1a04acdbe127e\transformed\jetified-nativeimagetranscoder-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:nativeimagetranscoder:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\76fc4e57fd7edb6881b1a04acdbe127e\transformed\jetified-nativeimagetranscoder-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:imagepipeline-base:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\7a79d37d5f61b85b14405dc6e8913cc9\transformed\jetified-imagepipeline-base-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:imagepipeline-base:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\7a79d37d5f61b85b14405dc6e8913cc9\transformed\jetified-imagepipeline-base-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:middleware:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\6cb692628b5e42284c10ef1f6d68fcad\transformed\jetified-middleware-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:middleware:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\6cb692628b5e42284c10ef1f6d68fcad\transformed\jetified-middleware-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:ui-common:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\c69748365d8f4179e27d85762a6be299\transformed\jetified-ui-common-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:ui-common:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\c69748365d8f4179e27d85762a6be299\transformed\jetified-ui-common-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [:expo-dev-client] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-client\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-dev-client] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-client\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:soloader:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\48e5691cad6ddac3a7832443c85ba136\transformed\jetified-soloader-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:soloader:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\48e5691cad6ddac3a7832443c85ba136\transformed\jetified-soloader-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:fbcore:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\261266b492641522cd060b80a2640baa\transformed\jetified-fbcore-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:fbcore:3.1.3] C:\Users\atana\.gradle\caches\transforms-3\261266b492641522cd060b80a2640baa\transformed\jetified-fbcore-3.1.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.autofill:autofill:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\f3c2390263e8fa98cec8357db0eb7139\transformed\jetified-autofill-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\f3c2390263e8fa98cec8357db0eb7139\transformed\jetified-autofill-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\60a758f2a4a1266a819e7b6544db743d\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\60a758f2a4a1266a819e7b6544db743d\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\502d7614bc905d886d372bc134963904\transformed\coordinatorlayout-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\502d7614bc905d886d372bc134963904\transformed\coordinatorlayout-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\f61c934ee8c9a517b44fe7ec3e39f2a0\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\f61c934ee8c9a517b44fe7ec3e39f2a0\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\b0e845350898fb3150fcef57c1496b31\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\b0e845350898fb3150fcef57c1496b31\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\30aaa7fd3a32e0c44a458762be664acb\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\30aaa7fd3a32e0c44a458762be664acb\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.6.0] C:\Users\atana\.gradle\caches\transforms-3\a3955de25f95452522ffc97f110e0aa1\transformed\browser-1.6.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.browser:browser:1.6.0] C:\Users\atana\.gradle\caches\transforms-3\a3955de25f95452522ffc97f110e0aa1\transformed\browser-1.6.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\885a3f14f9f054d4dbc0a12d839752de\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\885a3f14f9f054d4dbc0a12d839752de\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\atana\.gradle\caches\transforms-3\1c0e8f7a5c30e4fe14fbc6425a3c0f77\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\atana\.gradle\caches\transforms-3\1c0e8f7a5c30e4fe14fbc6425a3c0f77\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\a36bf8e35a9f122e3262f069089edd49\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\a36bf8e35a9f122e3262f069089edd49\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\58933e11473d6b72594891fb04f596ec\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\58933e11473d6b72594891fb04f596ec\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\5dcfbf229c0b2d86ac1dc3652c410f5b\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\5dcfbf229c0b2d86ac1dc3652c410f5b\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\8653bbbf5809dc5de2dae530966494be\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\8653bbbf5809dc5de2dae530966494be\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\fdb421da502f173367a0fcce52201236\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\atana\.gradle\caches\transforms-3\fdb421da502f173367a0fcce52201236\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\717453ce5e905ac9b1ef11df90e3665e\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\717453ce5e905ac9b1ef11df90e3665e\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\21aae90dea55bdc3a27fa11373e1078d\transformed\jetified-core-ktx-1.12.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\21aae90dea55bdc3a27fa11373e1078d\transformed\jetified-core-ktx-1.12.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\atana\.gradle\caches\transforms-3\dcc6bc01de5c6c9f534b6903a0d2da1a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\atana\.gradle\caches\transforms-3\dcc6bc01de5c6c9f534b6903a0d2da1a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\atana\.gradle\caches\transforms-3\44a24c29099bb77124b275c3f1b7bf4e\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\atana\.gradle\caches\transforms-3\44a24c29099bb77124b275c3f1b7bf4e\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\8de5448aee3526a0e93bd39e3e3e1bd2\transformed\jetified-tracing-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\8de5448aee3526a0e93bd39e3e3e1bd2\transformed\jetified-tracing-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing-ktx:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\fadff347bc3955c4bbe1c8b3a0ef73ca\transformed\jetified-tracing-ktx-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing-ktx:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\fadff347bc3955c4bbe1c8b3a0ef73ca\transformed\jetified-tracing-ktx-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [:expo-manifests] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-manifests\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-manifests] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-manifests\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-json-utils] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-json-utils\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-json-utils] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-json-utils\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-updates-interface] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-updates-interface\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-updates-interface] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-updates-interface\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] C:\Users\atana\.gradle\caches\transforms-3\c598b30cbb0693b633469e0c4fa7dc99\transformed\sqlite-framework-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] C:\Users\atana\.gradle\caches\transforms-3\c598b30cbb0693b633469e0c4fa7dc99\transformed\sqlite-framework-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.polidea.rxandroidble2:rxandroidble:1.17.2] C:\Users\atana\.gradle\caches\transforms-3\cd52ecf68ae55a69fdabab64aae225af\transformed\jetified-rxandroidble-1.17.2\AndroidManifest.xml:6:5-8:41
+MERGED from [com.polidea.rxandroidble2:rxandroidble:1.17.2] C:\Users\atana\.gradle\caches\transforms-3\cd52ecf68ae55a69fdabab64aae225af\transformed\jetified-rxandroidble-1.17.2\AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.sqlite:sqlite:2.2.0] C:\Users\atana\.gradle\caches\transforms-3\232cc0d1ae02f7bcf637c181cc959f6d\transformed\sqlite-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.2.0] C:\Users\atana\.gradle\caches\transforms-3\232cc0d1ae02f7bcf637c181cc959f6d\transformed\sqlite-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\d459b6faa7af2f5f07b4b03ffcd78e3c\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\d459b6faa7af2f5f07b4b03ffcd78e3c\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] C:\Users\atana\.gradle\caches\transforms-3\e2e3ce8562b3e80e72ff3322f14c4b17\transformed\jetified-lifecycle-service-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] C:\Users\atana\.gradle\caches\transforms-3\e2e3ce8562b3e80e72ff3322f14c4b17\transformed\jetified-lifecycle-service-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\atana\.gradle\caches\transforms-3\08fa42173212dbc72fb185375298efe3\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\atana\.gradle\caches\transforms-3\08fa42173212dbc72fb185375298efe3\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\dc8db49ab7825b725730f81f022d20af\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\dc8db49ab7825b725730f81f022d20af\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:viewbinding:8.1.1] C:\Users\atana\.gradle\caches\transforms-3\a8364a78aee273eb5b715642c6c522fd\transformed\jetified-viewbinding-8.1.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.1.1] C:\Users\atana\.gradle\caches\transforms-3\a8364a78aee273eb5b715642c6c522fd\transformed\jetified-viewbinding-8.1.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\atana\.gradle\caches\transforms-3\185ceb852d2d0f617a40dbf3bcebb180\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\atana\.gradle\caches\transforms-3\185ceb852d2d0f617a40dbf3bcebb180\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\2bbda4d4ad52453caad300e174b5f6b4\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\2bbda4d4ad52453caad300e174b5f6b4\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\atana\.gradle\caches\transforms-3\58f933abd055b4b7703a45f25e6d1f0f\transformed\lifecycle-livedata-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\atana\.gradle\caches\transforms-3\58f933abd055b4b7703a45f25e6d1f0f\transformed\lifecycle-livedata-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\atana\.gradle\caches\transforms-3\7df6c3a583de3226a0c878d8b36a0f6a\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\atana\.gradle\caches\transforms-3\7df6c3a583de3226a0c878d8b36a0f6a\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\atana\.gradle\caches\transforms-3\9c938bab49a5950bd146b126bbca4ae2\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\atana\.gradle\caches\transforms-3\9c938bab49a5950bd146b126bbca4ae2\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\4abe48bc7b87d41104c31efef3565150\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\4abe48bc7b87d41104c31efef3565150\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\8c0219e8149f4c11693e8d94cc299568\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\8c0219e8149f4c11693e8d94cc299568\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\f45f318678b94c6fb396bcf0ee7a82dc\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\atana\.gradle\caches\transforms-3\f45f318678b94c6fb396bcf0ee7a82dc\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\atana\.gradle\caches\transforms-3\01f691f95c8f0b585508a343e4299812\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\atana\.gradle\caches\transforms-3\01f691f95c8f0b585508a343e4299812\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.ndk.thirdparty:openssl:1.1.1l-beta-1] C:\Users\atana\.gradle\caches\transforms-3\4964c66c3dd382e32243e69befdc69a7\transformed\jetified-openssl-1.1.1l-beta-1\AndroidManifest.xml:2:2-70
+MERGED from [com.android.ndk.thirdparty:openssl:1.1.1l-beta-1] C:\Users\atana\.gradle\caches\transforms-3\4964c66c3dd382e32243e69befdc69a7\transformed\jetified-openssl-1.1.1l-beta-1\AndroidManifest.xml:2:2-70
+MERGED from [com.facebook.fbjni:fbjni:0.5.1] C:\Users\atana\.gradle\caches\transforms-3\cb036cbf446df26a13fe3a5ac955645f\transformed\jetified-fbjni-0.5.1\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fbjni:fbjni:0.5.1] C:\Users\atana\.gradle\caches\transforms-3\cb036cbf446df26a13fe3a5ac955645f\transformed\jetified-fbjni-0.5.1\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.soloader:soloader:0.10.5] C:\Users\atana\.gradle\caches\transforms-3\6bba1416e654a85d9ccbfd4761c6b39b\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.10.5] C:\Users\atana\.gradle\caches\transforms-3\6bba1416e654a85d9ccbfd4761c6b39b\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:7:5-9:41
+	android:targetSdkVersion
+		INJECTED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\atana\Documents\GitHub\GetFit\android\app\src\debug\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [com.facebook.flipper:flipper:0.182.0] C:\Users\atana\.gradle\caches\transforms-3\9a57f9132a4dcf71ff27232fb10f4a4f\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:16:5-76
+	android:name
+		ADDED from [com.facebook.flipper:flipper:0.182.0] C:\Users\atana\.gradle\caches\transforms-3\9a57f9132a4dcf71ff27232fb10f4a4f\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:16:22-73
+package#host.exp.exponent
+ADDED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-53
+	android:name
+		ADDED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:18-50
+meta-data#expo.modules.updates.AUTO_SETUP
+ADDED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-14:37
+	android:value
+		ADDED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-34
+	android:name
+		ADDED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-59
+activity#expo.modules.devlauncher.launcher.DevLauncherActivity
+ADDED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-29:20
+	android:launchMode
+		ADDED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-44
+	android:exported
+		ADDED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-36
+	android:theme
+		ADDED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-70
+	android:name
+		ADDED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-81
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:expo-dev-launcher
+ADDED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-28:29
+activity#expo.modules.devlauncher.launcher.errors.DevLauncherErrorActivity
+ADDED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:9-33:70
+	android:screenOrientation
+		ADDED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:32:13-49
+	android:theme
+		ADDED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:33:13-67
+	android:name
+		ADDED from [:expo-dev-launcher] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:31:13-93
+activity#expo.modules.devmenu.DevMenuActivity
+ADDED from [:expo-dev-menu] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-21:20
+	android:launchMode
+		ADDED from [:expo-dev-menu] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-44
+	android:exported
+		ADDED from [:expo-dev-menu] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-36
+	android:theme
+		ADDED from [:expo-dev-menu] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-75
+	android:name
+		ADDED from [:expo-dev-menu] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-64
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:expo-dev-menu
+ADDED from [:expo-dev-menu] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-20:29
+intent#action:name:android.intent.action.OPEN_DOCUMENT_TREE
+ADDED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-17:18
+action#android.intent.action.OPEN_DOCUMENT_TREE
+ADDED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-79
+	android:name
+		ADDED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:21-76
+provider#expo.modules.filesystem.FileSystemFileProvider
+ADDED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-30:20
+	android:grantUriPermissions
+		ADDED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-47
+	android:authorities
+		ADDED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-74
+	android:exported
+		ADDED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
+	tools:replace
+		ADDED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-48
+	android:name
+		ADDED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-74
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-29:70
+	android:resource
+		ADDED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-67
+	android:name
+		ADDED from [:expo-file-system] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-67
+uses-permission#android.permission.ACTIVITY_RECOGNITION
+ADDED from [:expo-sensors] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-sensors\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from [:expo-sensors] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-sensors\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:22-76
+intent#action:name:android.support.customtabs.action.CustomTabsService
+ADDED from [:expo-web-browser] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-web-browser\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:18
+action#android.support.customtabs.action.CustomTabsService
+ADDED from [:expo-web-browser] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-web-browser\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-90
+	android:name
+		ADDED from [:expo-web-browser] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-web-browser\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:21-87
+meta-data#org.unimodules.core.AppLoader#react-native-headless
+ADDED from [:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:9-11:89
+	android:value
+		ADDED from [:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-86
+	android:name
+		ADDED from [:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-79
+meta-data#com.facebook.soloader.enabled
+ADDED from [:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-15:45
+MERGED from [com.facebook.soloader:soloader:0.10.5] C:\Users\atana\.gradle\caches\transforms-3\6bba1416e654a85d9ccbfd4761c6b39b\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:12:9-14:37
+MERGED from [com.facebook.soloader:soloader:0.10.5] C:\Users\atana\.gradle\caches\transforms-3\6bba1416e654a85d9ccbfd4761c6b39b\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:12:9-14:37
+	tools:replace
+		ADDED from [:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-42
+	android:value
+		ADDED from [:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-33
+		REJECTED from [com.facebook.soloader:soloader:0.10.5] C:\Users\atana\.gradle\caches\transforms-3\6bba1416e654a85d9ccbfd4761c6b39b\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:14:13-34
+	android:name
+		ADDED from [:expo-modules-core] C:\Users\atana\Documents\GitHub\GetFit\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-57
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\atana\.gradle\caches\transforms-3\dcc6bc01de5c6c9f534b6903a0d2da1a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\atana\.gradle\caches\transforms-3\dcc6bc01de5c6c9f534b6903a0d2da1a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\atana\.gradle\caches\transforms-3\44a24c29099bb77124b275c3f1b7bf4e\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\atana\.gradle\caches\transforms-3\44a24c29099bb77124b275c3f1b7bf4e\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\atana\.gradle\caches\transforms-3\6609fecb9eccb60e8675ed1995beb54a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+permission#com.application.GetFit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+uses-permission#com.application.GetFit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] C:\Users\atana\.gradle\caches\transforms-3\0f0b7ff42fdf32aa2c2aa5c8bb49b18a\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\atana\.gradle\caches\transforms-3\dcc6bc01de5c6c9f534b6903a0d2da1a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\atana\.gradle\caches\transforms-3\dcc6bc01de5c6c9f534b6903a0d2da1a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\atana\.gradle\caches\transforms-3\dcc6bc01de5c6c9f534b6903a0d2da1a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78

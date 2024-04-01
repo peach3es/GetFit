@@ -1,0 +1,98 @@
+[
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.application.GetFit.app-main-41:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.application.GetFit.app-main-41:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.application.GetFit.app-main-41:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.application.GetFit.app-main-41:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/drawable_rn_edit_text_material.xml.flat",
+        "source": "com.application.GetFit.app-main-41:/drawable/rn_edit_text_material.xml"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.application.GetFit.app-main-41:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.application.GetFit.app-main-41:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/drawable-xxxhdpi_splashscreen_image.png.flat",
+        "source": "com.application.GetFit.app-main-41:/drawable-xxxhdpi/splashscreen_image.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.application.GetFit.app-main-41:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/drawable-xxhdpi_splashscreen_image.png.flat",
+        "source": "com.application.GetFit.app-main-41:/drawable-xxhdpi/splashscreen_image.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/drawable-mdpi_splashscreen_image.png.flat",
+        "source": "com.application.GetFit.app-main-41:/drawable-mdpi/splashscreen_image.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/drawable-hdpi_splashscreen_image.png.flat",
+        "source": "com.application.GetFit.app-main-41:/drawable-hdpi/splashscreen_image.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.application.GetFit.app-main-41:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.application.GetFit.app-main-41:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.application.GetFit.app-main-41:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/drawable-xhdpi_splashscreen_image.png.flat",
+        "source": "com.application.GetFit.app-main-41:/drawable-xhdpi/splashscreen_image.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.application.GetFit.app-main-41:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.application.GetFit.app-main-41:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.application.GetFit.app-main-41:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.application.GetFit.app-main-41:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.application.GetFit.app-main-41:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/drawable_splashscreen.xml.flat",
+        "source": "com.application.GetFit.app-main-41:/drawable/splashscreen.xml"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.application.GetFit.app-main-41:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.application.GetFit.app-merged_res-39:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.application.GetFit.app-main-41:/mipmap-xhdpi/ic_launcher_round.png"
+    }
+]
