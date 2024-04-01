@@ -6,7 +6,7 @@ import {
   FlatList,
   ScrollView,
   SafeAreaView,
-  DeviceEventEmitter
+  DeviceEventEmitter,
 } from "react-native";
 import "@/global.css";
 
@@ -19,6 +19,7 @@ import React, { useState, useEffect } from "react";
 import Daily from "@/src/app/Home/Daily";
 import Workouts from "@/src/app/Home/Workouts";
 import DatabaseManager from "../services/DatabaseManager";
+import { router } from "expo-router";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -33,7 +34,7 @@ const homePic = [
 
 export default function TabOneScreen() {
   const [randomIndex, setRandomIndex] = useState(0);
-  const [userName, setUserName] = useState(''); // State to store the fetched userName
+  const [userName, setUserName] = useState(""); // State to store the fetched userName
 
   useEffect(() => {
     // Generate a random index when the component mounts
@@ -41,7 +42,10 @@ export default function TabOneScreen() {
     setRandomIndex(randomIndex);
     fetchUserName();
     // Add listener for userName update event
-    const subscription = DeviceEventEmitter.addListener('userNameUpdated', fetchUserName);
+    const subscription = DeviceEventEmitter.addListener(
+      "userNameUpdated",
+      fetchUserName
+    );
     // Remove listener when component unmounts
     return () => {
       subscription.remove();
@@ -53,8 +57,9 @@ export default function TabOneScreen() {
       if (success && Array.isArray(data) && data.length > 0) {
         setUserName(data[0].name); // Assuming the name property exists
       } else {
-        console.error("Failed to fetch user profile or no profile exists");
-        setUserName('Username'); // Set to Username if fetching fails
+        // console.error("Failed to fetch user profile or no profile exists");
+        router.push("/Home/InitialForm");
+        // setUserName("Username"); // Set to Username if fetching fails
       }
     });
   };
@@ -72,12 +77,12 @@ export default function TabOneScreen() {
           <Text
             className={`text-6xl font-montreau text-w1 absolute p-5 z-10 bottom-0 text-shadow-[0_2px_10px_#3a3c42] tracking-wider`}
           >
-            Welcome Back, {userName}!
+            Welcome Back, {userName != "" ? userName : "Username"}!
           </Text>
         </View>
         <SafeAreaView className="h-2/3" style={{ flex: 1 }}>
           <ScrollView
-            className="w-full bg-w2 dark:bg-bl p-[5%] justify-bottom  rounded-t-3xl"
+            className="w-full bg-w2 dark:bg-bl p-[5%] justify-bottom rounded-t-3xl"
             // style={{ flex: 1 }}
           >
             <Daily />

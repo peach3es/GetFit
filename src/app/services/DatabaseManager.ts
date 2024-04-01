@@ -1,6 +1,7 @@
 import * as SQLite from 'expo-sqlite';
-import { Activity, ListActivitiesCallback, AddActivityCallback } from '../types/activityTypes';
-import { UserProfileData, ListUserDataCallback, AddUserDataCallback } from '../UserProfileInterface';
+import { Activity, ListActivitiesCallback, AddActivityCallback } from '../interfaces/activityInterface';
+import { UserProfileData, ListUserDataCallback, AddUserDataCallback } from '../interfaces/UserProfileInterface';
+import { AddDailyDataCallback, DailyData, ListDailyDataCallback } from '../interfaces/dailyDataInterface';
 
 const db = SQLite.openDatabase('getfitapp.db');
 
@@ -213,7 +214,6 @@ const addActivity = (activity: Activity, callback: AddActivityCallback): void =>
   });
 };
 
-
 const listActivities = (callback: ListActivitiesCallback): void => {
   db.transaction(tx => {
     tx.executeSql(
@@ -225,13 +225,56 @@ const listActivities = (callback: ListActivitiesCallback): void => {
   });
 };
 
+const initDailyDataDB = (): void => {
+  db.transaction(tx => {
+    tx.executeSql(
+      'CREATE TABLE IF NOT EXISTS DailyData (id INTEGER PRIMARY KEY AUTOINCREMENT, date TEXT, heartRateAverage INTEGER, steps INTEGER, caloriesBurned INTEGER);',
+      [],
+      () => console.log('Table created successfully'),
+      (tx, err) => { console.log('DB Error: ', err); return false; } // Updated to match expected error callback
+    );
+  });
+};
+
+const addDailyData = (dailyData: DailyData, callback: AddDailyDataCallback): void => {
+  db.transaction(tx => {
+    tx.executeSql(
+      'INSERT INTO DailyData (date, heartRateAverage, steps, caloriesBurned) VALUES (?, ?, ?, ?);',
+      [dailyData.date, dailyData.heartRateAverage, dailyData.steps, dailyData.caloriesBurned],
+      (tx, resultSet) => {
+        // Assuming that resultSet is of the correct type that includes insertId.
+        const insertId = resultSet.insertId as number; // Cast insertId as a number.
+        callback(true, { insertId });
+      },
+      (tx, err) => {
+        callback(false, err);
+        return false;
+      }
+    );
+  });
+};
+
+const listDailyData = (callback: ListDailyDataCallback): void => {
+  db.transaction(tx => {
+    tx.executeSql(
+      'SELECT * FROM DailyData ORDER BY id DESC;',
+      [],
+      (tx, resultSet) => callback(true, resultSet.rows._array as DailyData[]), // Assuming resultSet.rows._array is an array of Activity objects
+      (tx, err) => { callback(false, err); return false} // Pass the error object directly
+    );
+  });
+};
+
 // Initialize the database when this module is imported
 initUserProfileDB();
+initDailyDataDB();
 initActivityDB();
 
 export default {
   addActivity,
   listActivities,
+  addDailyData,
+  listDailyData,
   setUserName,
   setUserSex,
   setUserDOB,

@@ -10,10 +10,11 @@ import { config } from "@gluestack-ui/config";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { StatusBar } from "react-native";
 
 import { useColorScheme } from "@/src/components/useColorScheme";
+import DatabaseManager from "./services/DatabaseManager";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -56,17 +57,23 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
+
+  StatusBar.setTranslucent(true);
   StatusBar.setBackgroundColor("transparent");
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <GluestackUIProvider config={config}>
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="session" options={{ headerShown: false }} />
-          <Stack.Screen name="Home/History" options={{ headerShown: false }} />
-        </Stack>
-      </GluestackUIProvider>
+      {/* <GluestackUIProvider config={config}> */}
+      <Stack>
+        <Stack.Screen name={"(tabs)"} options={{ headerShown: false }} />
+        <Stack.Screen name="session" options={{ headerShown: false }} />
+        <Stack.Screen name="Home/History" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="Home/InitialForm"
+          options={{ headerShown: false }}
+        />
+      </Stack>
+      {/* </GluestackUIProvider> */}
     </ThemeProvider>
   );
 }

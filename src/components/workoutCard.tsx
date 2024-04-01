@@ -54,64 +54,86 @@ export default function WorkoutCard({
               <Iconify icon="mingcute:close-fill" size={32} color={iconColor} />
             </TouchableOpacity>
             <View className="items-center">
-              <View className="rounded-full w-20 aspect-square my-3 bg-w2 dark:bg-bl items-center justify-center">
+              <View className="rounded-full w-20 aspect-square my-3 bg-w2 dark:bg-bl2 items-center justify-center">
                 {type === "Running" && (
                   <Iconify
-                    icon="ph:person-simple-run-fill"
+                    icon="solar:running-round-bold-duotone"
                     size={54}
                     color={iconColor}
                   />
                 )}
                 {type === "Hiking" && (
                   <Iconify
-                    icon="ph:mountains-fill"
+                    icon="solar:hiking-round-bold-duotone"
                     size={54}
                     color={iconColor}
                   />
                 )}
                 {type === "Weight Training" && (
-                  <Iconify icon="ph:barbell-fill" size={54} color={iconColor} />
+                  <Iconify
+                    icon="solar:dumbbell-large-minimalistic-bold-duotone"
+                    size={54}
+                    color={iconColor}
+                  />
                 )}
               </View>
             </View>
             <Text className="text-center text-4xl text-bl dark:text-gr font-montreau">
               {type}
             </Text>
-            <Text className="text-center text-bl2 mb-5">
+            <Text className="text-center text-bl2 dark:text-w1 mb-5">
               {startTime}-{endTime}
             </Text>
             <View className="flex flex-row items-center justify-between">
               <View className="flex flex-col items-center">
-                <Text className="text-lg font-medium">Workout Time</Text>
-                <Text className="text-3xl font-medium">
+                <Text className="text-lg font-medium text-bl2 dark:text-w1">
+                  Workout Time
+                </Text>
+                <Text className="text-3xl font-medium text-red dark:text-gr">
                   {formattedDuration}
                 </Text>
-                <Text className="text-lg font-medium">Calories Burned</Text>
+                <Text className="text-lg font-medium text-bl2 dark:text-w1">
+                  Calories Burned
+                </Text>
               </View>
               <View className="flex flex-col items-center">
-                <Text className="text-lg font-medium">Avg. Heart Rate</Text>
-                <Text className="text-lg font-medium">Steps Taken</Text>
-                <Text className="text-3xl font-medium">{steps}</Text>
+                <Text className="text-lg font-medium text-bl2 dark:text-w1">
+                  Avg. Heart Rate
+                </Text>
+                <Text className="text-lg font-medium text-bl2 dark:text-w1">
+                  Steps Taken
+                </Text>
+                <Text className="text-3xl font-medium text-red dark:text-gr">
+                  {steps}
+                </Text>
               </View>
             </View>
           </View>
         </View>
       </Modal>
-      <View className="rounded-xl bg-w1 dark:bg-bl2 mb-2 flex flex-row p-5 justify-between">
+      <View className="rounded-xl bg-w1 dark:bg-bl2 mb-2 flex flex-row p-5 justify-between h-32 items-center">
         <View className="flex flex-row">
           <View className="rounded-full w-16 aspect-square bg-w2 dark:bg-bl mr-5 items-center justify-center">
             {type === "Running" && (
               <Iconify
-                icon="ph:person-simple-run-fill"
+                icon="solar:running-round-bold-duotone"
                 size={48}
                 color={iconColor}
               />
             )}
             {type === "Hiking" && (
-              <Iconify icon="ph:mountains-fill" size={48} color={iconColor} />
+              <Iconify
+                icon="solar:hiking-round-bold-duotone"
+                size={48}
+                color={iconColor}
+              />
             )}
             {type === "Weight Training" && (
-              <Iconify icon="ph:barbell-fill" size={48} color={iconColor} />
+              <Iconify
+                icon="solar:dumbbell-large-minimalistic-bold-duotone"
+                size={48}
+                color={iconColor}
+              />
             )}
           </View>
           <View className="flex flex-col">
