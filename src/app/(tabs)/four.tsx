@@ -37,7 +37,7 @@ const App = () => {
         {connectedDevice ? (
           <>
             <Text style={styles.heartRateTitleText}>Your Heart Rate Is:</Text>
-            <Text style={styles.heartRateText}>{heartRate} bpm</Text>
+            <Text style={styles.heartRateText}>{69420} bpm</Text>
           </>
         ) : (
           <Text style={styles.heartRateTitleText}>
@@ -56,7 +56,7 @@ const App = () => {
       <DeviceModal
         closeModal={hideModal}
         visible={isModalVisible}
-        connectToPeripheral={() => {}}
+        connectToPeripheral={connectToDevice}
         devices={allDevices}
       />
     </SafeAreaView>
