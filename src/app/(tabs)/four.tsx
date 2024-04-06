@@ -37,7 +37,7 @@ const App = () => {
         {connectedDevice ? (
           <>
             <Text style={styles.heartRateTitleText}>Your Heart Rate Is:</Text>
-            <Text style={styles.heartRateText}>{69420} bpm</Text>
+            <Text style={styles.heartRateText}>{heartRate} bpm</Text>
           </>
         ) : (
           <Text style={styles.heartRateTitleText}>
@@ -46,11 +46,11 @@ const App = () => {
         )}
       </View>
       <TouchableOpacity
-        onPress={openModal}
+        onPress={connectedDevice ?disconnectFromDevice: openModal}
         style={styles.ctaButton}
       >
         <Text style={styles.ctaButtonText}>
-          {"Connect to a Device"}
+          {connectedDevice? "Disconnect" : "Connect to a Device"}
         </Text>
       </TouchableOpacity>
       <DeviceModal

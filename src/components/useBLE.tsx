@@ -12,8 +12,8 @@ import * as ExpoDevice from "expo-device";
 
 import base64 from "react-native-base64";
 
-const HEART_RATE_UUID = "0000180d-0000-1000-8000-00805f9b34fb";
-const HEART_RATE_CHARACTERISTIC = "00002a37-0000-1000-8000-00805f9b34fb";
+const HEART_RATE_UUID = "4509e4e1-aabd-44eb-8b2a-1c99eabd6a1a";
+const HEART_RATE_CHARACTERISTIC = "fbfebe3d-e63d-49ee-9b5f-2cb44484d1a8";
 
 interface BluetoothLowEnergyApi {
   requestPermissions(): Promise<boolean>;
@@ -111,9 +111,19 @@ function useBLE(): BluetoothLowEnergyApi {
     try {
       const deviceConnection = await bleManager.connectToDevice(device.id);
       setConnectedDevice(deviceConnection);
-      await deviceConnection.discoverAllServicesAndCharacteristics();
+      // console.log(deviceConnection)  
+      await bleManager.discoverAllServicesAndCharacteristicsForDevice(device.id);
+      const services = await bleManager.servicesForDevice(device.id);
+      // console.log(services)
+      const value = await bleManager.readCharacteristicForDevice(
+        device.id,
+        services[2].uuid,
+        HEART_RATE_CHARACTERISTIC,
+      )
+      console.log(value);
       bleManager.stopDeviceScan();
-      startStreamingData(deviceConnection);
+      startStreamingData(deviceConnection, value);
+
     } catch (e) {
       console.log("FAILED TO CONNECT", e);
     }
@@ -155,12 +165,24 @@ function useBLE(): BluetoothLowEnergyApi {
     setHeartRate(innerHeartRate);
   };
 
-  const startStreamingData = async (device: Device) => {
+  const startStreamingData = async (device: Device, value:any) => {
     if (device) {
-      device.monitorCharacteristicForService(
-        HEART_RATE_UUID,
-        HEART_RATE_CHARACTERISTIC,
-        onHeartRateUpdate
+
+      const sub = await bleManager.monitorCharacteristicForDevice(
+        device.id,
+        value.serviceUUID,
+        value.uuid,
+        (error, characteristic) => {
+          if (error) {
+            console.error('Error monitoring characteristic:', error);
+            return;
+          }
+          if (characteristic) {
+            console.log('Characteristic value changed:', characteristic.value);
+            // Process the characteristic value as needed
+          }
+        }
+        
       );
     } else {
       console.log("No Device Connected");
