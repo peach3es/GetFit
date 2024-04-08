@@ -123,6 +123,7 @@ function useBLE(): BluetoothLowEnergyApi {
       console.log(value);
       bleManager.stopDeviceScan();
       startStreamingData(deviceConnection, value);
+      
 
     } catch (e) {
       console.log("FAILED TO CONNECT", e);
@@ -137,38 +138,27 @@ function useBLE(): BluetoothLowEnergyApi {
     }
   };
 
-  const onHeartRateUpdate = (
-    error: BleError | null,
-    characteristic: Characteristic | null
-  ) => {
+  const onHeartRateUpdate = (error: BleError | null, characteristic: Characteristic | null) => {
     if (error) {
-      console.log(error);
-      return -1;
-    } else if (!characteristic?.value) {
-      console.log("No Data was recieved");
-      return -1;
+      console.error(error);
+      return;
+    }
+    if (!characteristic?.value) {
+      console.log("No Data was received");
+      return;
     }
 
-    const rawData = base64.decode(characteristic.value);
-    let innerHeartRate: number = -1;
-
-    const firstBitValue: number = Number(rawData) & 0x01;
-
-    if (firstBitValue === 0) {
-      innerHeartRate = rawData[1].charCodeAt(0);
-    } else {
-      innerHeartRate =
-        Number(rawData[1].charCodeAt(0) << 8) +
-        Number(rawData[2].charCodeAt(2));
-    }
-
-    setHeartRate(innerHeartRate);
+    // Decode the Base64 string and extract heart rate value
+    const data = base64.decode(characteristic.value);
+    // Assuming the heart rate value is being sent in the first byte
+    let heartRateValue = data.charCodeAt(0);
+    setHeartRate(heartRateValue);
+    console.log(`Heart Rate is: ${heartRateValue}`);
   };
 
-  const startStreamingData = async (device: Device, value:any) => {
+  const startStreamingData = async (device: Device, value: any) => {
     if (device) {
-
-      const sub = await bleManager.monitorCharacteristicForDevice(
+      await bleManager.monitorCharacteristicForDevice(
         device.id,
         value.serviceUUID,
         value.uuid,
@@ -179,10 +169,9 @@ function useBLE(): BluetoothLowEnergyApi {
           }
           if (characteristic) {
             console.log('Characteristic value changed:', characteristic.value);
-            // Process the characteristic value as needed
+            onHeartRateUpdate(error, characteristic);
           }
         }
-        
       );
     } else {
       console.log("No Device Connected");
